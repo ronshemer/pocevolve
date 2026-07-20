@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: exploit-generation
+    build: .
+    image: exploit-generation:latest
+    volumes:
+      - .:/app
+    tty: true
+    stdin_open: true

@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: gen-poc_mnt:latest
+    container_name: pocgen-original
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    user: root
+    volumes:
+      - .:/app
+    env_file:
+      - .env

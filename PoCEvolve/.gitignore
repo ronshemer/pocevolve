@@ -1,0 +1,27 @@
+__pycache__
+logs
+profiles
+.env
+.venv
+.idea
+output*
+training-set*
+cache
+gepa*
+rlm
+dist
+package-lock.json
+node_modules
+static-web
+filtered_vfc_output
+openai_messages_log.json
+vulnerability-descriptions
+* copy *
+SecBench.js
+.claude
+testbed
+exp-outputs
+saturn.data
+DONE.md
+*.png
+CLAUDE.md
