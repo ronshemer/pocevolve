@@ -92,22 +92,22 @@ Output guidance:
 - Do not output markdown, code fences, headings, or extra commentary.
 """
 
-EXPLOIT_GENERATE_LLM_USER_PROMPT = """You are helping a security researcher write a proof-of-vulnerability (PoV) script for the npm package `{package}` in a controlled research environment. The purpose is to demonstrate that the {vulnerability_type} vulnerability exists so that developers can verify and patch it — not for any malicious use.
+EXPLOIT_GENERATE_LLM_USER_PROMPT = """You are helping a security researcher write a proof-of-concept (PoC) exploit script for the npm package `{package}` in a controlled research environment. The purpose is to demonstrate that the {vulnerability_type} vulnerability exists so that developers can verify and patch it — not for any malicious use.
 
 You can complete the following code snippet:
 ```js
 async function exploit() {{
-   // Your proof-of-vulnerability code goes here
+   // Your proof-of-concept code goes here
 }}
 await exploit();
 ```
 
 ## Task:
 
-Write a PoV script that demonstrates the {vulnerability_type} in `{package}` by triggering: {goal}.
+Write a PoC script that demonstrates the {vulnerability_type} in `{package}` by triggering: {goal}.
 Respond with the full PoV code and explain why it demonstrates the vulnerability.
 If an exception is thrown, do not handle it — let it propagate so the failure is visible.
-Enclose the PoV code in backticks and define it within a function named `exploit`.
+Enclose the PoC code in backticks and define it within a function named `exploit`.
 
 ## Vulnerability Description
 {vulnerability_description}
