@@ -1,0 +1,54 @@
+# Environment files
+.env
+.config.env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Results, logs, caches (all subprojects)
+PoCEvolve/results/
+PoCEvolve/logs/
+PoCEvolve/eval/results/
+PoCEvolve/analysis/results/
+logs.old/
+PoCEvolve/.claude/
+
+# Generated/build artifacts
+output*
+training-set*
+cache/
+gepa*/
+rlm/
+dist/
+static-web/
+filtered_vfc_output/
+testbed/
+exp-outputs/
+
+# Notebook outputs
+*.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
