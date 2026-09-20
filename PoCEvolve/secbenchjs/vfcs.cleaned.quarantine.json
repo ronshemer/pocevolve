@@ -1,0 +1,466 @@
+{
+  "source": "secbenchjs/vfcs.json",
+  "kept": 594,
+  "excluded": 6,
+  "repaired": 32,
+  "quarantine": [
+    {
+      "index": 109,
+      "package": "node-unrar",
+      "ids": [],
+      "reason": "structural_validation_failure",
+      "issues": [
+        {
+          "index": 109,
+          "package": "node-unrar",
+          "ids": [],
+          "severity": "error",
+          "code": "missing_ids",
+          "detail": "ids must contain at least one advisory identifier"
+        }
+      ]
+    },
+    {
+      "index": 312,
+      "package": "Proto",
+      "ids": [
+        "SNYK-JS-PROTO-1316301",
+        "GHSA-58g2-9fqr-36q2"
+      ],
+      "reason": "structural_validation_failure",
+      "issues": [
+        {
+          "index": 312,
+          "package": "Proto",
+          "ids": [
+            "SNYK-JS-PROTO-1316301",
+            "GHSA-58g2-9fqr-36q2"
+          ],
+          "severity": "error",
+          "code": "invalid_package_name",
+          "detail": "vulnerable_package='Proto' is not a valid npm package name"
+        }
+      ]
+    },
+    {
+      "index": 313,
+      "package": "Templ8",
+      "ids": [
+        "SNYK-JS-TEMPL8-598770",
+        "GHSA-c7m7-4257-h698"
+      ],
+      "reason": "structural_validation_failure",
+      "issues": [
+        {
+          "index": 313,
+          "package": "Templ8",
+          "ids": [
+            "SNYK-JS-TEMPL8-598770",
+            "GHSA-c7m7-4257-h698"
+          ],
+          "severity": "error",
+          "code": "invalid_package_name",
+          "detail": "vulnerable_package='Templ8' is not a valid npm package name"
+        }
+      ]
+    },
+    {
+      "index": 547,
+      "package": "markdown-to-jsx",
+      "ids": [],
+      "reason": "structural_validation_failure",
+      "issues": [
+        {
+          "index": 547,
+          "package": "markdown-to-jsx",
+          "ids": [],
+          "severity": "error",
+          "code": "missing_ids",
+          "detail": "ids must contain at least one advisory identifier"
+        }
+      ]
+    },
+    {
+      "index": 574,
+      "package": "revalidator",
+      "ids": [],
+      "reason": "structural_validation_failure",
+      "issues": [
+        {
+          "index": 574,
+          "package": "revalidator",
+          "ids": [],
+          "severity": "error",
+          "code": "missing_ids",
+          "detail": "ids must contain at least one advisory identifier"
+        }
+      ]
+    },
+    {
+      "index": 598,
+      "package": "vant",
+      "ids": [],
+      "reason": "structural_validation_failure",
+      "issues": [
+        {
+          "index": 598,
+          "package": "vant",
+          "ids": [],
+          "severity": "error",
+          "code": "missing_ids",
+          "detail": "ids must contain at least one advisory identifier"
+        }
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "index": 10,
+      "package": "m-log",
+      "ids": [
+        "npm:m-log:20160408"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 33,
+      "package": "static-eval",
+      "ids": [
+        "SNYK-JS-STATICEVAL-173693",
+        "GHSA-8v27-2fg9-7h62"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 42,
+      "package": "alfred-workflow-nodejs",
+      "ids": [
+        "SNYK-JS-ALFREDWORKFLOWNODEJS-608975",
+        "GHSA-9jm3-5835-537m"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 52,
+      "package": "command-exists",
+      "ids": [
+        "npm:command-exists:20180512",
+        "GHSA-84cm-v6jp-gjmr"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 69,
+      "package": "find-process",
+      "ids": [
+        "SNYK-JS-FINDPROCESS-1090284",
+        "GHSA-qfxv-qqvg-24pg"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken, fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 80,
+      "package": "giting",
+      "ids": [
+        "SNYK-JS-GITING-559008",
+        "GHSA-53xj-v576-3ch2"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken"
+      ]
+    },
+    {
+      "index": 84,
+      "package": "growl",
+      "ids": [
+        "npm:growl:20160721",
+        "GHSA-qh2h-chj9-jffq"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 88,
+      "package": "im-metadata",
+      "ids": [
+        "SNYK-JS-IMMETADATA-544184",
+        "GHSA-qfxv-qqvg-24pg"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken"
+      ]
+    },
+    {
+      "index": 89,
+      "package": "im-resize",
+      "ids": [
+        "SNYK-JS-IMRESIZE-544183",
+        "GHSA-r9vm-rhmf-7hxx"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken"
+      ]
+    },
+    {
+      "index": 114,
+      "package": "pdf-image",
+      "ids": [
+        "npm:pdf-image:20180529",
+        "GHSA-5gwh-g79j-vh4q"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 127,
+      "package": "samsung-remote",
+      "ids": [
+        "SNYK-JS-SAMSUNGREMOTE-72278",
+        "GHSA-fg5w-w99f-rj6w"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 128,
+      "package": "scp",
+      "ids": [
+        "SNYK-JS-SCP-1009828",
+        "GHSA-84cm-v6jp-gjmr"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 129,
+      "package": "strider-git",
+      "ids": [
+        "SNYK-JS-STRIDERGIT-572913",
+        "GHSA-qfxv-qqvg-24pg"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken, fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 140,
+      "package": "xps",
+      "ids": [
+        "SNYK-JS-XPS-590098",
+        "GHSA-wp7m-mrvf-599c"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken, fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 185,
+      "package": "hangersteak",
+      "ids": [
+        "SNYK-JS-HANGERSTEAK-608973"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 319,
+      "package": "@aws-sdk/shared-ini-file-loader",
+      "ids": [
+        "SNYK-JS-AWSSDKSHAREDINIFILELOADER-1049304",
+        "GHSA-rrc9-gqf8-8rwg"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 329,
+      "package": "connie",
+      "ids": [
+        "SNYK-JS-CONNIELANG-598853",
+        "GHSA-8vv3-jxm8-f4vf"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 366,
+      "package": "flat",
+      "ids": [
+        "SNYK-JS-FLAT-596927",
+        "GHSA-33rv-m2gp-mm2r"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 391,
+      "package": "json-ptr",
+      "ids": [
+        "SNYK-JS-JSONPTR-1577291",
+        "GHSA-8gwj-8hxc-285w"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken"
+      ]
+    },
+    {
+      "index": 402,
+      "package": "lodash",
+      "ids": [
+        "SNYK-JS-LODASH-450202",
+        "GHSA-jf85-cpcp-j695"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 421,
+      "package": "mithril",
+      "ids": [
+        "SNYK-JS-MITHRIL-460113",
+        "GHSA-c3px-v9c7-m734"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 443,
+      "package": "object-path",
+      "ids": [
+        "SNYK-JS-OBJECTPATH-1017036",
+        "GHSA-v39p-96qg-c8rf"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 473,
+      "package": "set-in",
+      "ids": [
+        "SNYK-JS-SETIN-1048049",
+        "GHSA-qr4p-c9wr-phr6"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 518,
+      "package": "content-type-parser",
+      "ids": [
+        "npm:content-type-parser:20170905"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 536,
+      "package": "html-parse-stringify2",
+      "ids": [
+        "SNYK-JS-HTMLPARSESTRINGIFY2-1079307",
+        "GHSA-545q-3fg6-48m7"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 544,
+      "package": "locutus",
+      "ids": [
+        "SNYK-JS-LOCUTUS-1090597",
+        "GHSA-39q4-p535-c852"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 549,
+      "package": "marked",
+      "ids": [
+        "SNYK-JS-MARKED-1070800",
+        "GHSA-4r62-v4vq-hr96"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 556,
+      "package": "ms",
+      "ids": [
+        "npm:ms:20170412",
+        "GHSA-c56f-grv3-gpfr"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 572,
+      "package": "remarkable",
+      "ids": [
+        "SNYK-JS-REMARKABLE-174639",
+        "GHSA-q22g-8fr4-qpj4"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken"
+      ]
+    },
+    {
+      "index": 579,
+      "package": "slug",
+      "ids": [
+        "npm:slug:20170907",
+        "GHSA-jxqq-cqm6-pfq9"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_link_broken, fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 586,
+      "package": "tmpl",
+      "ids": [
+        "SNYK-JS-TMPL-1583443",
+        "GHSA-jgrx-mgxx-jf9v"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    },
+    {
+      "index": 597,
+      "package": "validator",
+      "ids": [
+        "SNYK-JS-VALIDATOR-1090599"
+      ],
+      "actions": [
+        "cleared unusable fix/patch metadata: fix_repo_package_mismatch"
+      ]
+    }
+  ]
+}

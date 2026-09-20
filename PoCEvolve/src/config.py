@@ -3,9 +3,9 @@ import os
 
 
 ## Paths & Directories
-DATASET_LIST = os.getenv("DATASET")
+DATASET_LIST = os.getenv("DATASET", "datasets/SecBench.js.PoCGen.vfc.190")
 TESTBED_DIR = "testbed"
-GEPA_LOG_DIR = Path("logs")
+GEPA_LOG_DIR = Path(os.getenv("RUN_OUTPUT_DIR", "logs"))
 GEPA_LOG_DIR.mkdir(parents=True, exist_ok=True)
 PROJECT_ROOT = Path(__file__).resolve().parent
 
@@ -16,18 +16,22 @@ MAX_EXEC_OUTPUT_CHARS = 4000
 MAX_EXECUTION_OUTPUTS_IN_FEEDBACK = 4
 
 
-TRAINING_DATA = "path/to/pocgen/qwen3.7-plus.training-set"
-GENERATED_VFC_GLOB = "./path/to/llm/qwen3.7-plus/vfcs.generated.*.jsonl"
-ITERATION = 5
+TRAINING_DATA = "datasets/qwen3.7-plus.training-set"
+GENERATED_VFC_GLOB = f"{GEPA_LOG_DIR}/vfcs.generated.*.jsonl"
+ITERATION = 0 # qwen3.6 is not doing well anyway for GEPA so keeping it short (was 5)
 MINIBATCH_SIZE = 3
 VERIFY_TIME = 2
 SEED = 42
+SKIP_GEPA = os.getenv("SKIP_GEPA", "1") == "1"
 # MODEL_NAME = "gpt-4o-mini"
 # API_KEY = "sk-proj-xxx"
 # API_BASE = "https://api.openai.com/v1"
-MODEL_NAME = "qwen/qwen3.7-plus"
-API_KEY = "sk-or-v1-xxx"
-API_BASE = "https://openrouter.ai/api/v1"
+MODEL_NAME = "qwen36-local"
+API_KEY = "sk-litellm-local"  # LiteLLM auth token from ~/.claude/settings.json
+API_BASE = "http://127.0.0.1:4000"  # Local LiteLLM proxy
+
+# When running inside Docker with network_mode: host, localhost already points to the
+# host's network stack where Ollama listens. No override needed.
 TEMPERATURE = 1
 MAX_RETRY = 2
 

@@ -291,15 +291,11 @@ def load_transcripts(logs_dir: str) -> list[dict]:
     return transcripts
 
 
-def load_generated_exploits() -> dict:
-    """Load vfcs.generated.*.jsonl if available — for additional metric sources.
-
-    Returns per-vuln metadata including exploit pass/fail counts from Phase 1 generator.
-    """
+def load_generated_exploits(logs_dir: str) -> dict:
     result = {}
-    base = Path(__file__).parent.parent / "logs"
+    base = Path(logs_dir)
 
-    for f in base.glob("vfcs.generated.*.jsonl"):
+    for f in base.glob("vfcs.generated*.jsonl"):
         try:
             with open(f, "r") as fh:
                 for line in fh:
@@ -310,18 +306,18 @@ def load_generated_exploits() -> dict:
                     except json.JSONDecodeError:
                         continue
 
-                    vid = entry.get("id", "") or entry.get("testbed_dir", "")
+                    # Normalize raw ID and testbed_dir (e.g., npm:m-log:20160408 -> npm_m-log_20160408)
+                    raw_id = entry.get("testbed_dir", "") or entry.get("id", "")
+                    vid = raw_id.replace(":", "_")
                     if not vid:
                         continue
 
-                    # Collect per-vuln exploit metadata from generated data
                     result[vid] = {
                         "generation_time": entry.get("generation_time"),
                         "has_generated_exploits": "generated_exploits" in entry,
                         "vulnerability_type": classify_vuln(entry),
                     }
 
-                    # Phase 1 generator: check if any exploit passed (exploit_result=True)
                     prompts = entry.get("generated_exploits") or []
                     if prompts:
                         result[vid]["phase1_pass_count"] = sum(
@@ -337,13 +333,12 @@ def load_generated_exploits() -> dict:
 # ─── Main aggregation logic ──────────────────────────────────────────────────
 
 def aggregate_single(logs_dir: str, dataset_list: str | None = None) -> dict:
-    """Aggregate one evaluation run."""
     print(f"Loading transcripts from {logs_dir}...", file=sys.stderr)
     transcripts = load_transcripts(logs_dir)
     print(f"Found {len(transcripts)} transcripts", file=sys.stderr)
 
-    # Load generated exploits for cross-reference
-    generated = load_generated_exploits()
+    # Pass logs_dir so it searches inside the run folder!
+    generated = load_generated_exploits(logs_dir)
 
     # Track which vulns have a Phase 2 transcript (to find Phase 1-only successes)
     transcript_vids: set[str] = set()
@@ -389,6 +384,7 @@ def aggregate_single(logs_dir: str, dataset_list: str | None = None) -> dict:
             "vulnerability_type": g.get("vulnerability_type"),
             "status_detail": "phase1_success" if pass_count > 0 else "phase1_no_pass",
             "generation_time": g.get("generation_time"),
+            "generated_exploits_available": g.get("has_generated_exploits", False),
         })
 
     aggregated = compute_aggregated(per_vuln)

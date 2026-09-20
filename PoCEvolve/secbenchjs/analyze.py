@@ -1,5 +1,8 @@
 import json
+import os
 import re
+import shutil
+import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
@@ -37,17 +40,53 @@ SUPPORTED_FILE_EXTENSIONS = {
 }
 GITHUB_API_HEADERS = {
     "Accept": "application/vnd.github.v3+json",
-    "Authorization": "Bearer ghp_xxx",
 }
 MAX_WORKERS = 8
 
 # Paths relative to the script's directory so the script is location-independent.
 _SCRIPT_DIR = Path(__file__).parent
+_REPO_ROOT = _SCRIPT_DIR.parent.parent
 TESTBED_ROOT = _SCRIPT_DIR / ".." / "testbed"
 DATASETS_DIR = _SCRIPT_DIR / ".." / "datasets"
 OUTPUT_JSON_PATH = _SCRIPT_DIR / "vfcs.json"
 OUTPUT_TESTBED_JSON_PATH = _SCRIPT_DIR / "vfcs.testbed.json"
 OUTPUT_FILTERED_JSON_PATH = _SCRIPT_DIR / "vfcs.filtered.json"
+CLEANED_JSON_PATH = _SCRIPT_DIR / "vfcs.cleaned.json"
+CLEANED_QUARANTINE_PATH = _SCRIPT_DIR / "vfcs.cleaned.quarantine.json"
+
+
+def _load_dotenv(path: Path) -> None:
+    """Load simple KEY=VALUE pairs without requiring python-dotenv.
+
+    Existing environment variables win, so CI/container configuration can override
+    the repository-level .env file. Values are intentionally not printed.
+    """
+    if not path.is_file():
+        return
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip()
+        if not key or key.startswith("#"):
+            continue
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in ("'", '"'):
+            value = value[1:-1]
+        os.environ.setdefault(key, value)
+
+
+_load_dotenv(_REPO_ROOT / ".env")
+_github_api_key = os.getenv("GITHUB_API_KEY", "").strip()
+if _github_api_key:
+    GITHUB_API_HEADERS["Authorization"] = f"Bearer {_github_api_key}"
+else:
+    print("[WARN] GITHUB_API_KEY is not set; GitHub API requests will be unauthenticated and rate-limited.")
 
 
 def read_json_file(path: Path) -> Any:
@@ -56,6 +95,43 @@ def read_json_file(path: Path) -> Any:
 
 def read_text_file(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="replace")
+
+
+def load_cleaned_exclusions() -> dict[str, dict[str, Any]]:
+    """Load repaired records whose unusable VFC metadata was cleared.
+
+    The analyzer normally starts from raw SecBench modules.  Without this
+    override, a known cross-contaminated fix commit can be fetched again and
+    silently reintroduced into the generated VFCS files.
+    """
+    if not CLEANED_JSON_PATH.is_file() or not CLEANED_QUARANTINE_PATH.is_file():
+        return {}
+    try:
+        records = read_json_file(CLEANED_JSON_PATH)
+        report = read_json_file(CLEANED_QUARANTINE_PATH)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    by_id: dict[str, dict[str, Any]] = {}
+    for record in records if isinstance(records, list) else []:
+        if not isinstance(record, dict):
+            continue
+        ids = record.get("ids") or []
+        for identifier in ids:
+            by_id[str(identifier)] = record
+
+    # Only apply explicit validator repairs. Many legitimate records naturally
+    # have no source diff, so checking every empty record would over-filter.
+    overrides: dict[str, dict[str, Any]] = {}
+    repairs = report.get("repairs", []) if isinstance(report, dict) else []
+    for repair in repairs:
+        actions = repair.get("actions", []) if isinstance(repair, dict) else []
+        if not any("fix_repo_package_mismatch" in str(action) for action in actions):
+            continue
+        for identifier in repair.get("ids", []):
+            record = by_id.get(str(identifier))
+            if record is not None:
+                overrides[str(identifier)] = record
+    return overrides
 
 
 def find_repo_root(start: Path | None = None) -> Path:
@@ -461,6 +537,86 @@ def resolve_testbed_dir(ids: list[str], available: set[str]) -> str | None:
     return None
 
 
+# Strip semver range characters (^, ~) and prerelease suffixes from a version
+# string so it maps to a real npm registry entry. E.g. "^0.1.3" → "0.1.3",
+# "~2.4.5" → "2.4.5", "1.0.0-rc.1" → "1.0.0".
+_SEMVER_CLEAN = re.compile(r"^[\^~]*(.*?)(?:-[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*)?$")
+
+
+def _clean_version(v: str) -> str:
+    m = _SEMVER_CLEAN.match(v)
+    return m.group(1) if m else v
+
+
+_POPULATE_STATS = {"ok": 0, "fail": 0, "skip_no_version": 0}
+
+
+def _installed_package_path(testbed_dir: Path, package_name: str) -> Path:
+    """Return the package.json Node resolves from a generated test subdirectory."""
+    return testbed_dir / "node_modules" / Path(package_name) / "package.json"
+
+
+def _has_installed_package(testbed_dir: Path, package_name: str) -> bool:
+    return _installed_package_path(testbed_dir, package_name).is_file()
+
+
+def _populate_testbed(
+    folder_name: str,
+    vulnerable_package: str,
+    vulnerable_version: str,
+    alternate_package: str | None = None,
+) -> str | None:
+    """Install the vulnerable package and runtime dependencies into a testbed.
+
+    Returns the folder name on success, or None if population fails.
+    Updates `_POPULATE_STATS` with the result.
+    """
+    target = TESTBED_ROOT / folder_name
+
+    # A directory containing only prior gepa_test.js artifacts is not a usable
+    # testbed. The verifier runs from a child directory and resolves packages
+    # through <testbed>/node_modules, so require the actual package here.
+    if _has_installed_package(target, vulnerable_package):
+        _POPULATE_STATS["ok"] += 1
+        return folder_name
+
+    # Try each candidate package name on npm, stopping at the first success.
+    candidates = [vulnerable_package]
+    if alternate_package and alternate_package != vulnerable_package:
+        candidates.append(alternate_package)
+
+    for pkg in candidates:
+        try:
+            target.mkdir(parents=True, exist_ok=True)
+            completed = subprocess.run(
+                [
+                    "npm", "install", "--prefix", str(target), "--no-save",
+                    "--no-package-lock", "--ignore-scripts", "--no-audit",
+                    "--no-fund", f"{pkg}@{vulnerable_version}",
+                ],
+                capture_output=True,
+                text=True,
+                timeout=180,
+                check=False,
+            )
+            if completed.returncode != 0:
+                detail = (completed.stderr or completed.stdout).strip().splitlines()
+                raise RuntimeError(detail[-1] if detail else f"npm exited {completed.returncode}")
+            if not _has_installed_package(target, vulnerable_package):
+                # An alternate name may be useful for lookup, but the verifier
+                # requires vulnerable_package; do not claim success otherwise.
+                raise RuntimeError(f"npm installed {pkg}, not required package {vulnerable_package}")
+            _POPULATE_STATS["ok"] += 1
+            return folder_name
+
+        except (OSError, RuntimeError, subprocess.TimeoutExpired) as exc:
+            if pkg in candidates[:-1]:
+                continue  # try next candidate
+            _POPULATE_STATS["fail"] += 1
+            tqdm.write(f"[WARN] Failed to populate testbed {folder_name} ({pkg}@{vulnerable_version}): {exc}")
+    return None
+
+
 def load_testbed_dirs() -> set[str]:
     testbed = TESTBED_ROOT.resolve()
     if not testbed.is_dir():
@@ -508,6 +664,7 @@ def serialize_vfc_record(vfc_record: dict[str, Any]) -> dict[str, Any]:
 repo_root = find_repo_root()
 assets = load_vulnerable_assets(repo_root)
 available_testbed_dirs = load_testbed_dirs()
+cleaned_exclusions = load_cleaned_exclusions()
 
 print(f"Repository root: {repo_root}")
 print(f"Categories loaded: {len(assets['categories'])}")
@@ -536,11 +693,18 @@ def process_module(vulnerability_type: str, module: dict[str, Any]) -> dict[str,
     dependencies = (package_json["content"].get("dependencies") or {}) if package_json else {}
     if dependencies:
         vulnerable_package = next(iter(dependencies))
-        vulnerable_version = next(iter(dependencies.values()))
+        raw_version = next(iter(dependencies.values()))
+        vulnerable_version = _clean_version(raw_version)
+        # Log when we cleaned a semver constraint so the user can verify.
+        if raw_version != vulnerable_version:
+            tqdm.write(f"[INFO] Stripped semver constraint from {vulnerable_package}: '{raw_version}' → '{vulnerable_version}'")
     else:
         module_name = Path(module["module_dir"]).name
         vulnerable_package = module_name.split("_")[0]
-        vulnerable_version = module_name.split("_")[-1]
+        raw_version = module_name.split("_")[-1]
+        vulnerable_version = _clean_version(raw_version)
+        if raw_version != vulnerable_version:
+            tqdm.write(f"[INFO] Stripped semver constraint from {vulnerable_package}: '{raw_version}' → '{vulnerable_version}'")
 
     fix_commit = package_json["content"]["fixCommit"] if package_json else "n/a"
     links = package_json["content"].get("links", {}) if package_json else {}
@@ -549,7 +713,42 @@ def process_module(vulnerability_type: str, module: dict[str, Any]) -> dict[str,
     ids = extract_vulnerability_ids(links)
     testbed_dir = resolve_testbed_dir(ids, available_testbed_dirs)
 
-    if fix_commit.strip() and fix_commit.strip().lower() != "n/a":
+    cleaned_exclusion = next((cleaned_exclusions.get(identifier) for identifier in ids
+                              if identifier in cleaned_exclusions), None)
+
+    if testbed_dir and not _has_installed_package(TESTBED_ROOT / testbed_dir, vulnerable_package):
+        tqdm.write(f"[INFO] Rebuilding incomplete testbed {testbed_dir} for {vulnerable_package}")
+        testbed_dir = None
+
+    # Auto-populate missing testbed directories (Option B).
+    if not testbed_dir and vulnerable_package and vulnerable_version:
+        # Derive an alternate package name from the module directory (strip version suffix).
+        # Always populate this — even when dependencies exist, the primary may 404 on npm.
+        _alternate = None
+        _dir_name = Path(module["module_dir"]).name
+        parts = _dir_name.split("_")
+        if len(parts) >= 2:
+            _alt = "_".join(parts[:-1])
+            # npm doesn't support underscores — try with hyphens too.
+            if "-" not in _alt:
+                _alternate = _alt.replace("_", "-")
+
+        populated = _populate_testbed(
+            ids[0].replace(":", "_") if ids else f"{vulnerable_package}_{vulnerable_version}",
+            vulnerable_package,
+            vulnerable_version,
+            _alternate,
+        )
+        if populated:
+            testbed_dir = populated
+            available_testbed_dirs.add(populated)  # cache for remaining workers
+        else:
+            tqdm.write(f"[WARN] No testbed dir for {ids} — record will be excluded from filtered output")
+
+    if cleaned_exclusion is not None:
+        tqdm.write(f"[INFO] Preserving cleaned exclusion for {ids}: VFC metadata was cleared")
+        vfc = dict(_EMPTY_VFC)
+    elif fix_commit.strip() and fix_commit.strip().lower() != "n/a":
         vfc = get_vfc(fix_commit) or dict(_EMPTY_VFC)
     else:
         vfc = dict(_EMPTY_VFC)
@@ -638,3 +837,10 @@ print(f"Wrote {len(testbed_vfcs)} IDs      → {p}")
 
 p = write_id_file(filtered_vfcs, "SecBench.js.PoCGen.vfc")
 print(f"Wrote {len(filtered_vfcs)} IDs      → {p}")
+
+# ── Auto-population summary ──────────────────────────────────────────────────
+s = _POPULATE_STATS
+print(
+    f"\nTestbed auto-population: {s['ok']} ok, {s['fail']} failed"
+    f"{', ' + str(s['skip_no_version']) + ' skipped (no version info)' if s['skip_no_version'] else ''}"
+)

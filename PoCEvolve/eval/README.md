@@ -36,6 +36,12 @@ bash PoCEvolve/eval/run_pipeline.sh --mode improvement
 
 # Compare results
 python3 PoCEvolve/eval/aggregate_metrics.py --baseline baseline/results/baseline_metrics.json --improvement baseline/results/improvement_metrics.json --output baseline/results/comparison.csv
+
+# Run only command-injection records from the current VFC dataset
+cd PoCEvolve
+python3 eval/e2e.py --mode baseline \
+  --dataset datasets/SecBench.js.PoCGen.vfc.195 \
+  --vulnerability-type command-injection
 ```
 
 ## Configuration
@@ -54,6 +60,9 @@ All configuration is in `PoCEvolve/src/config.py`:
 | `DATASET_LIST` | datasets/SecBench.js.PoCGen.vfc.190 | Target dataset file path |
 
 ## Dataset Selection
+
+`eval/e2e.py` accepts `--vulnerability-type` (for example,
+`command-injection`) and applies the filter before `--cve` or `--cve-count`.
 
 Two datasets are available:
 

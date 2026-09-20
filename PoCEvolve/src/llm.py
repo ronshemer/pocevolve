@@ -28,8 +28,8 @@ def _make_cache_dir() -> Path:
 	return cache_dir
 
 
-def _cache_path_for(system_prompt: str, prompt: str) -> Path:
-	key = f"model:{MODEL_NAME}\ntemp:{TEMPERATURE}\nsystem:{system_prompt}\n---\nprompt:{prompt}"
+def _cache_path_for(system_prompt: str, prompt: str, response_format: dict = None) -> Path:
+	key = f"model:{MODEL_NAME}\ntemp:{TEMPERATURE}\nsystem:{system_prompt}\nformat:{response_format}\n---\nprompt:{prompt}"
 	h = hashlib.sha256(key.encode("utf-8")).hexdigest()
 	return _make_cache_dir() / f"{h}.json"
 
@@ -40,13 +40,9 @@ def _strip_think_block(text: str) -> str:
 	return re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).lstrip()
 
 
-def call_llm(prompt: str, system_prompt: str = "You are a helpful assistant.") -> dict:
-	"""Call the configured OpenAI-compatible chat model and return full response data.
-
-	This function caches responses on disk keyed by a hash of `system_prompt` and `prompt`.
-	If a cached response exists it is returned instead of calling the external API.
-	"""
-	cache_file = _cache_path_for(system_prompt or "", prompt or "")
+def call_llm(prompt: str, system_prompt: str = "You are a helpful assistant.", response_format: dict = None) -> dict:
+	"""Call the configured OpenAI-compatible chat model and return full response data."""
+	cache_file = _cache_path_for(system_prompt or "", prompt or "", response_format)
 
 	if cache_file.exists():
 		try:
@@ -54,20 +50,23 @@ def call_llm(prompt: str, system_prompt: str = "You are a helpful assistant.") -
 			with cache_file.open("r", encoding="utf-8") as fh:
 				return json.load(fh)
 		except Exception:
-			# on read error, fall through and call LLM
 			pass
 
 	last_exc = None
 	for attempt in range(MAX_RETRY):
 		try:
-			response = llm.chat.completions.create(
-				model=MODEL_NAME,
-				messages=[
+			kwargs = {
+				"model": MODEL_NAME,
+				"messages": [
 					{"role": "system", "content": system_prompt},
 					{"role": "user", "content": prompt},
 				],
-				temperature=TEMPERATURE
-			)
+				"temperature": TEMPERATURE
+			}
+			if response_format:
+				kwargs["response_format"] = response_format
+
+			response = llm.chat.completions.create(**kwargs)
 			break
 		except Exception as exc:
 			last_exc = exc
@@ -87,7 +86,6 @@ def call_llm(prompt: str, system_prompt: str = "You are a helpful assistant.") -
 		with cache_file.open("w", encoding="utf-8") as fh:
 			json.dump(data, fh, ensure_ascii=False, indent=2)
 	except Exception:
-		# ignore cache write errors
 		pass
 
 	return data

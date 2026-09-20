@@ -284,6 +284,9 @@ phase_2_evolution() {
     # Export CVE_COUNT so evolver scripts read it from env for --cve-count filtering
     export CVE_COUNT="$CVE_COUNT"
 
+    # Pass through GEPA skip flag (default: enabled — set SKIP_GEPA=0 to re-enable GEPA)
+    export SKIP_GEPA="${SKIP_GEPA:-1}"
+
     # Export FILTERED_DATASET path via DATASET env var so evolvers pick it up
     if [[ -f "$FILTERED_DATASET" ]]; then
         export DATASET="$FILTERED_DATASET"

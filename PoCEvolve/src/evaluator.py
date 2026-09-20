@@ -1,4 +1,5 @@
 import json
+import re
 
 from src.llm import call_llm
 from src.utils import extract_js_triple_backticks
@@ -173,11 +174,49 @@ def _process_prompt(args):
     llm_output = call_llm(
         system_prompt=SCORING_LLM_SYSTEM_PROMPT,
         prompt=llm_prompt,
+        response_format={"type": "json_object"}
     )
+    
     prompt["scores_usage_summary"] = llm_output.get("usage")
-    prompt["scores_json"] = json.loads(llm_output["choices"][0]["message"]["content"].strip())
-    prompt["scores"] = [item['score'] for item in prompt["scores_json"]]
-    prompt["avg_score"] = sum(prompt["scores"]) / len(prompt["scores"])
+    raw_content = llm_output["choices"][0]["message"]["content"].strip()
+    
+    try:
+        # Strip markdown fences if hallucinated
+        cleaned = re.sub(r'^```(?:json)?\s*', '', raw_content, flags=re.IGNORECASE)
+        cleaned = re.sub(r'\s*```$', '', cleaned)
+        
+        # Extract strictly between the outermost brackets
+        start_idx = cleaned.find('[')
+        end_idx = cleaned.rfind(']') + 1
+        
+        if start_idx != -1 and end_idx > start_idx:
+            cleaned = cleaned[start_idx:end_idx]
+            
+        prompt["scores_json"] = json.loads(cleaned)
+    except json.JSONDecodeError:
+        print(f"[WARN] GEPA scoring JSON parse failed. Output: {raw_content}")
+        prompt["scores_json"] = [] # Fallback to prevent loop termination
+        
+    # Defensively parse scores regardless of whether the model returned dicts, numbers, or strings
+    scores_parsed = []
+    if isinstance(prompt["scores_json"], list):
+        for item in prompt["scores_json"]:
+            if isinstance(item, dict):
+                val = item.get('score', 0)
+                try:
+                    scores_parsed.append(float(val))
+                except (ValueError, TypeError):
+                    scores_parsed.append(0.0)
+            elif isinstance(item, (int, float)):
+                scores_parsed.append(float(item))
+            elif isinstance(item, str):
+                try:
+                    scores_parsed.append(float(item))
+                except ValueError:
+                    scores_parsed.append(0.0)
+                    
+    prompt["scores"] = scores_parsed
+    prompt["avg_score"] = sum(prompt["scores"]) / len(prompt["scores"]) if prompt["scores"] else 0
         
 
     context = {

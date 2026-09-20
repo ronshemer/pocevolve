@@ -1,9 +1,18 @@
 services:
   app:
     container_name: exploit-generation
+    # Host networking makes localhost inside the container = host's localhost,
+    # which is where Ollama binds by default (127.0.0.1:11434).
+    network_mode: host
     build: .
     image: exploit-generation:latest
     volumes:
       - .:/app
+      - ./testbed:/app/testbed
+    environment:
+      # Use localhost to reach Ollama (works because of network_mode: host)
+      - API_BASE=http://localhost:11434/v1
+    # Keep the container alive so `docker exec` works.
     tty: true
     stdin_open: true
+    command: bash
