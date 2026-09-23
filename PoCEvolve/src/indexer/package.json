@@ -1,0 +1,13 @@
+{
+  "name": "pocevolve",
+  "version": "1.0.0",
+  "description": "PoC Evolve - Automated PoC generation and evolution for CVE exploits in npm packages",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@sourcegraph/scip-typescript": "^0.4.0"
+  },
+  "scripts": {
+    "indexer": "scip-typescript index"
+  }
+}
