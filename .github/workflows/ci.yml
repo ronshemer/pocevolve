@@ -23,7 +23,7 @@ jobs:
       - name: Install scip-typescript for indexer
         run: |
           mkdir -p .
-          npm install --prefix PoCEvole/src/indexer
+          npm install --prefix PoCEvolve/src/indexer
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,6 +31,6 @@ jobs:
           python-version: "3.12"
 
       - name: Run indexer tests
-        working-directory: ./PoCEvole
+        working-directory: ./PoCEvolve
         run: |
           PYTHONPATH=. python -m unittest discover -s src/indexer/tests -v
