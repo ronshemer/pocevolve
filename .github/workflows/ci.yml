@@ -30,6 +30,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install Python protobuf dependency
+        run: pip install protobuf
+
       - name: Run indexer tests
         working-directory: ./PoCEvolve
         run: |
