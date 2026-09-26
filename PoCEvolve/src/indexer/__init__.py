@@ -95,43 +95,21 @@ def scan(package_root: str | Path, opts: config.IndexerConfig | None = None) -> 
     return result
 
 
-# ---------------------------------------------------------------------------
-# SCIP CLI invocation — bootstrap via Node.js helper (pure-JS testbeds)
-# ---------------------------------------------------------------------------
-
-def _resolve_helper():
-    """Return the path to scip-helper.mjs next to this module."""
-    candidate = Path(__file__).parent / 'scip-helper.mjs'
-    if candidate.exists():
-        return candidate
-    # Fallback for case-insensitive filesystems where cwd may resolve
-    # through a different case variant than __file__.
-    try:
-        real_cwd = Path(os.getcwd()).resolve()
-        return real_cwd.parent / 'indexer' / 'scip-helper.mjs'
-    except Exception:
-        return candidate  # caller will get FileNotFoundError either way
-
-
-_HELPER = _resolve_helper()
-
-
 def _run_scip_indexer(package_root: str, opts: config.IndexerConfig) -> str | None:
     """Run scip-typescript and return path to the output .scip file.
 
     Falls back to text-pb if binary output is rejected by scip-typescript.
-    Returns ``None`` when the CLI itself is unavailable (npx / node missing).
+    Returns ``None`` when the CLI itself is unavailable (node/npm missing).
     """
     tmp_dir = Path(opts.temp_dir)
     output_path = str(tmp_dir / "index.scip")
 
-    # Delegate to the Node.js helper; it handles tsconfig bootstrap + stub
-    # creation AND cleanup automatically.  Python callers don't manage temp files.
-    if not _HELPER.exists():
-        logger.warning("scip-helper.mjs not found at %s — SCIP indexing skipped", _HELPER)
+    helper = Path(__file__).parent / "scip-helper.cjs"
+    if not helper.exists():
+        logger.warning("scip-helper.cjs not found at %s — SCIP indexing skipped", helper)
         return None
 
-    cmd = ["node", str(_HELPER), "--cwd", package_root, "--output", output_path]
+    cmd = ["node", str(helper), "--cwd", package_root, "--output", output_path]
 
     try:
         proc = subprocess.run(
@@ -161,8 +139,8 @@ def _run_scip_indexer(package_root: str, opts: config.IndexerConfig) -> str | No
 def available() -> bool:
     """Return True if scip-typescript and protobuf are installed.
 
-    Checks both the Node.js toolchain (via *npx*) and the Python protobuf
-    runtime that is needed to read the binary output.
+    Checks the Python protobuf runtime (needed to read binary output)
+    and verifies Node.js can load the scip-helper.cjs module.
     """
     try:
         __import__("google.protobuf")
@@ -170,10 +148,12 @@ def available() -> bool:
         return False
 
     try:
+        helper = Path(__file__).parent / "scip-helper.cjs"
         proc = subprocess.run(
-            ["npx", "--yes", "@sourcegraph/scip-typescript", "--version"],
+            ["node", str(helper), "--version"],
             capture_output=True, text=True, timeout=30,
         )
+        # scip-helper prints version info or exits cleanly — any rc==0 means node+deps work
         return proc.returncode == 0
     except Exception:
         return False

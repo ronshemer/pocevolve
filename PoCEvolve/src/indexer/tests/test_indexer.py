@@ -280,15 +280,16 @@ def _mock_available():
     """Helper to test the availability check with patched subprocess."""
 
     def _run(args, **kwargs):
-        # Simulate checking if scip-typescript is installed.
+        # Simulate checking if scip-helper.cjs is available.
         if "version" in args:
-            raise FileNotFoundError("npx not found")
+            raise FileNotFoundError("node not found")
         return MagicMock(returncode=1)
 
     import subprocess  # noqa: PLC0415
 
+    helper = Path(__file__).resolve().parent.parent / "scip-helper.cjs"
     try:
-        subprocess.run(["npx", "--prefix", str(_PROJECT_ROOT / "node_modules"), "scip-typescript", "--version"], check=True, capture_output=True, timeout=30)  # noqa: S603
+        subprocess.run(["node", str(helper), "--version"], check=True, capture_output=True, timeout=30)  # noqa: S603
         return True
     except FileNotFoundError:
         return False
@@ -307,7 +308,7 @@ class TestScanPipeline(unittest.TestCase):
     """
 
     def test_scan_unavailable_gracefully(self):
-        """When scip-helper.mjs is not found, scan() returns an unavailable result."""
+        """When scip-helper.cjs is not found, scan() returns an unavailable result."""
         from src.indexer import scan  # noqa: PLC0415
 
         # Point at a directory that clearly has no helper — it will fail to find index.scip.

@@ -1,13 +1,14 @@
 {
-  "name": "pocevolve",
+  "name": "pocevole-indexer",
   "version": "1.0.0",
   "description": "PoC Evolve - Automated PoC generation and evolution for CVE exploits in npm packages",
   "private": true,
   "type": "module",
-  "devDependencies": {
+  "dependencies": {
     "@sourcegraph/scip-typescript": "^0.4.0"
   },
   "scripts": {
-    "indexer": "scip-typescript index"
+    "bootstrap": "npm install",
+    "indexer": "node scip-helper.mjs"
   }
 }
