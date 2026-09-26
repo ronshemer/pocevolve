@@ -76,8 +76,18 @@ class _MockDoc:
             return len(r) == 0
 
 
+class _MockSig:
+    """Minimal Signature-like object for tests."""
+
+    def __init__(self, occurrences=None):
+        self.occurrences = occurrences or []
+
+    def HasField(self, name):
+        return hasattr(self, name) and getattr(self, name) is not None
+
+
 # Import normaliser after path is set up.
-from src.indexer.normalizer import normalise, NormalizedGraph  # noqa: E402
+from src.indexer.normalizer import normalise, NormalizedGraph, _symbols_to_nodes  # noqa: E402
 
 
 class TestNormaliserBasic(unittest.TestCase):
@@ -158,6 +168,54 @@ class TestNormaliserDefinitions(unittest.TestCase):
         symbols_in_map = set(graph.symbol_map.keys())
         self.assertIn(s1.symbol, symbols_in_map)
         self.assertIn(s2.symbol, symbols_in_map)
+
+
+class TestSignatureDocumentationBug(unittest.TestCase):
+    """Verify NameError from occurrences/occs typo on line 173.
+
+    The code on line 172 binds `occs = sig.occurrences` but line 173
+    still references the undefined name ``occurrences``, causing a
+    NameError when *any* symbol has signature_documentation with
+    non-empty occurrences.
+    """
+
+    def test_symbols_to_nodes_nameerror_on_occurrences_typo(self):
+        """Regression test for occurrences/occs typo on line 173.
+
+        The code binds `occs = sig.occurrences` but then references the
+        undefined name ``occurrences``, causing a NameError.
+        After the fix, this test should pass (no exception).
+        """
+        # Build a mock Signature with a single occurrence.
+        occ = _MockSig()
+        line_range = MagicMock()
+        line_range.line = 41  # SCIP is 0-based; +1 gives line 42
+        occ.single_line_range = line_range
+        sig_doc = _MockSig()
+        sig_doc.occurrences = [occ]
+
+        # Build a mock SymbolInformation that carries the signature.
+        sym = _MockSymbol(symbol="pkg/src/index.js:myFunc", kind=17)  # Function
+        sym.signature_documentation = sig_doc
+        sym.scope = ("", "src/", "index.js")
+
+        # Before the fix, this raises NameError on `if occurrences:`.
+        # After the fix (occurrences → occs), it should succeed.
+        nodes = _symbols_to_nodes(
+            {sym.symbol: sym},  # type: ignore[arg-type]
+            root_path="/fake/root",
+        )
+        self.assertIn(sym.symbol, nodes)
+
+
+class TestSymbolKindNoKind:
+    """Symbols with kind=0x0 (NoKind / UNKNOWN) from scip-typescript."""
+
+    def test_no_kind_node_included(self):
+        sym = _MockSymbol(symbol="pkg/index.js:foo", kind=0)
+        sym.scope = ("", "pkg/", "index.js")
+        nodes = _symbols_to_nodes({sym.symbol: sym}, root_path="/fake/root")
+        assert len(nodes) == 1
 
 
 class TestParseScipResult(unittest.TestCase):

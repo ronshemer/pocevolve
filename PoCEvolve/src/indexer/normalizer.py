@@ -170,8 +170,8 @@ def _symbols_to_nodes(
         sig = getattr(sym, "signature_documentation", None)
         if sig is not None and hasattr(sig, "occurrences") and sig.occurrences:
             occs = sig.occurrences
-            if occurrences:
-                occ = occurrences[0]
+            if occs:
+                occ = occs[0]
                 line_start = _get_line(occ)
                 line_range = (line_start, line_start)
 
