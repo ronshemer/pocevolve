@@ -1,3 +1,4 @@
 openai
 sentence_transformers
 tqdm
+protobuf

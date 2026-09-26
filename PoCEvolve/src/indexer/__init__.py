@@ -69,7 +69,7 @@ def scan(package_root: str | Path, opts: config.IndexerConfig | None = None) -> 
         return result
 
     # --- Step 3: normalise to graph ----------------------------------------
-    norm = normalizer.normalise(parsed, root_path=str(Path(package_root).resolve()))
+    norm = normalizer.normalise(parsed.documents, root_path=str(Path(package_root).resolve()))
     result.available = len(norm.nodes) > 0
     result.nodes = norm.nodes
     result.edges = norm.edges
@@ -95,45 +95,39 @@ def scan(package_root: str | Path, opts: config.IndexerConfig | None = None) -> 
     return result
 
 
-# ---------------------------------------------------------------------------
-# SCIP CLI invocation (pure subprocess — no external helpers)
-# ---------------------------------------------------------------------------
-
 def _run_scip_indexer(package_root: str, opts: config.IndexerConfig) -> str | None:
     """Run scip-typescript and return path to the output .scip file.
 
     Falls back to text-pb if binary output is rejected by scip-typescript.
-    Returns ``None`` when the CLI itself is unavailable (npx / node missing).
+    Returns ``None`` when the CLI itself is unavailable (node/npm missing).
     """
     tmp_dir = Path(opts.temp_dir)
     output_path = str(tmp_dir / "index.scip")
 
-    cmd = [
-        "npx", "--yes", "@sourcegraph/scip-typescript", "index",
-        "--output", output_path,
-    ]
+    helper = Path(__file__).parent / "scip-helper.cjs"
+    if not helper.exists():
+        logger.warning("scip-helper.cjs not found at %s — SCIP indexing skipped", helper)
+        return None
 
-    merged_env: dict[str, str] = dict(os.environ)
-    if opts.env:
-        merged_env.update(opts.env)
+    cmd = ["node", str(helper), "--cwd", package_root, "--output", output_path]
 
     try:
         proc = subprocess.run(
             cmd,
             cwd=package_root,
-            env=merged_env,
+            env=dict(os.environ),
             capture_output=True,
             timeout=opts.timeout,
         )
         if proc.returncode != 0:
-            logger.warning("scip-typescript failed (rc=%d): %s", proc.returncode, proc.stderr.decode(errors="replace").strip())
+            logger.warning("scip-helper failed (rc=%d): %s", proc.returncode, proc.stderr.decode(errors="replace").strip())
             return None
     except FileNotFoundError:
-        logger.warning("npx not found — SCIP indexing skipped")
+        logger.warning("node not found — SCIP indexing skipped")
         return None  # type: ignore[return-value]
     except subprocess.TimeoutExpired:
-        logger.warning("scip-typescript timed out after %ds on %s", opts.timeout, package_root)
-        return False
+        logger.warning("scip-helper timed out after %ds on %s", opts.timeout, package_root)
+        return None
 
     return output_path
 
@@ -145,8 +139,8 @@ def _run_scip_indexer(package_root: str, opts: config.IndexerConfig) -> str | No
 def available() -> bool:
     """Return True if scip-typescript and protobuf are installed.
 
-    Checks both the Node.js toolchain (via *npx*) and the Python protobuf
-    runtime that is needed to read the binary output.
+    Checks the Python protobuf runtime (needed to read binary output)
+    and verifies Node.js can load the scip-helper.cjs module.
     """
     try:
         __import__("google.protobuf")
@@ -154,10 +148,12 @@ def available() -> bool:
         return False
 
     try:
+        helper = Path(__file__).parent / "scip-helper.cjs"
         proc = subprocess.run(
-            ["npx", "--yes", "@sourcegraph/scip-typescript", "--version"],
+            ["node", str(helper), "--version"],
             capture_output=True, text=True, timeout=30,
         )
+        # scip-helper prints version info or exits cleanly — any rc==0 means node+deps work
         return proc.returncode == 0
     except Exception:
         return False

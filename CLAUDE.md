@@ -18,3 +18,11 @@ DATASET=<path> python3 -B -m src.evolver_pocgen       # iterative (PoCGEN; needs
 **Eval:** `cd eval && cp config.env.example config.env && bash check_baseline.sh && bash run_pipeline.sh` → `eval/RUNBOOK.md`.
 
 **Docker:** `docker compose -f docker-compose.yml up -d` → `docker exec -it exploit-generation bash`. Prefer host for Ollama localhost.
+
+## Indexer (`PoCEvolve/src/indexer/`)
+
+**Flow:** `config.py` (IndexerConfig: temp_dir, timeout, env, prefer_text_fallback) → `__init__.py` (`scan()`) → `scip-helper.mjs` (bootstrap tsconfig, run @sourcegraph/scip-typescript, gzip output) → `parser.py` (protobuf `.scip` parse) → `normalizer.py` → graph.
+
+**Setup:** `requirements.txt` includes `protobuf`. Install npm deps via `npm ci` in `src/indexer/`.
+
+**Test:** `python3 -m pytest PoCEvolve/src/indexer/tests/test_indexer.py -v`. Defaults to SNYK-JS-DEEPLY-451026 (`deeply`) testbed; set `SCIP_TESTBED=/path` to override.
