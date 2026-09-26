@@ -232,7 +232,7 @@ def _mock_available():
     try:
         subprocess.run(["npx", "--prefix", str(_PROJECT_ROOT / "node_modules"), "scip-typescript", "--version"], check=True, capture_output=True, timeout=30)  # noqa: S603
         return True
-    except (FileNotFoundError, FileNotFoundError):
+    except FileNotFoundError:
         return False
 
 
@@ -240,22 +240,73 @@ def _mock_available():
 # Real-indexing integration test (skipped when deps unavailable).
 # ---------------------------------------------------------------------------
 
+class TestScanPipeline(unittest.TestCase):
+    """Verify the public scan() function works end-to-end when deps are available.
+
+    These tests do NOT require scip-typescript to produce a real index — they
+    verify the scanner handles the unavailable case gracefully and passes
+    IndexerConfig options correctly.
+    """
+
+    def test_scan_unavailable_gracefully(self):
+        """When scip-helper.mjs is not found, scan() returns an unavailable result."""
+        from src.indexer import scan  # noqa: PLC0415
+
+        # Point at a directory that clearly has no helper — it will fail to find index.scip.
+        result = scan("/nonexistent")
+        self.assertFalse(result.available)
+
+    def test_scan_config_respected(self):
+        """IndexerConfig overrides (temp_dir, timeout) are applied correctly."""
+        from src.indexer import config, scan  # noqa: PLC0415
+
+        opts = config.IndexerConfig(temp_dir="/tmp/scip-test-config", timeout=60)
+        result = scan("/nonexistent", opts=opts)
+        self.assertFalse(result.available)
+
+    def test_scan_available_check(self):
+        """When scip-typescript and protobuf are installed, available() returns True."""
+        from src.indexer import available  # noqa: PLC0415
+
+        if not available():
+            self.skipTest("SCIP prerequisites not installed (protobuf or scip-typescript)")
+
+    @unittest.skipIf(
+        not os.environ.get("CI_RUN"),
+        "Skipped by default — requires scip-typescript to be pre-installed in node_modules",
+    )
+    def test_scan_on_real_testbed(self):
+        """Run scanner on a real npm package and validate the graph."""
+        from src.indexer import scan  # noqa: PLC0415
+
+        testbed = os.environ.get(
+            "SCIP_TESTBED",
+            str(_PROJECT_ROOT.parent.parent / "testbed" / "SNYK-JS-DEEPLY-451026"),
+        )
+        result = scan(testbed)
+        self.assertTrue(result.available, f"Indexer should be available: {result.error}")
+        self.assertGreater(len(result.nodes), 0)
+        self.assertGreater(len(result.symbol_map), 0)
+
+
 class TestIntegrationRealIndex(unittest.TestCase):
     """Run scip-typescript on a small real package and validate the graph.
 
     Skipped when @sourcegraph/scip-typescript is not installed in PoCEvolve's
     node_modules or when no testbed packages exist.
+    Uses SNYK-JS-DEEPLY-451026 (deeply) as the default testbed — a pure-JS
+    package that stresses the TypeScript stub + tsconfig bootstrap path.
     """
+
+    TESTBED = "SNYK-JS-DEEPLY-451026"  # deeply
 
     @classmethod
     def skip_test(cls) -> bool:
         """Return True if prerequisites for real indexing are missing."""
-        # Check npm package.
         pkg_json = _PROJECT_ROOT / "node_modules" / "@sourcegraph" / "scip-typescript" / "package.json"
         if not pkg_json.is_file():
             return True
-        # Check testbed exists (user can set SCIP_TESTBED env var to point to one).
-        testbed = os.environ.get("SCIP_TESTBED", str(_PROJECT_ROOT.parent.parent / "testbed" / "SNYK-JS-ARPPING-1060047"))
+        testbed = os.environ.get("SCIP_TESTBED", str(_PROJECT_ROOT.parent.parent / "testbed" / cls.TESTBED))
         return not Path(testbed).is_dir()
 
     @classmethod
@@ -264,10 +315,10 @@ class TestIntegrationRealIndex(unittest.TestCase):
             raise unittest.SkipTest("SCIP integration prerequisites missing (package or testbed)")
 
     def test_full_pipeline_on_testbed(self):
-        """Run scanner, parser and normaliser end-to-end on the testbed package."""
+        """Run scanner, parser and normaliser end-to-end on the deeply testbed."""
         from src.indexer import scan  # noqa: PLC0415
 
-        testbed = os.environ.get("SCIP_TESTBED", str(_PROJECT_ROOT.parent.parent / "testbed" / "SNYK-JS-ARPPING-1060047"))
+        testbed = os.environ.get("SCIP_TESTBED", str(_PROJECT_ROOT.parent.parent / "testbed" / self.TESTBED))
         result = scan(testbed)
 
         # The scanner should report the indexer is available and return nodes.

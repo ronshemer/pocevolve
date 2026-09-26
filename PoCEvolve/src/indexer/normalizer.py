@@ -31,6 +31,7 @@ ROLE_READ_ACCESS  = 1 << 3 # 8
 
 # SCIP Kind enum values we consider as graph nodes.
 NODE_KINDS = frozenset({
+    0x0,   # NoKind (UNKNOWN) — scip-typescript produces this for pure JS code
     0x11,  # Function
     0x7,   # Class
     0x1d,  # Module
@@ -99,7 +100,7 @@ def normalise(
     for doc in documents:
         # Edges from SymbolInformation.relationships (is_reference=True).
         for sym in doc.symbols:
-            if not sym.HasField("relationships"):
+            if not getattr(sym, "relationships", None):
                 continue
             for rel in sym.relationships:
                 edge_key = (sym.symbol, rel.symbol, "calls")
@@ -146,9 +147,7 @@ def normalise(
 
 def _is_node_kind(sym: proto.SymbolInformation) -> bool:
     """Return True if *sym*'s Kind indicates a call-graph node."""
-    kind_val = 0
-    if hasattr(sym, "kind") and sym.HasField("kind"):
-        kind_val = sym.kind
+    kind_val = getattr(sym, "kind", 0)
     return kind_val in NODE_KINDS
 
 
@@ -168,8 +167,9 @@ def _symbols_to_nodes(
         file_path = _extract_file_path(sym, root_path)
 
         line_range: tuple[int, int] | None = None
-        if sym.HasField("signature_documentation") and sym.signature_documentation.HasField("occurrences"):
-            occurrences = sym.signature_documentation.occurrences
+        sig = getattr(sym, "signature_documentation", None)
+        if sig is not None and hasattr(sig, "occurrences") and sig.occurrences:
+            occs = sig.occurrences
             if occurrences:
                 occ = occurrences[0]
                 line_start = _get_line(occ)
@@ -197,7 +197,7 @@ def _get_line(occ: proto.Occurrence) -> int:
 
 def _get_occurrence_roles(occ: proto.Occurrence) -> int:
     """Return the integer bit-mask of roles from an :class:`~src.indexer._proto.scip_pb2.Occurrence`."""
-    if hasattr(occ, "symbol_roles") and occ.HasField("symbol_roles"):
+    if hasattr(occ, "symbol_roles"):
         return occ.symbol_roles
     # Fallback: scan relationships for definition flags.
     role_mask = 0
@@ -285,9 +285,7 @@ def _symbol_kind(sym: proto.SymbolInformation) -> str:
         103: "TypeClassConstructor",
     }
 
-    kind_val = 0
-    if hasattr(sym, "kind") and sym.HasField("kind"):
-        kind_val = sym.kind
+    kind_val = getattr(sym, "kind", 0)
     return kind_map.get(kind_val, f"Kind({kind_val})")
 
 

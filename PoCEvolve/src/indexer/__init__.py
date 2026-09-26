@@ -69,7 +69,7 @@ def scan(package_root: str | Path, opts: config.IndexerConfig | None = None) -> 
         return result
 
     # --- Step 3: normalise to graph ----------------------------------------
-    norm = normalizer.normalise(parsed, root_path=str(Path(package_root).resolve()))
+    norm = normalizer.normalise(parsed.documents, root_path=str(Path(package_root).resolve()))
     result.available = len(norm.nodes) > 0
     result.nodes = norm.nodes
     result.edges = norm.edges
@@ -96,8 +96,25 @@ def scan(package_root: str | Path, opts: config.IndexerConfig | None = None) -> 
 
 
 # ---------------------------------------------------------------------------
-# SCIP CLI invocation (pure subprocess — no external helpers)
+# SCIP CLI invocation — bootstrap via Node.js helper (pure-JS testbeds)
 # ---------------------------------------------------------------------------
+
+def _resolve_helper():
+    """Return the path to scip-helper.mjs next to this module."""
+    candidate = Path(__file__).parent / 'scip-helper.mjs'
+    if candidate.exists():
+        return candidate
+    # Fallback for case-insensitive filesystems where cwd may resolve
+    # through a different case variant than __file__.
+    try:
+        real_cwd = Path(os.getcwd()).resolve()
+        return real_cwd.parent / 'indexer' / 'scip-helper.mjs'
+    except Exception:
+        return candidate  # caller will get FileNotFoundError either way
+
+
+_HELPER = _resolve_helper()
+
 
 def _run_scip_indexer(package_root: str, opts: config.IndexerConfig) -> str | None:
     """Run scip-typescript and return path to the output .scip file.
@@ -108,32 +125,31 @@ def _run_scip_indexer(package_root: str, opts: config.IndexerConfig) -> str | No
     tmp_dir = Path(opts.temp_dir)
     output_path = str(tmp_dir / "index.scip")
 
-    cmd = [
-        "npx", "--yes", "@sourcegraph/scip-typescript", "index",
-        "--output", output_path,
-    ]
+    # Delegate to the Node.js helper; it handles tsconfig bootstrap + stub
+    # creation AND cleanup automatically.  Python callers don't manage temp files.
+    if not _HELPER.exists():
+        logger.warning("scip-helper.mjs not found at %s — SCIP indexing skipped", _HELPER)
+        return None
 
-    merged_env: dict[str, str] = dict(os.environ)
-    if opts.env:
-        merged_env.update(opts.env)
+    cmd = ["node", str(_HELPER), "--cwd", package_root, "--output", output_path]
 
     try:
         proc = subprocess.run(
             cmd,
             cwd=package_root,
-            env=merged_env,
+            env=dict(os.environ),
             capture_output=True,
             timeout=opts.timeout,
         )
         if proc.returncode != 0:
-            logger.warning("scip-typescript failed (rc=%d): %s", proc.returncode, proc.stderr.decode(errors="replace").strip())
+            logger.warning("scip-helper failed (rc=%d): %s", proc.returncode, proc.stderr.decode(errors="replace").strip())
             return None
     except FileNotFoundError:
-        logger.warning("npx not found — SCIP indexing skipped")
+        logger.warning("node not found — SCIP indexing skipped")
         return None  # type: ignore[return-value]
     except subprocess.TimeoutExpired:
-        logger.warning("scip-typescript timed out after %ds on %s", opts.timeout, package_root)
-        return False
+        logger.warning("scip-helper timed out after %ds on %s", opts.timeout, package_root)
+        return None
 
     return output_path
 
