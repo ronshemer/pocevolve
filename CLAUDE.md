@@ -2,6 +2,10 @@
 
 **Three sub-projects:** `cves-fixes/`, `PoCGen/`, `PoCEvolve/` (iterative exploit gen).
 
+## Documentation
+
+- [ARCHITECTURE.md](PoCEvolve/CLAUDE-plans/ARCHITECTURE.md) — Full system architecture, module layout, and data flow diagrams.
+
 ## PoCEvolve (`PoCEvolve/`)
 
 **Flow:** `config.py` → `generator.py` | `evolver_llm.py` | `evolver_pocgen.py` → `pipeline.py` → `evaluator.py` → `evolve_prompt.py` → `llm.py`+`prompts.py`. Support: `analyzer.py`, `verify.py`, `selector.py`, `train_set.py`.
