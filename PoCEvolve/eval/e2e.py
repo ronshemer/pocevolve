@@ -10,6 +10,12 @@ import queue
 from pathlib import Path
 from datetime import datetime
 
+# This file can be launched from either the repository root or PoCEvolve/.
+# Make the project package importable before phases import ``src.*`` modules.
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+if str(PROJECT_DIR) not in sys.path:
+    sys.path.insert(0, str(PROJECT_DIR))
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Evaluate PoCEvolve pipeline end-to-end")
     parser.add_argument("--mode", choices=["baseline", "improvement"], default="baseline",
@@ -30,6 +36,8 @@ def parse_args():
                         help="Skip GEPA optimization (default: skip)")
     parser.add_argument("--run-gepa", action="store_true",
                         help="Explicitly re-enable GEPA optimization (overriding default skip)")
+    parser.add_argument("--through", choices=["exploit-generation", "full"], default="full",
+                        help="Stop after initial exploit generation, or continue through evolution and metrics")
     return parser.parse_args()
 
 def stream_command(cmd, env_vars=None, cwd=None, log_file=None):
@@ -74,6 +82,7 @@ def stream_command(cmd, env_vars=None, cwd=None, log_file=None):
                 sys.stdout.write(line)
                 sys.stdout.flush()
                 f_log.write(line)
+                f_log.flush()
             except queue.Empty:
                 # Animate spinner
                 sys.stdout.write(f"\r\033[96m{spinner[spin_idx]} Working...\033[0m")
@@ -233,7 +242,7 @@ def main():
     args = parse_args()
     
     script_dir = Path(__file__).parent.resolve()
-    parent_dir = script_dir.parent
+    parent_dir = PROJECT_DIR
     
     # Setup Run Directory
     if args.resume_dir:
@@ -251,7 +260,7 @@ def main():
     run_log = run_dir / f"{run_id}.log"
     metrics_out = run_dir / f"{run_id}_metrics.json"
 
-    dataset = Path(args.dataset) if args.dataset else parent_dir / "datasets" / "SecBench.js.PoCGen.vfc.190"
+    dataset = Path(args.dataset) if args.dataset else parent_dir / "datasets" / "SecBench.js.PoCGen.vfc.173"
     if not dataset.exists():
         print(f"\033[91m[ERROR] Dataset not found: {dataset}\033[0m")
         sys.exit(1)
@@ -300,12 +309,36 @@ def main():
         phase_0_verify_env(parent_dir)
         sys.exit(0)
 
+    phase_0_verify_env(parent_dir)
+
     # Preflight: check that requested CVEs exist in the underlying source data.
     if args.cve or (args.cve_count and args.cve_count > 0):
         cve_ids = [l.strip() for l in Path(active_dataset).read_text().splitlines() if l.strip()]
         missing = _preflight_cve_check(run_dir, cve_ids, script_dir)
         if missing:
             sys.exit(1)
+
+    if args.mode == "improvement":
+        # Ensure static-analysis git testbeds exist before running generation.
+        # The manager checks out the vulnerable parent of each VFC fix commit.
+        from src.graph_analysis.testbed_manager import (
+            TestbedUnavailableError,
+            ensure_git_testbed,
+            find_vfc_record,
+        )
+        active_ids = [line.strip() for line in Path(active_dataset).read_text().splitlines()
+                      if line.strip() and not line.lstrip().startswith("#")]
+        for cve_id in active_ids:
+            try:
+                find_vfc_record(cve_id)
+            except LookupError:
+                print(f"[WARN] No VFC record for {cve_id}; skipping git testbed preparation.")
+                continue
+            try:
+                path = ensure_git_testbed(cve_id)
+                print(f"[OK] Vulnerable git testbed ready: {path}")
+            except (TestbedUnavailableError, ValueError, FileNotFoundError) as exc:
+                print(f"[WARN] Skipping static analysis for {cve_id}: {exc}")
 
     # Determine SKIP_GEPA: --run-gepa overrides everything → --skip-gepa respects env → default "1" (skip)
     if args.run_gepa and not args.skip_gepa:
@@ -325,13 +358,15 @@ def main():
     if args.mode == "improvement":
         env_vars["USE_STATIC_ANALYSIS"] = "true"
 
-    phase_0_verify_env(parent_dir)
-
     print(f"\n=== Phase 1: Vulnerability Analysis ===")
     stream_command(["python3", "-B", "-m", "src.analyzer"], env_vars=env_vars, cwd=parent_dir, log_file=run_log)
 
     print(f"\n=== Phase 2: VFC Generation ===")
     stream_command(["python3", "-B", "-m", "src.generator"], env_vars=env_vars, cwd=parent_dir, log_file=run_log)
+
+    if args.through == "exploit-generation":
+        print(f"\n=== Prepared through exploit generation ===\nRun directory: {run_dir}")
+        sys.exit(0)
 
     print(f"\n=== Phase 3: Exploit Evolution ===")
     evolver_script = "src.evolver_llm" if "vfc" in dataset.name else "src.evolver_pocgen"

@@ -1,5 +1,7 @@
 import json
 import csv
+import os
+import signal
 import subprocess
 import time
 import urllib.parse
@@ -94,6 +96,32 @@ def extract_js_triple_backticks(input_text: str) -> str:
 
     return extract_triple_backticks(input_text)
 
+def _strip_static_analysis(text) -> str:
+    """Remove any 'Static Analysis Context' section from *text*.
+
+    When USE_STATIC_ANALYSIS is disabled the value of the environment variable
+    controls whether static-analysis material may appear in prompts.  Prompts
+    that were saved during improvement mode (or training-set construction) may
+    still contain baked-in "Static Analysis Context" blocks.  This helper
+    strips them unconditionally so the env-var gate cannot be bypassed by
+    stale on-disk content.
+    """
+    if not text or not isinstance(text, str):
+        return text if isinstance(text, str) else ''
+
+    # Match the "Static Analysis Context" section and everything up to the next
+    # major markdown heading (###) or the end of the string.
+    cleaned = re.sub(
+        r'\n?\nStatic Analysis Context\s*\n[\s\S]*?(?=\n### |\Z)',
+        '',
+        text,
+        flags=re.MULTILINE,
+    )
+    # Normalise any remaining double blank lines left by the deletion
+    cleaned = re.sub(r'\n{3,}', '\n\n', cleaned)
+    return cleaned.strip()
+
+
 def url_encode_all_chars(input_str):
     return urllib.parse.quote(input_str, safe='')
 
@@ -183,7 +211,15 @@ def exec_command(cmd:str, cwd:str=".", timeout=COMMAND_TIMEOUT):
     :return: Standard output and standard error of the executed command.
     """
     try:
-        p = subprocess.Popen(cmd, cwd=cwd, shell=True, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen(
+            cmd,
+            cwd=cwd,
+            shell=True,
+            universal_newlines=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            start_new_session=True,
+        )
         start_time = time.time()
 
         while True:
@@ -191,7 +227,27 @@ def exec_command(cmd:str, cwd:str=".", timeout=COMMAND_TIMEOUT):
                 break
             elapsed_time = time.time() - start_time
             if timeout and elapsed_time > timeout:
-                p.terminate()
+                # Commands are launched through a shell, so terminating only
+                # that shell leaves descendants such as node --test running.
+                try:
+                    os.killpg(p.pid, signal.SIGTERM)
+                    p.wait(timeout=2)
+                except subprocess.TimeoutExpired:
+                    try:
+                        os.killpg(p.pid, signal.SIGKILL)
+                    except ProcessLookupError:
+                        pass
+                    p.wait()
+                except ProcessLookupError:
+                    pass
+                try:
+                    p.communicate(timeout=2)
+                except subprocess.TimeoutExpired:
+                    try:
+                        os.killpg(p.pid, signal.SIGKILL)
+                    except ProcessLookupError:
+                        pass
+                    p.communicate()
                 return f"The command reached timeout ({timeout} seconds)", ""
             time.sleep(1)
 

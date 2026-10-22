@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-DISKUSAGENG-564425",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-DISKUSAGENG-564425",
+  "indexed": true,
+  "entrypoints_count": 1,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

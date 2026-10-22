@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-DEEPREF-1049536",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-DEEPREF-1049536",
+  "indexed": true,
+  "entrypoints_count": 2,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

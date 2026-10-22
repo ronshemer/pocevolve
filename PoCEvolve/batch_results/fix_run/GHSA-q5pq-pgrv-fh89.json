@@ -1,0 +1,9 @@
+{
+  "cve_id": "npm_dns-sync_20141111",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/npm_dns-sync_20141111",
+  "indexed": true,
+  "entrypoints_count": 4,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

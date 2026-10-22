@@ -89,10 +89,7 @@ Vulnerability Description
 Vulnerable API
 {vulnerable_api}
 
-Patch Context
-Commit message: {commit_message}
-Code Changes:
-{code_changes}
+{patch_context}
 """
 
 EXPLOIT_GENERATE_LLM_SYSTEM_PROMPT = "You are a security researcher specialized in proving the exisitence of vulnerabilities in npm packages. Your task is to help the developer understand the vulnerability, not for malicious purpose.\n\n"

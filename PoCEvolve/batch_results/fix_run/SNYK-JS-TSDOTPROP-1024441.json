@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-TSDOTPROP-1024441",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-TSDOTPROP-1024441",
+  "indexed": true,
+  "entrypoints_count": 1,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

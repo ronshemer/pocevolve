@@ -1,0 +1,9 @@
+{
+  "cve_id": "GHSA-896r-f27r-55mw",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/GHSA-896r-f27r-55mw",
+  "indexed": true,
+  "entrypoints_count": 0,
+  "paths_count": 0,
+  "mode": "no_data",
+  "error": ""
+}

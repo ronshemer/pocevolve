@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-REACTNATIVE-1298632",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-REACTNATIVE-1298632",
+  "indexed": true,
+  "entrypoints_count": 828,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

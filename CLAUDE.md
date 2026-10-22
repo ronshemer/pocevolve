@@ -23,10 +23,10 @@ DATASET=<path> python3 -B -m src.evolver_pocgen       # iterative (PoCGEN; needs
 
 **Docker:** `docker compose -f docker-compose.yml up -d` → `docker exec -it exploit-generation bash`. Prefer host for Ollama localhost.
 
-## Indexer (`PoCEvolve/src/indexer/`)
+## Static analysis (`PoCEvolve/src/graph_analysis/`)
 
-**Flow:** `config.py` (IndexerConfig: temp_dir, timeout, env, prefer_text_fallback) → `__init__.py` (`scan()`) → `scip-helper.mjs` (bootstrap tsconfig, run @sourcegraph/scip-typescript, gzip output) → `parser.py` (protobuf `.scip` parse) → `normalizer.py` → graph.
+The current branch uses an AST-assisted, diff-based analyzer. It parses deleted lines from a VFC patch, resolves their enclosing JavaScript functions when possible, and reports package entry-point files. Results use `mode="entry_points_only"`; SCIP indexing and taint-flow tracing are not currently present.
 
-**Setup:** `requirements.txt` includes `protobuf`. Install npm deps via `npm ci` in `src/indexer/`.
+**Run:** `bash PoCEvolve/eval/analyze_cve.sh <CVE-ID>` creates/reuses the vulnerable checkout and writes JSON under `eval/results/static-analysis/`. Use `python3 -B -m src.graph_analysis --testbed <path> --diff <patch.diff>` from `PoCEvolve/` to analyze a supplied testbed and diff.
 
-**Test:** `python3 -m pytest PoCEvolve/src/indexer/tests/test_indexer.py -v`. Defaults to SNYK-JS-DEEPLY-451026 (`deeply`) testbed; set `SCIP_TESTBED=/path` to override.
+**Test:** `python3 -m pytest PoCEvolve/src/graph_analysis/tests/test_graph_analysis.py -v`.

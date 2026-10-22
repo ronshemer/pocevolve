@@ -20,6 +20,7 @@ vulnerability-descriptions
 SecBench.js
 .claude
 testbed
+src/git_testbeds/auto/
 exp-outputs
 saturn.data
 DONE.md

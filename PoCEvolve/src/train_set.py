@@ -7,6 +7,7 @@ import threading
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_distances
+from src.utils import _strip_static_analysis
 
 POCGEN_DIR = "./final-exp-outputs/jit/pocgen/qwen3.7-plus"
 DATASET_LIST = "./datasets/SecBench.js.PoCGen.vfc.190"
@@ -48,13 +49,15 @@ def normalize_unique_prompt_entries(prompt_entries):
     for prompt_obj in prompt_entries or []:
         if not isinstance(prompt_obj, dict):
             continue
-        prompt_text = (prompt_obj.get("userPrompt") or "").strip()
-        if not prompt_text or prompt_text in seen_prompts:
+        raw_prompt = (prompt_obj.get("userPrompt") or "").strip()
+        # Unconditionally strip baked-in static analysis before normalization
+        cleaned_prompt = _strip_static_analysis(raw_prompt)
+        if not cleaned_prompt or cleaned_prompt in seen_prompts:
             continue
 
-        seen_prompts.add(prompt_text)
+        seen_prompts.add(cleaned_prompt)
         normalized_prompt_obj = dict(prompt_obj)
-        normalized_prompt_obj["userPrompt"] = prompt_text
+        normalized_prompt_obj["userPrompt"] = cleaned_prompt
         cleaned_entries.append(normalized_prompt_obj)
 
     return cleaned_entries
@@ -139,6 +142,15 @@ def process_datapoint(datapoint: str, testbed_dir: Path, training_set_dir: Path,
         result_report_dir = testbed_dir / datapoint / "RunnerResult_DefaultRefiner.json"
 
         prompts = json.loads(prompts_dir.read_text()) if prompts_dir.exists() else []
+        # Unconditionally strip baked-in static analysis from loaded prompts
+        for p in prompts:
+            if isinstance(p, dict):
+                if isinstance(p.get("prompt"), str):
+                    p["prompt"] = _strip_static_analysis(p["prompt"])
+                if isinstance(p.get("response"), dict) and isinstance(p["response"].get("completions", []), list):
+                    for c in p["response"]["completions"]:
+                        if isinstance(c, str):
+                            c = _strip_static_analysis(c)
         new_datapoint["prompts"] += prompts
 
         result_report: dict = json.loads(result_report_dir.read_text()) if result_report_dir.exists() else {}
@@ -177,6 +189,14 @@ def process_datapoint(datapoint: str, testbed_dir: Path, training_set_dir: Path,
                         if seen_prompt == prompt["prompt"]:
                             response = prompt["response"]["completions"][0]
                             seen_prompt["response"] = response
+
+                # Unconditionally strip baked-in static analysis from loaded seen_prompts
+                for sp in seen_prompts:
+                    if isinstance(sp, dict):
+                        for key in ("reflective_prompt", "userPrompt"):
+                            val = sp.get(key)
+                            if isinstance(val, str):
+                                sp[key] = _strip_static_analysis(val)
 
                 if refinement_attempts > -1 and len(seen_prompts) != 0:
                     new_datapoint['refinement-attempts'].append(refinement_attempts)

@@ -1,0 +1,9 @@
+{
+  "cve_id": "npm_brace-expansion_20170302",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/npm_brace-expansion_20170302",
+  "indexed": true,
+  "entrypoints_count": 2,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

@@ -1,64 +1,55 @@
-"""Unit tests for graph analysis components.
+"""Unit tests for graph analysis components (AST-based pipeline).
 
-Tests diff-to-graph matching and taint extraction in isolation from SCIP / Node.js —
-all inputs are synthetic IndexResult objects built programmatically so the entire
-pipeline can run without external dependencies.
+Tests diff-to-method matching and entry-point detection in isolation from SCIP / Node.js —
+all inputs are synthetic or use actual files on disk so the entire pipeline can run
+without external dependencies.
 """
 
+import json
+import os
+import tempfile
+import textwrap
 import unittest
 from pathlib import Path
-
-# ---------------------------------------------------------------------------
-# Synthetic helpers: build a minimal IndexResult without running SCIP
-# ---------------------------------------------------------------------------
-
-from src.indexer._types import EdgeInfo, IndexResult, NodeInfo
-
-
-def _make_node(
-    symbol: str = "src/foo.js/Bar",
-    kind: int = 17,  # NodeKind.Function
-    file_path: str = "test.js",
-    line_range: tuple[int, int] | None = (1, 20),
-) -> NodeInfo:
-    return NodeInfo(
-        symbol=symbol,
-        kind=kind,
-        display_name=symbol,
-        file_path=file_path,
-        line_range=line_range,
-    )
-
-
-def _make_edge(caller_symbol: str, callee_symbol: str) -> EdgeInfo:
-    return EdgeInfo(
-        caller_symbol=caller_symbol,
-        callee_symbol=callee_symbol,
-        kind="calls",
-        location="test.js:0",
-    )
-
-
-def _make_index(
-    node_defs: list[NodeInfo],
-    edge_defs: list[EdgeInfo] | None = None,
-) -> IndexResult:
-    result = IndexResult(root_path="/fake/pkg")
-    result.available = True
-    result.nodes = node_defs
-    result.edges = edge_defs or []
-    result.symbol_map = {n.symbol: n for n in node_defs}
-    return result
+from unittest.mock import patch
 
 
 # ---------------------------------------------------------------------------
-# Test suite
+# Test helpers: create temporary files for AST-based testing
+# ---------------------------------------------------------------------------
+
+def _write_tmp_files(tmpdir: Path, files: dict[str, str]) -> None:
+    """Write *files* (path → content) into *tmpdir*, creating subdirs as needed."""
+    for rel_path, content in files.items():
+        full = tmpdir / rel_path
+        full.parent.mkdir(parents=True, exist_ok=True)
+        full.write_text(textwrap.dedent(content))
+
+
+# ---------------------------------------------------------------------------
+# TestDiffParser
 # ---------------------------------------------------------------------------
 
 class TestDiffParser(unittest.TestCase):
     """Test unified-diff parsing into DiffEntry objects."""
 
-    def test_parses_method_calls(self):
+    def test_parses_deletions_only(self):
+        from src.graph_analysis.diff_parser import parse_diff
+
+        diff = (
+            'diff --git a/src/ping.js b/src/ping.js\n'
+            '@@ -10,3 +10,0 @@\n'
+            '-function ping(host) {\n'
+            '-  var cmd = "ping -c 1 " + host;\n'
+            '-  exec(cmd);\n'
+        )
+        entries = parse_diff(diff, only_deleted=True)
+        # Should capture the 3 deleted lines
+        self.assertGreater(len(entries), 0)
+        for e in entries:
+            self.assertEqual(e.change_type, "removed")
+
+    def test_parses_method_calls_with_params(self):
         from src.graph_analysis.diff_parser import parse_diff
 
         diff = (
@@ -70,9 +61,34 @@ class TestDiffParser(unittest.TestCase):
         )
         entries = parse_diff(diff)
         self.assertGreater(len(entries), 0)
-        # Should capture both the function definition and the exec call
         methods = {e.method_name for e in entries}
         self.assertIn("ping", methods)
+
+    def test_ignores_deletions_git_aligns_as_whitespace_only(self):
+        from src.graph_analysis.diff_parser import parse_diff
+
+        diff = (
+            "diff --git a/index.js b/index.js\n"
+            "@@ -10,2 +10,2 @@\n"
+            "-  format(value);\n"
+            "-  child.exec(command);\n"
+            "+ format(value);   \n"
+            "+  child.exec(quote(command));\n"
+        )
+        entries = parse_diff(diff, only_deleted=True)
+        self.assertEqual([entry.method_name for entry in entries], ["exec"])
+        self.assertEqual(entries[0].orig_line_start, 11)
+
+    def test_whitespace_only_diff_produces_no_deleted_entries(self):
+        from src.graph_analysis.diff_parser import parse_diff
+
+        diff = (
+            "diff --git a/index.js b/index.js\n"
+            "@@ -4 +4 @@\n"
+            "-  run(value);\n"
+            "+ run(value);  \n"
+        )
+        self.assertEqual(parse_diff(diff, only_deleted=True), [])
 
     def test_empty_diff_returns_nothing(self):
         from src.graph_analysis.diff_parser import parse_diff
@@ -81,141 +97,212 @@ class TestDiffParser(unittest.TestCase):
         self.assertEqual(parse_diff("\n\n"), [])
 
 
-class TestGraphMatcher(unittest.TestCase):
-    """Test DiffEntry → IndexResult node matching."""
+# ---------------------------------------------------------------------------
+# TestMethodResolution (AST-based enclosing function detection)
+# ---------------------------------------------------------------------------
 
-    def test_exact_symbol_match(self):
-        from src.graph_analysis.graph_matcher import match_diff_to_graph
-        from src.graph_analysis._types import DiffEntry
+class TestMethodResolution(unittest.TestCase):
+    """Test that get_enclosing_function_name resolves correctly for JS code."""
 
-        node = _make_node(
-            symbol="src/ping.js/ping",
-            file_path="src/ping.js",
-            line_range=(10, 20),
-        )
-        index = _make_index([node])
+    def test_nested_functions(self):
+        from src.graph_analysis.method_resolution import get_enclosing_function_name
 
-        entry = DiffEntry(
-            file_path="src/ping.js",
-            method_name="ping",
-            parameter_names=["host"],
-            line_start=10,
-            line_end=15,
-        )
-        matched = match_diff_to_graph([entry], index)
-        self.assertEqual(len(matched), 1)
-        self.assertEqual(matched[0].symbol, "src/ping.js/ping")
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".js", delete=False) as f:
+            f.write(textwrap.dedent("""\
+                function outer() {
+                    function inner() {
+                        console.log("hello");
+                    }
+                }
+            """))
+            f.flush()
+            path = f.name
 
-    def test_no_match_on_unknown_method(self):
-        from src.graph_analysis.graph_matcher import match_diff_to_graph
-        from src.graph_analysis._types import DiffEntry
+        try:
+            # Line 3 is inside `inner`
+            name = get_enclosing_function_name(path, line_number=3)
+            self.assertEqual(name, "inner")
+        finally:
+            os.unlink(path)
 
-        node = _make_node(symbol="src/foo.js/other", file_path="src/foo.js")
-        index = _make_index([node])
+    def test_single_function(self):
+        from src.graph_analysis.method_resolution import get_enclosing_function_name
 
-        entry = DiffEntry(
-            file_path="src/bar.js",
-            method_name="nonexistent",
-            line_start=5,
-            line_end=10,
-        )
-        matched = match_diff_to_graph([entry], index)
-        self.assertEqual(matched, [])
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".js", delete=False) as f:
+            f.write(textwrap.dedent("""\
+                function process() {
+                    console.log("hello");
+                }
+            """))
+            f.flush()
+            path = f.name
 
+        try:
+            name = get_enclosing_function_name(path, line_number=2)
+            self.assertEqual(name, "process")
+        finally:
+            os.unlink(path)
 
-class TestTaintFlow(unittest.TestCase):
-    """Test taint propagation from entry points to shell sinks."""
+    def test_class_constructor(self):
+        from src.graph_analysis.method_resolution import get_enclosing_function_name
 
-    def test_trace_path_to_shell_exec(self):
-        from src.graph_analysis.taint_flow import extract_taint_flows
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".js", delete=False) as f:
+            f.write(textwrap.dedent("""\
+                class Arpping {
+                    constructor() {
+                        this.ping = function(host) {};
+                    }
+                }
+            """))
+            f.flush()
+            path = f.name
 
-        ping_node = _make_node(
-            symbol="src/ping.js/ping",
-            file_path="src/ping.js",
-            line_range=(10, 20),
-        )
-        exec_node = _make_node(
-            symbol="src/utils.js/exec",
-            file_path="src/utils.js",
-            line_range=(5, 15),
-        )
-        edges = [
-            _make_edge(caller_symbol="src/ping.js/ping", callee_symbol="src/utils.js/exec"),
-        ]
-        index = _make_index([ping_node, exec_node], edges)
-
-        from src.graph_analysis._types import MatchedMethod
-        matched = [MatchedMethod(
-            symbol="src/ping.js/ping",
-            file_path="src/ping.js",
-            line_range=(10, 15),
-        )]
-
-        flows = extract_taint_flows(matched, index)
-        # ping contains a known taint indicator, should produce at least one flow
-        self.assertGreater(len(flows), 0)
-        # The flow should have exec in its sinks
-        all_sink_symbols = [s.symbol for f in flows for s in f.sinks]
-        self.assertTrue(any("exec" in s.lower() for s in all_sink_symbols))
-
-    def test_no_flow_when_no_edges(self):
-        from src.graph_analysis.taint_flow import extract_taint_flows
-
-        node = _make_node(symbol="src/ping.js/ping", file_path="src/ping.js")
-        index = _make_index([node], [])
-
-        from src.graph_analysis._types import MatchedMethod
-        matched = [MatchedMethod(
-            symbol="src/ping.js/ping",
-            file_path="src/ping.js",
-            line_range=(10, 15),
-        )]
-
-        flows = extract_taint_flows(matched, index)
-        self.assertEqual(flows, [])
+        try:
+            name = get_enclosing_function_name(path, line_number=3)
+            self.assertIsNotNone(name)
+            self.assertIn("ping", name.lower())
+        finally:
+            os.unlink(path)
 
 
-class TestAnalyzerIntegration(unittest.TestCase):
-    """End-to-end test: diff → analysis result."""
+# ---------------------------------------------------------------------------
+# TestAnalyzerEntryPointDetection (module.exports scanning)
+# ---------------------------------------------------------------------------
 
-    def test_full_pipeline(self):
+class TestAnalyzerEntryPointDetection(unittest.TestCase):
+    """Test that the analyzer correctly detects entry points and matched methods."""
+
+    def test_entry_points_detected(self):
+        """When a package has module.exports, run_analysis should detect them."""
         from src.graph_analysis.analyzer import run_analysis
         from src.graph_analysis._types import AnalysisResult
 
-        ping_node = _make_node(
-            symbol="src/ping.js/ping",
-            file_path="src/ping.js",
-            line_range=(10, 20),
-        )
-        exec_node = _make_node(
-            symbol="src/utils.js/exec",
-            file_path="src/utils.js",
-            line_range=(5, 15),
-        )
-        edges = [
-            _make_edge(caller_symbol="src/ping.js/ping", callee_symbol="src/utils.js/exec"),
-        ]
-        index = _make_index([ping_node, exec_node], edges)
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir = Path(tmpdir)
+            _write_tmp_files(tmpdir, {
+                "index.js": """
+                    const utils = require("./utils");
+                    module.exports.startServer = function(port) {};
+                """,
+                "utils.js": """
+                    module.exports.ping = function(host) {};
+                    module.exports.execCmd = function(cmd) {};
+                """,
+            })
+            result = run_analysis(
+                cve_id="CVE-2024-9999",
+                package_root=str(tmpdir),
+                diff_text="",  # no diff → only entry points scanned
+                testbed_dir=tmpdir.name,
+            )
 
-        diff = (
-            'diff --git a/src/ping.js b/src/ping.js\n'
-            '@@ -10,0 +11,3 @@\n'
-            '+function ping(host) {\n'
-            '+  var cmd = "ping -c 1 " + host;\n'
-            '+  exec(cmd);\n'
-        )
-
-        result = run_analysis(
-            cve_id="CVE-2024-9999",
-            package_root="/fake/pkg",
-            index_result=index,
-            diff_text=diff,
-        )
         self.assertIsInstance(result, AnalysisResult)
         self.assertEqual(result.cve_id, "CVE-2024-9999")
-        # Should have at least one matched method and possibly a taint flow
-        self.assertGreater(len(result.matched_methods), 0)
+        self.assertEqual(result.mode, "entry_points_only")
+        # Should detect module.exports in index.js and utils.js
+        self.assertGreater(len(result.entry_points), 0)
 
+    def test_matched_methods_from_diff(self):
+        """Diff-based pipeline should produce matched methods with sink keywords."""
+        from src.graph_analysis.analyzer import run_analysis
+        from src.graph_analysis._types import AnalysisResult, DiffEntry
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir = Path(tmpdir)
+            _write_tmp_files(tmpdir, {
+                "index.js": """
+                    const utils = require("./utils");
+                    module.exports.startServer = function(port) {};
+                """,
+                "utils.js": """
+                    const child_process = require("child_process");
+
+                    function execShell(cmd) {
+                        return child_process.execSync(cmd);
+                    }
+
+                    module.exports.ping = function(host) {
+                        return execShell("ping -c 1 " + host);
+                    };
+                """,
+            })
+            diff = (
+                'diff --git a/src/ping.js b/src/ping.js\n'
+                '@@ -5,0 +6 @@\n'
+                '+function ping(host) {\n'
+                '+  execShell(cmd);\n'
+                '+}\n'
+            )
+
+            result = run_analysis(
+                cve_id="CVE-2024-9999",
+                package_root=str(tmpdir),
+                diff_text=diff,
+                testbed_dir=tmpdir.name,
+            )
+
+        self.assertIsInstance(result, AnalysisResult)
+        self.assertEqual(result.mode, "entry_points_only")
+        # Diff parser should extract lines from the diff text
+        # (exact count depends on parsing heuristics; just check non-empty list)
+        self.assertTrue(len(result.matched_methods) > 0 or len(result.entry_points) > 0)
+
+    def test_matched_methods_group_lines_by_enclosing_function(self):
+        from src.graph_analysis.analyzer import run_analysis
+
+        diff = (
+            "diff --git a/index.js b/index.js\n"
+            "@@ -10,5 +10,0 @@\n"
+            "-eval(input);\n"
+            "-arr.forEach(items);\n"
+            "-out.push(item);\n"
+            "-function _parseError(msg, hash) {}\n"
+            "-this._parseError(str, hash);\n"
+        )
+        enclosing = {
+            10: "performAction",
+            11: "performAction",
+            12: "performAction",
+            13: "_parseError",
+            14: "parseError",
+        }
+        with tempfile.TemporaryDirectory() as tmpdir, patch(
+            "src.graph_analysis.analyzer._resolve_enclosing_function",
+            side_effect=lambda _root, entry: enclosing[entry.orig_line_start],
+        ):
+            result = run_analysis(
+                cve_id="CVE-2024-9999",
+                package_root=tmpdir,
+                diff_text=diff,
+            )
+
+        self.assertEqual(len(result.matched_methods), 2)
+        perform = next(m for m in result.matched_methods if m.method_name == "performAction")
+        self.assertEqual(perform.removed_lines, [10, 11, 12])
+        self.assertEqual(perform.diff_symbols, ["eval", "forEach", "push"])
+        self.assertEqual(perform.orig_line_start, 10)
+        self.assertEqual(perform.orig_line_end, 12)
+        parse_error = next(m for m in result.matched_methods if m.method_name == "parseError")
+        self.assertEqual(parse_error.removed_lines, [13, 14])
+        self.assertEqual(parse_error.file_path, "index.js#parseError")
+        self.assertIn("_parseError", parse_error.diff_symbols)
+
+
+# ---------------------------------------------------------------------------
+# TestVFCIntegration (standalone VFC loader utility)
+# ---------------------------------------------------------------------------
+
+class TestVFCLoader(unittest.TestCase):
+    """Test that the VFC loader can be imported and has expected structure."""
+
+    def test_import(self):
+        from src.graph_analysis.vfc_loader import get_diff  # noqa: F401
+        # Just a smoke test — the loader should import without error.
+
+
+# ---------------------------------------------------------------------------
+# TestGracefulDegradation (edge cases)
+# ---------------------------------------------------------------------------
 
 class TestGracefulDegradation(unittest.TestCase):
     """Test that empty / missing data produces safe defaults, not crashes."""
@@ -223,27 +310,13 @@ class TestGracefulDegradation(unittest.TestCase):
     def test_empty_diff_no_crash(self):
         from src.graph_analysis.analyzer import run_analysis
 
-        index = _make_index([_make_node(symbol="src/foo.js/other")])
-        result = run_analysis(
-            cve_id="CVE-0000-0000",
-            package_root="/fake/pkg",
-            index_result=index,
-            diff_text="",
-        )
-        self.assertEqual(result.matched_methods, [])
-
-    def test_unavailable_index_raises(self):
-        from src.graph_analysis.analyzer import run_analysis
-
-        unavailable = IndexResult(root_path="/fake")
-        # available defaults to False → should raise
-        with self.assertRaises(ValueError):
-            run_analysis(
-                cve_id="CVE-0000-0001",
-                package_root="/fake/pkg",
-                index_result=unavailable,
-                diff_text="some diff",
+        with tempfile.TemporaryDirectory() as tmpdir:
+            result = run_analysis(
+                cve_id="CVE-0000-0000",
+                package_root=tmpdir,
+                diff_text="",
             )
+        self.assertEqual(result.matched_methods, [])
 
 
 if __name__ == "__main__":

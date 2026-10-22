@@ -1,0 +1,1497 @@
+{
+  "SNYK-JS-HOTFORMULAPARSER-541328": {
+    "testbed_dir": "SNYK-JS-HOTFORMULAPARSER-541328",
+    "vulnerable_package": "hot-formula-parser",
+    "vulnerability_fix_commit": "https://github.com/handsontable/formula-parser/commit/396b089738d4bf30eb570a4fe6a188affa95cd5e"
+  },
+  "GHSA-rc77-xxq6-4mff": {
+    "testbed_dir": "SNYK-JS-HOTFORMULAPARSER-541328",
+    "vulnerable_package": "hot-formula-parser",
+    "vulnerability_fix_commit": "https://github.com/handsontable/formula-parser/commit/396b089738d4bf30eb570a4fe6a188affa95cd5e"
+  },
+  "SNYK-JS-ISMYJSONVALID-597167": {
+    "testbed_dir": "SNYK-JS-ISMYJSONVALID-597167",
+    "vulnerable_package": "is-my-json-valid",
+    "vulnerability_fix_commit": "https://github.com/mafintosh/is-my-json-valid/commit/3419563687df463b4ca709a2b46be8e15d6a2b3d"
+  },
+  "GHSA-f522-ffg8-j8r6": {
+    "testbed_dir": "SNYK-JS-ISMYJSONVALID-597165",
+    "vulnerable_package": "is-my-json-valid",
+    "vulnerability_fix_commit": "https://github.com/mafintosh/is-my-json-valid/commit/c3fc04fc455d40e9b29537f8e2c73a28ce106edb"
+  },
+  "SNYK-JS-JSYAML-174129": {
+    "testbed_dir": "SNYK-JS-JSYAML-174129",
+    "vulnerable_package": "js-yaml",
+    "vulnerability_fix_commit": "https://github.com/nodeca/js-yaml/pull/480/commits/e18afbf1edcafb7add2c4c7b22abc8d6ebc2fa61"
+  },
+  "GHSA-xxvw-45rp-3mj2": {
+    "testbed_dir": "SNYK-JS-JSYAML-174129",
+    "vulnerable_package": "js-yaml",
+    "vulnerability_fix_commit": "https://github.com/nodeca/js-yaml/pull/480/commits/e18afbf1edcafb7add2c4c7b22abc8d6ebc2fa61"
+  },
+  "npm:mixin-pro:20160407": {
+    "testbed_dir": "npm_mixin-pro_20160407",
+    "vulnerable_package": "mixin-pro",
+    "vulnerability_fix_commit": "https://github.com/floatinghotpot/mixin-pro/commit/8bb355209f0a082d24b04355b3e8051a6455454f"
+  },
+  "npm:mobile-icon-resizer:20160408": {
+    "testbed_dir": "npm_mobile-icon-resizer_20160408",
+    "vulnerable_package": "mobile-icon-resizer",
+    "vulnerability_fix_commit": "https://github.com/muzzley/mobile-icon-resizer/commit/a6c50f884bd282d74ab77e1fce6317d5d0dd2f0f"
+  },
+  "GHSA-mxjr-xmcg-fg7w": {
+    "testbed_dir": "npm_mobile-icon-resizer_20160408",
+    "vulnerable_package": "mobile-icon-resizer",
+    "vulnerability_fix_commit": "https://github.com/muzzley/mobile-icon-resizer/commit/a6c50f884bd282d74ab77e1fce6317d5d0dd2f0f"
+  },
+  "npm:mol-proto:20160407": {
+    "testbed_dir": "npm_mol-proto_20160407",
+    "vulnerable_package": "mol-proto",
+    "vulnerability_fix_commit": "https://github.com/milojs/proto/pull/2/commits/10adbec293e7dfdb2e9e565bfd77187cf0373cbe"
+  },
+  "SNYK-JS-PIXLCLASS-564968": {
+    "testbed_dir": "SNYK-JS-PIXLCLASS-564968",
+    "vulnerable_package": "pixl-class",
+    "vulnerability_fix_commit": "https://github.com/jhuckaby/pixl-class/commit/47677a3638e3583e42f3a05cc7f0b30293d2acc8"
+  },
+  "GHSA-vm5j-vqr6-v7v8": {
+    "testbed_dir": "SNYK-JS-PIXLCLASS-564968",
+    "vulnerable_package": "pixl-class",
+    "vulnerability_fix_commit": "https://github.com/jhuckaby/pixl-class/commit/47677a3638e3583e42f3a05cc7f0b30293d2acc8"
+  },
+  "SNYK-JS-SERIALIZEJAVASCRIPT-570062": {
+    "testbed_dir": "SNYK-JS-SERIALIZEJAVASCRIPT-570062",
+    "vulnerable_package": "serialize-javascript",
+    "vulnerability_fix_commit": "https://github.com/yahoo/serialize-javascript/commit/f21a6fb3ace2353413761e79717b2d210ba6ccbd"
+  },
+  "GHSA-hxcc-f52p-wc94": {
+    "testbed_dir": "SNYK-JS-SERIALIZEJAVASCRIPT-570062",
+    "vulnerable_package": "serialize-javascript",
+    "vulnerability_fix_commit": "https://github.com/yahoo/serialize-javascript/commit/f21a6fb3ace2353413761e79717b2d210ba6ccbd"
+  },
+  "npm:serialize-to-js:20170208": {
+    "testbed_dir": "npm_serialize-to-js_20170208",
+    "vulnerable_package": "serialize-to-js",
+    "vulnerability_fix_commit": "https://github.com/commenthol/serialize-to-js/commit/1cd433960e5b9db4c0b537afb28366198a319429"
+  },
+  "GHSA-mm62-wxc8-cf7m": {
+    "testbed_dir": "npm_serialize-to-js_20170208",
+    "vulnerable_package": "serialize-to-js",
+    "vulnerability_fix_commit": "https://github.com/commenthol/serialize-to-js/commit/1cd433960e5b9db4c0b537afb28366198a319429"
+  },
+  "SNYK-JS-THENIFY-571690": {
+    "testbed_dir": "SNYK-JS-THENIFY-571690",
+    "vulnerable_package": "thenify",
+    "vulnerability_fix_commit": "https://github.com/thenables/thenify/commit/0d94a24eb933bc835d568f3009f4d269c4c4c17a"
+  },
+  "GHSA-cf4h-3jhx-xvhq": {
+    "testbed_dir": "GHSA-cf4h-3jhx-xvhq",
+    "vulnerable_package": "underscore",
+    "vulnerability_fix_commit": "https://github.com/jashkenas/underscore/commit/4c73526d43838ad6ab43a6134728776632adeb66"
+  },
+  "SNYK-JS-ARPPING-1060047": {
+    "testbed_dir": "SNYK-JS-ARPPING-1060047",
+    "vulnerable_package": "arpping",
+    "vulnerability_fix_commit": "https://github.com/haf-decent/arpping/commit/0db06723f8c3c73a5cc0829c667d45cba25ca44d"
+  },
+  "SNYK-JS-ASYNCGIT-1064877": {
+    "testbed_dir": "SNYK-JS-ASYNCGIT-1064877",
+    "vulnerable_package": "async-git",
+    "vulnerability_fix_commit": "https://github.com/omrilotan/async-git/commit/d1950a5021f4e19d92f347614be0d85ce991510d"
+  },
+  "GHSA-6qpr-9mc5-7gch": {
+    "testbed_dir": "SNYK-JS-ASYNCGIT-1064877",
+    "vulnerable_package": "async-git",
+    "vulnerability_fix_commit": "https://github.com/omrilotan/async-git/commit/d1950a5021f4e19d92f347614be0d85ce991510d"
+  },
+  "SNYK-JS-BESTZIP-609371": {
+    "testbed_dir": "SNYK-JS-BESTZIP-609371",
+    "vulnerable_package": "bestzip",
+    "vulnerability_fix_commit": "https://github.com/nfriedly/node-bestzip/commit/45d4a901478c6a8f396c8b959dd6cf8fd3f955b6"
+  },
+  "GHSA-6xv6-jpvw-cx6q": {
+    "testbed_dir": "SNYK-JS-BESTZIP-609371",
+    "vulnerable_package": "bestzip",
+    "vulnerability_fix_commit": "https://github.com/nfriedly/node-bestzip/commit/45d4a901478c6a8f396c8b959dd6cf8fd3f955b6"
+  },
+  "SNYK-JS-BLAMER-559541": {
+    "testbed_dir": "SNYK-JS-BLAMER-559541",
+    "vulnerable_package": "blamer",
+    "vulnerability_fix_commit": "https://github.com/kucherenko/blamer/commit/5fada8c9b6986ecd28942b724fa682e77ce1e11c"
+  },
+  "GHSA-7vm7-j8p7-h346": {
+    "testbed_dir": "SNYK-JS-BLAMER-559541",
+    "vulnerable_package": "blamer",
+    "vulnerability_fix_commit": "https://github.com/kucherenko/blamer/commit/5fada8c9b6986ecd28942b724fa682e77ce1e11c"
+  },
+  "SNYK-JS-CLAMSCAN-564113": {
+    "testbed_dir": "SNYK-JS-CLAMSCAN-564113",
+    "vulnerable_package": "clamscan",
+    "vulnerability_fix_commit": "https://github.com/kylefarris/clamscan/commit/5f557c970817fe8c578ec3f7ad3bcbcef4cf5538"
+  },
+  "SNYK-JS-CODECOV-585979": {
+    "testbed_dir": "SNYK-JS-CODECOV-585979",
+    "vulnerable_package": "codecov",
+    "vulnerability_fix_commit": "https://github.com/codecov/codecov-node/commit/c0711c656686e902af2cd92d6aecc8074de4d83d"
+  },
+  "GHSA-xp63-6vf5-xf3v": {
+    "testbed_dir": "SNYK-JS-CODECOV-585979",
+    "vulnerable_package": "codecov",
+    "vulnerability_fix_commit": "https://github.com/codecov/codecov-node/commit/c0711c656686e902af2cd92d6aecc8074de4d83d"
+  },
+  "SNYK-JS-DISKUSAGENG-564425": {
+    "testbed_dir": "SNYK-JS-DISKUSAGENG-564425",
+    "vulnerable_package": "diskusage-ng",
+    "vulnerability_fix_commit": "https://github.com/iximiuz/node-diskusage-ng/commit/48e7e093486b528f0c81ec699573e0e4a431b8d3#diff-38182cfe286a150ebcc88df0ec57ed66"
+  },
+  "GHSA-3269-x4pw-vffg": {
+    "testbed_dir": "SNYK-JS-DISKUSAGENG-564425",
+    "vulnerable_package": "diskusage-ng",
+    "vulnerability_fix_commit": "https://github.com/iximiuz/node-diskusage-ng/commit/48e7e093486b528f0c81ec699573e0e4a431b8d3#diff-38182cfe286a150ebcc88df0ec57ed66"
+  },
+  "npm:dns-sync:20141111": {
+    "testbed_dir": "npm_dns-sync_20141111",
+    "vulnerable_package": "dns-sync",
+    "vulnerability_fix_commit": "https://github.com/skoranga/node-dns-sync/commit/d9abaae384b198db1095735ad9c1c73d7b890a0d"
+  },
+  "GHSA-q5pq-pgrv-fh89": {
+    "testbed_dir": "npm_dns-sync_20141111",
+    "vulnerable_package": "dns-sync",
+    "vulnerability_fix_commit": "https://github.com/skoranga/node-dns-sync/commit/d9abaae384b198db1095735ad9c1c73d7b890a0d"
+  },
+  "SNYK-JS-EXTRAASCIINEMA-608292": {
+    "testbed_dir": "SNYK-JS-EXTRAASCIINEMA-608292",
+    "vulnerable_package": "extra-asciinema",
+    "vulnerability_fix_commit": "https://github.com/nodef/extra-asciinema/commit/fd1a8a38d6c72e1eb573b2ab03d5e86de8047480"
+  },
+  "SNYK-JS-GETNPMPACKAGEVERSION-1050390": {
+    "testbed_dir": "SNYK-JS-GETNPMPACKAGEVERSION-1050390",
+    "vulnerable_package": "get-npm-package-version",
+    "vulnerability_fix_commit": "https://github.com/hoperyy/get-npm-package-version/commit/40b1cf31a0607ea66f9e30a0c3af1383b52b2dec"
+  },
+  "SNYK-JS-KILLBYPORT-1078531": {
+    "testbed_dir": "SNYK-JS-KILLBYPORT-1078531",
+    "vulnerable_package": "kill-by-port",
+    "vulnerability_fix_commit": "https://github.com/GuyMograbi/kill-by-port/commit/ea5b1f377e196a4492e05ff070eba8b30b7372c4"
+  },
+  "GHSA-mm4f-47ch-f7hx": {
+    "testbed_dir": "SNYK-JS-KILLBYPORT-1078531",
+    "vulnerable_package": "kill-by-port",
+    "vulnerability_fix_commit": "https://github.com/GuyMograbi/kill-by-port/commit/ea5b1f377e196a4492e05ff070eba8b30b7372c4"
+  },
+  "SNYK-JS-KILLPORT-1078535": {
+    "testbed_dir": "SNYK-JS-KILLPORT-1078535",
+    "vulnerable_package": "killport",
+    "vulnerability_fix_commit": "https://github.com/ssnau/killport/commit/bec8e371f170a12e11cd222ffc7a6e1ae9942638"
+  },
+  "GHSA-fc42-h7q4-qp8h": {
+    "testbed_dir": "SNYK-JS-KILLPORT-1078535",
+    "vulnerable_package": "killport",
+    "vulnerability_fix_commit": "https://github.com/ssnau/killport/commit/bec8e371f170a12e11cd222ffc7a6e1ae9942638"
+  },
+  "SNYK-JS-LIBNMAP-72551": {
+    "testbed_dir": "SNYK-JS-LIBNMAP-72551",
+    "vulnerable_package": "libnmap",
+    "vulnerability_fix_commit": "https://github.com/jas-/node-libnmap/commit/c235b24b0342e12a5dbf502f89daabe95883b6c8"
+  },
+  "GHSA-7g2w-6r25-2j7p": {
+    "testbed_dir": "SNYK-JS-LIBNMAP-72551",
+    "vulnerable_package": "libnmap",
+    "vulnerability_fix_commit": "https://github.com/jas-/node-libnmap/commit/c235b24b0342e12a5dbf502f89daabe95883b6c8"
+  },
+  "npm:macaddress:20180511": {
+    "testbed_dir": "npm_macaddress_20180511",
+    "vulnerable_package": "macaddress",
+    "vulnerability_fix_commit": "https://github.com/scravy/node-macaddress/commit/358fd594adb196a86b94ac9c691f69fe5dad2332"
+  },
+  "GHSA-pp57-mqmh-44h7": {
+    "testbed_dir": "npm_macaddress_20180511",
+    "vulnerable_package": "macaddress",
+    "vulnerability_fix_commit": "https://github.com/scravy/node-macaddress/commit/358fd594adb196a86b94ac9c691f69fe5dad2332"
+  },
+  "SNYK-JS-MACFROMIP-1048336": {
+    "testbed_dir": "SNYK-JS-MACFROMIP-1048336",
+    "vulnerable_package": "macfromip",
+    "vulnerability_fix_commit": "https://github.com/bcamarneiro/macfromip/commit/1bbed8cd6f8299ad2e9d028e0ed0771340ab8391"
+  },
+  "GHSA-vh8f-xw5v-8993": {
+    "testbed_dir": "SNYK-JS-MACFROMIP-1048336",
+    "vulnerable_package": "macfromip",
+    "vulnerability_fix_commit": "https://github.com/bcamarneiro/macfromip/commit/1bbed8cd6f8299ad2e9d028e0ed0771340ab8391"
+  },
+  "npm:pidusage:20170605": {
+    "testbed_dir": "npm_pidusage_20170605",
+    "vulnerable_package": "pidusage",
+    "vulnerability_fix_commit": "https://github.com/soyuka/pidusage/commit/b70eca15f7ca7f1b82a15f8a5d4bb48737f5a89d"
+  },
+  "GHSA-hfq9-rfpv-j8r8": {
+    "testbed_dir": "npm_pidusage_20170605",
+    "vulnerable_package": "pidusage",
+    "vulnerability_fix_commit": "https://github.com/soyuka/pidusage/commit/b70eca15f7ca7f1b82a15f8a5d4bb48737f5a89d"
+  },
+  "SNYK-JS-PORTPROCESSES-1078536": {
+    "testbed_dir": "SNYK-JS-PORTPROCESSES-1078536",
+    "vulnerable_package": "portprocesses",
+    "vulnerability_fix_commit": "https://github.com/rrainn/PortProcesses/commit/86811216c9b97b01b5722f879f8c88a7aa4214e1"
+  },
+  "GHSA-vm67-7vmg-66vm": {
+    "testbed_dir": "SNYK-JS-PORTPROCESSES-1078536",
+    "vulnerable_package": "portprocesses",
+    "vulnerability_fix_commit": "https://github.com/rrainn/PortProcesses/commit/86811216c9b97b01b5722f879f8c88a7aa4214e1"
+  },
+  "SNYK-JS-THINGEGF-1089810": {
+    "testbed_dir": "SNYK-JS-THINGEGF-1089810",
+    "vulnerable_package": "@thi.ng/egf",
+    "vulnerability_fix_commit": "https://github.com/thi-ng/umbrella/commit/88f61656e5f5cfba960013b8133186389efaf243"
+  },
+  "GHSA-rj44-gpjc-29r7": {
+    "testbed_dir": "SNYK-JS-THINGEGF-1089810",
+    "vulnerable_package": "@thi.ng/egf",
+    "vulnerability_fix_commit": "https://github.com/thi-ng/umbrella/commit/88f61656e5f5cfba960013b8133186389efaf243"
+  },
+  "SNYK-JS-TOTALJS-1046672": {
+    "testbed_dir": "SNYK-JS-TOTALJS-1046672",
+    "vulnerable_package": "total.js",
+    "vulnerability_fix_commit": "https://github.com/totaljs/framework/commit/6192491ab2631e7c1d317c221f18ea613e2c18a5"
+  },
+  "GHSA-4449-hg37-77v8": {
+    "testbed_dir": "SNYK-JS-TOTALJS-1046672",
+    "vulnerable_package": "total.js",
+    "vulnerability_fix_commit": "https://github.com/totaljs/framework/commit/6192491ab2631e7c1d317c221f18ea613e2c18a5"
+  },
+  "SNYK-JS-VBOXMANAGEJS-607910": {
+    "testbed_dir": "SNYK-JS-VBOXMANAGEJS-607910",
+    "vulnerable_package": "vboxmanage.js",
+    "vulnerability_fix_commit": "https://github.com/danielgindi/node-vboxmanage/commit/8efe421dd19c474cbdeb0908cbcc7aabfe343d5e"
+  },
+  "GHSA-whq6-mj2r-mjqc": {
+    "testbed_dir": "SNYK-JS-VBOXMANAGEJS-607910",
+    "vulnerable_package": "vboxmanage.js",
+    "vulnerability_fix_commit": "https://github.com/danielgindi/node-vboxmanage/commit/8efe421dd19c474cbdeb0908cbcc7aabfe343d5e"
+  },
+  "npm:whereis:20180401": {
+    "testbed_dir": "npm_whereis_20180401",
+    "vulnerable_package": "whereis",
+    "vulnerability_fix_commit": "https://github.com/vvo/node-whereis/commit/0f64e3780235004fb6e43bfd153ea3e0e210ee2b"
+  },
+  "GHSA-wjr4-2jgw-hmv8": {
+    "testbed_dir": "npm_whereis_20180401",
+    "vulnerable_package": "whereis",
+    "vulnerability_fix_commit": "https://github.com/vvo/node-whereis/commit/0f64e3780235004fb6e43bfd153ea3e0e210ee2b"
+  },
+  "SNYK-JS-VIVAXYHERE-455285": {
+    "testbed_dir": "SNYK-JS-VIVAXYHERE-455285",
+    "vulnerable_package": "@vivaxy/here",
+    "vulnerability_fix_commit": "https://github.com/vivaxy/here/commit/298dbab41344dfb7f95f66b1fa7b5cfb436bd4a2"
+  },
+  "npm:angular-http-server:20180426": {
+    "testbed_dir": "npm_angular-http-server_20180426",
+    "vulnerable_package": "angular-http-server",
+    "vulnerability_fix_commit": "https://github.com/simonh1000/angular-http-server/commit/8bafc9577161469f5dea01e0b98ea9c525d063e9"
+  },
+  "GHSA-4rvg-955w-h68q": {
+    "testbed_dir": "npm_angular-http-server_20180426",
+    "vulnerable_package": "angular-http-server",
+    "vulnerability_fix_commit": "https://github.com/simonh1000/angular-http-server/commit/8bafc9577161469f5dea01e0b98ea9c525d063e9"
+  },
+  "npm:crud-file-server:20180226": {
+    "testbed_dir": "npm_crud-file-server_20180226",
+    "vulnerable_package": "crud-file-server",
+    "vulnerability_fix_commit": "https://github.com/omphalos/crud-file-server/commit/4fc3b404f718abb789f4ce4272c39c7a138c7a82"
+  },
+  "GHSA-vfp9-gwrh-wq9g": {
+    "testbed_dir": "npm_crud-file-server_20180226",
+    "vulnerable_package": "crud-file-server",
+    "vulnerability_fix_commit": "https://github.com/omphalos/crud-file-server/commit/4fc3b404f718abb789f4ce4272c39c7a138c7a82"
+  },
+  "npm:glance:20180129": {
+    "testbed_dir": "npm_glance_20180129",
+    "vulnerable_package": "glance",
+    "vulnerability_fix_commit": "https://github.com/jarofghosts/glance/commit/8cfd88e44ebd3f07e3a2eaf376a3e758b6c4ca19"
+  },
+  "GHSA-2x4q-6jfv-8h9h": {
+    "testbed_dir": "npm_glance_20180129",
+    "vulnerable_package": "glance",
+    "vulnerability_fix_commit": "https://github.com/jarofghosts/glance/commit/8cfd88e44ebd3f07e3a2eaf376a3e758b6c4ca19"
+  },
+  "npm:hostr:20161211": {
+    "testbed_dir": "npm_hostr_20161211",
+    "vulnerable_package": "hostr",
+    "vulnerability_fix_commit": "https://github.com/henrytseng/hostr/commit/789a00047459fd80b6f0a9701a1378a47fb73ba8"
+  },
+  "GHSA-xqqr-p362-6rmc": {
+    "testbed_dir": "npm_hostr_20161211",
+    "vulnerable_package": "hostr",
+    "vulnerability_fix_commit": "https://github.com/henrytseng/hostr/commit/789a00047459fd80b6f0a9701a1378a47fb73ba8"
+  },
+  "npm:m-server:20180226": {
+    "testbed_dir": "npm_m-server_20180226",
+    "vulnerable_package": "m-server",
+    "vulnerability_fix_commit": "https://github.com/nunnly/m-server/commit/01f13f040d1961ca3146dce7e2db990156e65e9a"
+  },
+  "GHSA-899g-6q6w-7v94": {
+    "testbed_dir": "npm_m-server_20180226",
+    "vulnerable_package": "m-server",
+    "vulnerability_fix_commit": "https://github.com/nunnly/m-server/commit/01f13f040d1961ca3146dce7e2db990156e65e9a"
+  },
+  "npm:node-simple-router:20170523": {
+    "testbed_dir": "npm_node-simple-router_20170523",
+    "vulnerable_package": "node-simple-router",
+    "vulnerability_fix_commit": "https://github.com/sandy98/node-simple-router/commit/dfdd52e2e80607af433097d940b3834fd96df488"
+  },
+  "GHSA-5w8q-x7hc-jhp6": {
+    "testbed_dir": "npm_node-simple-router_20170523",
+    "vulnerable_package": "node-simple-router",
+    "vulnerability_fix_commit": "https://github.com/sandy98/node-simple-router/commit/dfdd52e2e80607af433097d940b3834fd96df488"
+  },
+  "npm:node-srv:20180125": {
+    "testbed_dir": "npm_node-srv_20180125",
+    "vulnerable_package": "node-srv",
+    "vulnerability_fix_commit": "https://github.com/nim579/node-srv/commit/15be996c0520ac6e4dee0cf0808fc7e72effd2a2"
+  },
+  "GHSA-52r9-g5g6-2hjp": {
+    "testbed_dir": "npm_node-srv_20180125",
+    "vulnerable_package": "node-srv",
+    "vulnerability_fix_commit": "https://github.com/nim579/node-srv/commit/15be996c0520ac6e4dee0cf0808fc7e72effd2a2"
+  },
+  "SNYK-JS-SERVEHEREJS-450884": {
+    "testbed_dir": "SNYK-JS-SERVEHEREJS-450884",
+    "vulnerable_package": "serve-here.js",
+    "vulnerability_fix_commit": "https://github.com/ChristoPy/serve-here.js/commit/cefb51d03290b6a88dd13143ab2de31b8cf57c39"
+  },
+  "GHSA-4448-rc82-fcr7": {
+    "testbed_dir": "SNYK-JS-SERVEHEREJS-450884",
+    "vulnerable_package": "serve-here.js",
+    "vulnerability_fix_commit": "https://github.com/ChristoPy/serve-here.js/commit/cefb51d03290b6a88dd13143ab2de31b8cf57c39"
+  },
+  "SNYK-JS-ALGOLIASEARCHHELPER-1570421": {
+    "testbed_dir": "SNYK-JS-ALGOLIASEARCHHELPER-1570421",
+    "vulnerable_package": "algoliasearch-helper",
+    "vulnerability_fix_commit": "https://github.com/algolia/algoliasearch-helper-js/commit/4ff542b70b92a6b81cce8b9255700b0bc0817edd"
+  },
+  "GHSA-vpf5-82c8-9v36": {
+    "testbed_dir": "SNYK-JS-ALGOLIASEARCHHELPER-1570421",
+    "vulnerable_package": "algoliasearch-helper",
+    "vulnerability_fix_commit": "https://github.com/algolia/algoliasearch-helper-js/commit/4ff542b70b92a6b81cce8b9255700b0bc0817edd"
+  },
+  "SNYK-JS-ASSIGNDEEP-450211": {
+    "testbed_dir": "SNYK-JS-ASSIGNDEEP-450211",
+    "vulnerable_package": "assign-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/assign-deep/commit/90bf1c551d05940898168d04066bbf15060f50cc"
+  },
+  "GHSA-66rh-8fw6-59q6": {
+    "testbed_dir": "SNYK-JS-ASSIGNDEEP-450211",
+    "vulnerable_package": "assign-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/assign-deep/commit/90bf1c551d05940898168d04066bbf15060f50cc"
+  },
+  "SNYK-JS-AURELIAPATH-1292346": {
+    "testbed_dir": "SNYK-JS-AURELIAPATH-1292346",
+    "vulnerable_package": "aurelia-path",
+    "vulnerability_fix_commit": "https://github.com/aurelia/path/releases/tag/1.1.7"
+  },
+  "GHSA-3c9c-2p65-qvwv": {
+    "testbed_dir": "SNYK-JS-AURELIAPATH-1292346",
+    "vulnerable_package": "aurelia-path",
+    "vulnerability_fix_commit": "https://github.com/aurelia/path/releases/tag/1.1.7"
+  },
+  "SNYK-JS-BODYMEN-548897": {
+    "testbed_dir": "SNYK-JS-BODYMEN-548897",
+    "vulnerable_package": "bodymen",
+    "vulnerability_fix_commit": "https://github.com/diegohaz/bodymen/commit/5d52e8cf360410ee697afd90937e6042c3a8653b"
+  },
+  "GHSA-8h84-8j4f-p97q": {
+    "testbed_dir": "SNYK-JS-BODYMEN-548897",
+    "vulnerable_package": "bodymen",
+    "vulnerability_fix_commit": "https://github.com/diegohaz/bodymen/commit/5d52e8cf360410ee697afd90937e6042c3a8653b"
+  },
+  "SNYK-JS-CACHEDPATHRELATIVE-72573": {
+    "testbed_dir": "SNYK-JS-CACHEDPATHRELATIVE-72573",
+    "vulnerable_package": "cached-path-relative",
+    "vulnerability_fix_commit": "https://github.com/ashaffer/cached-path-relative/commit/a43cffec84ed0e9eceecb43b534b6937a8028fc0"
+  },
+  "GHSA-hc9w-4p87-j549": {
+    "testbed_dir": "SNYK-JS-CACHEDPATHRELATIVE-72573",
+    "vulnerable_package": "cached-path-relative",
+    "vulnerability_fix_commit": "https://github.com/ashaffer/cached-path-relative/commit/a43cffec84ed0e9eceecb43b534b6937a8028fc0"
+  },
+  "SNYK-JS-CHANGESET-1083989": {
+    "testbed_dir": "SNYK-JS-CHANGESET-1083989",
+    "vulnerable_package": "changeset",
+    "vulnerability_fix_commit": "https://github.com/eugeneware/changeset/commit/9e588844edbb9993b32e7366cc799262b4447f99"
+  },
+  "SNYK-JS-CONFINIT-564433": {
+    "testbed_dir": "SNYK-JS-CONFINIT-564433",
+    "vulnerable_package": "confinit",
+    "vulnerability_fix_commit": "https://github.com/davideicardi/confinit/commit/a34e06ca5c1c8b047ef112ef188b2fe30d2a1eab"
+  },
+  "GHSA-jgpq-g82g-6c39": {
+    "testbed_dir": "SNYK-JS-CONFINIT-564433",
+    "vulnerable_package": "confinit",
+    "vulnerability_fix_commit": "https://github.com/davideicardi/confinit/commit/a34e06ca5c1c8b047ef112ef188b2fe30d2a1eab"
+  },
+  "SNYK-JS-CONTROLLEDMERGE-1040460": {
+    "testbed_dir": "SNYK-JS-CONTROLLEDMERGE-1040460",
+    "vulnerable_package": "controlled-merge",
+    "vulnerability_fix_commit": "https://github.com/hlfshell/controlled-merge/commit/5a4b2e9ffe5a0be7f8843d4ab038599d3ae5f9d4"
+  },
+  "GHSA-5pg7-v24c-9rp9": {
+    "testbed_dir": "SNYK-JS-CONTROLLEDMERGE-1040460",
+    "vulnerable_package": "controlled-merge",
+    "vulnerability_fix_commit": "https://github.com/hlfshell/controlled-merge/commit/5a4b2e9ffe5a0be7f8843d4ab038599d3ae5f9d4"
+  },
+  "npm:deep-extend:20180409": {
+    "testbed_dir": "npm_deep-extend_20180409",
+    "vulnerable_package": "deep-extend",
+    "vulnerability_fix_commit": "https://github.com/unclechu/node-deep-extend/commit/433ee51ed606f4e1867ece57b6ff5a47bebb492f"
+  },
+  "GHSA-hr2v-3952-633q": {
+    "testbed_dir": "npm_deep-extend_20180409",
+    "vulnerable_package": "deep-extend",
+    "vulnerability_fix_commit": "https://github.com/unclechu/node-deep-extend/commit/433ee51ed606f4e1867ece57b6ff5a47bebb492f"
+  },
+  "SNYK-JS-DEEPOVERRIDE-1292344": {
+    "testbed_dir": "SNYK-JS-DEEPOVERRIDE-1292344",
+    "vulnerable_package": "deep-override",
+    "vulnerability_fix_commit": "https://github.com/ASaiAnudeep/deep-override/commit/2aced17651fb684959a6e04b1465a8329b3d5268"
+  },
+  "GHSA-v659-54cx-g4qr": {
+    "testbed_dir": "SNYK-JS-DEEPOVERRIDE-1292344",
+    "vulnerable_package": "deep-override",
+    "vulnerability_fix_commit": "https://github.com/ASaiAnudeep/deep-override/commit/2aced17651fb684959a6e04b1465a8329b3d5268"
+  },
+  "SNYK-JS-DEEPHAS-1039845": {
+    "testbed_dir": "SNYK-JS-DEEPHAS-1039845",
+    "vulnerable_package": "deephas",
+    "vulnerability_fix_commit": "https://github.com/sharpred/deepHas/commit/2fe011713a6178c50f7deb6f039a8e5435981e20"
+  },
+  "GHSA-4fr2-j4g9-mppf": {
+    "testbed_dir": "SNYK-JS-DEEPHAS-1039845",
+    "vulnerable_package": "deephas",
+    "vulnerability_fix_commit": "https://github.com/sharpred/deepHas/commit/2fe011713a6178c50f7deb6f039a8e5435981e20"
+  },
+  "SNYK-JS-DEEPLY-451026": {
+    "testbed_dir": "SNYK-JS-DEEPLY-451026",
+    "vulnerable_package": "deeply",
+    "vulnerability_fix_commit": "https://github.com/alexindigo/deeply/commit/6eccb2f03ec8d3eefc6805053c4cc2a36aab1505"
+  },
+  "GHSA-8j4w-5fw4-rm27": {
+    "testbed_dir": "SNYK-JS-DEEPLY-451026",
+    "vulnerable_package": "deeply",
+    "vulnerability_fix_commit": "https://github.com/alexindigo/deeply/commit/6eccb2f03ec8d3eefc6805053c4cc2a36aab1505"
+  },
+  "SNYK-JS-DEEPREF-1049536": {
+    "testbed_dir": "SNYK-JS-DEEPREF-1049536",
+    "vulnerable_package": "deepref",
+    "vulnerability_fix_commit": "https://github.com/isaymatato/deepref/commit/24935e6a1060cb09c641d3075982f0b44cfca4c2"
+  },
+  "GHSA-7c7g-72q7-4xhm": {
+    "testbed_dir": "SNYK-JS-DEEPREF-1049536",
+    "vulnerable_package": "deepref",
+    "vulnerability_fix_commit": "https://github.com/isaymatato/deepref/commit/24935e6a1060cb09c641d3075982f0b44cfca4c2"
+  },
+  "npm:defaults-deep:20180215": {
+    "testbed_dir": "npm_defaults-deep_20180215",
+    "vulnerable_package": "defaults-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/defaults-deep/commit/c873f341327ad885ff4d0f23b3d3bca31b0343e5"
+  },
+  "GHSA-cqp5-m4pq-gfgp": {
+    "testbed_dir": "npm_defaults-deep_20180215",
+    "vulnerable_package": "defaults-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/defaults-deep/commit/c873f341327ad885ff4d0f23b3d3bca31b0343e5"
+  },
+  "SNYK-JS-DOCPATH-1011952": {
+    "testbed_dir": "SNYK-JS-DOCPATH-1011952",
+    "vulnerable_package": "doc-path",
+    "vulnerability_fix_commit": "https://github.com/mrodrig/doc-path/commit/3e2bb168cf303bffcd7fae5f8d05e5300c1541c7"
+  },
+  "GHSA-gm8g-xhh8-rmwr": {
+    "testbed_dir": "SNYK-JS-DOCPATH-1011952",
+    "vulnerable_package": "doc-path",
+    "vulnerability_fix_commit": "https://github.com/mrodrig/doc-path/commit/3e2bb168cf303bffcd7fae5f8d05e5300c1541c7"
+  },
+  "SNYK-JS-DOTOBJECT-548905": {
+    "testbed_dir": "SNYK-JS-DOTOBJECT-548905",
+    "vulnerable_package": "dot-object",
+    "vulnerability_fix_commit": "https://github.com/rhalff/dot-object/commit/f76cff5fe6d01d30ce110d8f454db2e5bd28a7de"
+  },
+  "SNYK-JS-DOTPROP-543489": {
+    "testbed_dir": "SNYK-JS-DOTPROP-543489",
+    "vulnerable_package": "dot-prop",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/dot-prop/commit/3039c8c07f6fdaa8b595ec869ae0895686a7a0f2"
+  },
+  "GHSA-ff7x-qrg7-qggm": {
+    "testbed_dir": "SNYK-JS-DOTPROP-543489",
+    "vulnerable_package": "dot-prop",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/dot-prop/commit/3039c8c07f6fdaa8b595ec869ae0895686a7a0f2"
+  },
+  "SNYK-JS-DOTTY-1577292": {
+    "testbed_dir": "SNYK-JS-DOTTY-1577292",
+    "vulnerable_package": "dotty",
+    "vulnerability_fix_commit": "https://github.com/deoxxa/dotty/commit/88f61860dcc274a07a263c32cbe9d44c24ef02d7"
+  },
+  "GHSA-6g47-63mv-qpgh": {
+    "testbed_dir": "SNYK-JS-DOTTY-1577292",
+    "vulnerable_package": "dotty",
+    "vulnerability_fix_commit": "https://github.com/deoxxa/dotty/commit/88f61860dcc274a07a263c32cbe9d44c24ef02d7"
+  },
+  "SNYK-JS-EIVIFJDOT-564435": {
+    "testbed_dir": "SNYK-JS-EIVIFJDOT-564435",
+    "vulnerable_package": "@eivifj/dot",
+    "vulnerability_fix_commit": "https://github.com/eivindfjeldstad/dot/commit/774e4b0c97ca35d2ae40df2cd14428d37dd07a0b"
+  },
+  "SNYK-JS-EXTENDMERGE-609868": {
+    "testbed_dir": "SNYK-JS-EXTENDMERGE-609868",
+    "vulnerable_package": "extend-merge",
+    "vulnerability_fix_commit": "https://github.com/crysalead-js/extend-merge/commit/6c8dc4e4b5983fa3e85544716f8e347dea2ba3b0"
+  },
+  "npm:extend:20180424": {
+    "testbed_dir": "npm_extend_20180424",
+    "vulnerable_package": "extend",
+    "vulnerability_fix_commit": "https://github.com/justmoon/node-extend/commit/0e68e71d93507fcc391e398bc84abd0666b28190"
+  },
+  "GHSA-qrmc-fj45-qfc2": {
+    "testbed_dir": "npm_extend_20180424",
+    "vulnerable_package": "extend",
+    "vulnerability_fix_commit": "https://github.com/justmoon/node-extend/commit/0e68e71d93507fcc391e398bc84abd0666b28190"
+  },
+  "SNYK-JS-FABIOCACCAMOUTILSJS-1932614": {
+    "testbed_dir": "SNYK-JS-FABIOCACCAMOUTILSJS-1932614",
+    "vulnerable_package": "@fabiocaccamo/utils.js",
+    "vulnerability_fix_commit": "https://github.com/fabiocaccamo/utils.js/commit/102efafb291ce1916985514440d3bf8a6826890a"
+  },
+  "GHSA-3xph-cp8f-2229": {
+    "testbed_dir": "SNYK-JS-FABIOCACCAMOUTILSJS-1932614",
+    "vulnerable_package": "@fabiocaccamo/utils.js",
+    "vulnerability_fix_commit": "https://github.com/fabiocaccamo/utils.js/commit/102efafb291ce1916985514440d3bf8a6826890a"
+  },
+  "SNYK-JS-FASTJSONPATCH-595663": {
+    "testbed_dir": "SNYK-JS-FASTJSONPATCH-595663",
+    "vulnerable_package": "fast-json-patch",
+    "vulnerability_fix_commit": "https://github.com/Starcounter-Jack/JSON-Patch/pull/219/commits/dd5d353f5d65888aeac91359484a73f0e2a9e5bd"
+  },
+  "SNYK-JS-FIREBASEUTIL-1038324": {
+    "testbed_dir": "SNYK-JS-FIREBASEUTIL-1038324",
+    "vulnerable_package": "@firebase/util",
+    "vulnerability_fix_commit": "https://github.com/firebase/firebase-js-sdk/commit/9cf727fcc3d049551b16ae0698ac33dc2fe45ada"
+  },
+  "GHSA-fpm5-vv97-jfwg": {
+    "testbed_dir": "SNYK-JS-FIREBASEUTIL-1038324",
+    "vulnerable_package": "@firebase/util",
+    "vulnerability_fix_commit": "https://github.com/firebase/firebase-js-sdk/commit/9cf727fcc3d049551b16ae0698ac33dc2fe45ada"
+  },
+  "npm:hoek:20180212": {
+    "testbed_dir": "npm_hoek_20180212",
+    "vulnerable_package": "hoek",
+    "vulnerability_fix_commit": "https://github.com/hapijs/hoek/commit/32ed5c9413321fbc37da5ca81a7cbab693786dee"
+  },
+  "GHSA-jp4x-w63m-7wgm": {
+    "testbed_dir": "npm_hoek_20180212",
+    "vulnerable_package": "hoek",
+    "vulnerability_fix_commit": "https://github.com/hapijs/hoek/commit/32ed5c9413321fbc37da5ca81a7cbab693786dee"
+  },
+  "SNYK-JS-I18NEXT-1065979": {
+    "testbed_dir": "SNYK-JS-I18NEXT-1065979",
+    "vulnerable_package": "i18next",
+    "vulnerability_fix_commit": "https://github.com/i18next/i18next/commit/932f5f662893376254d826e9b01dc4e4c0cd91c0"
+  },
+  "GHSA-cmh5-qc8w-xvcq": {
+    "testbed_dir": "SNYK-JS-I18NEXT-1065979",
+    "vulnerable_package": "i18next",
+    "vulnerability_fix_commit": "https://github.com/i18next/i18next/commit/932f5f662893376254d826e9b01dc4e4c0cd91c0"
+  },
+  "SNYK-JS-IMMER-1540542": {
+    "testbed_dir": "SNYK-JS-IMMER-1540542",
+    "vulnerable_package": "immer",
+    "vulnerability_fix_commit": "https://github.com/immerjs/immer/commit/fa671e55ee9bd42ae08cc239102b665a23958237"
+  },
+  "GHSA-33f9-j839-rf8h": {
+    "testbed_dir": "SNYK-JS-IMMER-1540542",
+    "vulnerable_package": "immer",
+    "vulnerability_fix_commit": "https://github.com/immerjs/immer/commit/fa671e55ee9bd42ae08cc239102b665a23958237"
+  },
+  "SNYK-JS-INIREADER-1054843": {
+    "testbed_dir": "SNYK-JS-INIREADER-1054843",
+    "vulnerable_package": "inireader",
+    "vulnerability_fix_commit": "https://github.com/Ajnasz/IniReader/commit/c260e4e9050c731dbdb88e1d2e23e851528d3d93"
+  },
+  "SNYK-JS-JOINTJS-1579578": {
+    "testbed_dir": "SNYK-JS-JOINTJS-1579578",
+    "vulnerable_package": "jointjs",
+    "vulnerability_fix_commit": "https://github.com/clientIO/joint/commit/e5bf89efef6d5ea572d66870ffd86560de7830a8"
+  },
+  "GHSA-f3pp-32qc-36w4": {
+    "testbed_dir": "SNYK-JS-JOINTJS-1579578",
+    "vulnerable_package": "jointjs",
+    "vulnerability_fix_commit": "https://github.com/clientIO/joint/commit/e5bf89efef6d5ea572d66870ffd86560de7830a8"
+  },
+  "SNYK-JS-JQUERY-174006": {
+    "testbed_dir": "SNYK-JS-JQUERY-174006",
+    "vulnerable_package": "jquery",
+    "vulnerability_fix_commit": "https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b"
+  },
+  "GHSA-6c3j-c64m-qhgq": {
+    "testbed_dir": "SNYK-JS-JQUERY-174006",
+    "vulnerable_package": "jquery",
+    "vulnerability_fix_commit": "https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b"
+  },
+  "SNYK-JS-JSDATA-1584361": {
+    "testbed_dir": "SNYK-JS-JSDATA-1584361",
+    "vulnerable_package": "js-data",
+    "vulnerability_fix_commit": "https://github.com/js-data/js-data/pull/579/commits/44d69656ce22a0a0300f1e94eb6dcfefd9dcffa4"
+  },
+  "GHSA-c6h4-gc3f-hgjq": {
+    "testbed_dir": "SNYK-JS-JSDATA-1584361",
+    "vulnerable_package": "js-data",
+    "vulnerability_fix_commit": "https://github.com/js-data/js-data/pull/579/commits/44d69656ce22a0a0300f1e94eb6dcfefd9dcffa4"
+  },
+  "SNYK-JS-JSINI-1048970": {
+    "testbed_dir": "SNYK-JS-JSINI-1048970",
+    "vulnerable_package": "js-ini",
+    "vulnerability_fix_commit": "https://github.com/Sdju/js-ini/commit/fa17efb7e3a7c9464508a254838d4c231784931e"
+  },
+  "GHSA-896r-f27r-55mw": {
+    "testbed_dir": "GHSA-896r-f27r-55mw",
+    "vulnerable_package": "json-schema",
+    "vulnerability_fix_commit": "https://github.com/kriszyp/json-schema/commit/22f146111f541d9737e832823699ad3528ca7741"
+  },
+  "SNYK-JS-JSONSCHEMA-1920922": {
+    "testbed_dir": "GHSA-896r-f27r-55mw",
+    "vulnerable_package": "json-schema",
+    "vulnerability_fix_commit": "https://github.com/kriszyp/json-schema/commit/22f146111f541d9737e832823699ad3528ca7741"
+  },
+  "SNYK-JS-JSONPOINTER-1577288": {
+    "testbed_dir": "SNYK-JS-JSONPOINTER-1577288",
+    "vulnerable_package": "jsonpointer",
+    "vulnerability_fix_commit": "https://github.com/janl/node-jsonpointer/commit/a0345f3550cd9c4d89f33b126390202b89510ad4"
+  },
+  "GHSA-282f-qqgm-c34q": {
+    "testbed_dir": "SNYK-JS-JSONPOINTER-1577288",
+    "vulnerable_package": "jsonpointer",
+    "vulnerability_fix_commit": "https://github.com/janl/node-jsonpointer/commit/a0345f3550cd9c4d89f33b126390202b89510ad4"
+  },
+  "SNYK-JS-JUSTSAFESET-1316267": {
+    "testbed_dir": "SNYK-JS-JUSTSAFESET-1316267",
+    "vulnerable_package": "just-safe-set",
+    "vulnerability_fix_commit": "https://github.com/angus-c/just/commit/dd57a476f4bb9d78c6f60741898dc04c71d2eb53"
+  },
+  "GHSA-v26w-gcxh-v4r7": {
+    "testbed_dir": "SNYK-JS-JUSTSAFESET-1316267",
+    "vulnerable_package": "just-safe-set",
+    "vulnerability_fix_commit": "https://github.com/angus-c/just/commit/dd57a476f4bb9d78c6f60741898dc04c71d2eb53"
+  },
+  "SNYK-JS-KEYGET-1048048": {
+    "testbed_dir": "SNYK-JS-KEYGET-1048048",
+    "vulnerable_package": "keyget",
+    "vulnerability_fix_commit": "https://github.com/rumkin/keyget/commit/17d15b6c75036eb429075a8cfeccfc18094dd2e2"
+  },
+  "SNYK-JS-LIBNESTED-1054930": {
+    "testbed_dir": "SNYK-JS-LIBNESTED-1054930",
+    "vulnerable_package": "libnested",
+    "vulnerability_fix_commit": "https://github.com/dominictarr/libnested/commit/9619863a319ed1e5c19ddcbdbe3312f9cef72760"
+  },
+  "GHSA-3r9x-mjrm-2725": {
+    "testbed_dir": "SNYK-JS-LIBNESTED-1054930",
+    "vulnerable_package": "libnested",
+    "vulnerability_fix_commit": "https://github.com/dominictarr/libnested/commit/9619863a319ed1e5c19ddcbdbe3312f9cef72760"
+  },
+  "SNYK-JS-LINUXCMDLINE-598674": {
+    "testbed_dir": "SNYK-JS-LINUXCMDLINE-598674",
+    "vulnerable_package": "linux-cmdline",
+    "vulnerability_fix_commit": "https://github.com/piranna/linux-cmdline/commit/53c61a88bc47eb25d71832205056beaab95cf677"
+  },
+  "SNYK-JS-LODASH-608086": {
+    "testbed_dir": "SNYK-JS-LODASH-608086",
+    "vulnerable_package": "lodash",
+    "vulnerability_fix_commit": "https://github.com/lodash/lodash/commit/d8e069cc3410082e44eb18fcf8e7f3d08ebe1d4a"
+  },
+  "GHSA-fvqr-27wr-82fm": {
+    "testbed_dir": "SNYK-JS-LODASH-608086",
+    "vulnerable_package": "lodash",
+    "vulnerability_fix_commit": "https://github.com/lodash/lodash/commit/d8e069cc3410082e44eb18fcf8e7f3d08ebe1d4a"
+  },
+  "SNYK-JS-LODASH-73638": {
+    "testbed_dir": "SNYK-JS-LODASH-73638",
+    "vulnerable_package": "lodash",
+    "vulnerability_fix_commit": "https://github.com/lodash/lodash/commit/90e6199a161b6445b01454517b40ef65ebecd2ad"
+  },
+  "GHSA-h726-x36v-rx45": {
+    "testbed_dir": "SNYK-JS-LODASH-73638",
+    "vulnerable_package": "lodash",
+    "vulnerability_fix_commit": "https://github.com/lodash/lodash/commit/90e6199a161b6445b01454517b40ef65ebecd2ad"
+  },
+  "SNYK-JS-MATHJS-1016401": {
+    "testbed_dir": "SNYK-JS-MATHJS-1016401",
+    "vulnerable_package": "mathjs",
+    "vulnerability_fix_commit": "https://github.com/josdejong/mathjs/commit/ecb80514e80bce4e6ec7e71db8ff79954f07c57e"
+  },
+  "GHSA-x2fc-mxcx-w4mf": {
+    "testbed_dir": "SNYK-JS-MATHJS-1016401",
+    "vulnerable_package": "mathjs",
+    "vulnerability_fix_commit": "https://github.com/josdejong/mathjs/commit/ecb80514e80bce4e6ec7e71db8ff79954f07c57e"
+  },
+  "SNYK-JS-MERGEDEEP-1070277": {
+    "testbed_dir": "SNYK-JS-MERGEDEEP-1070277",
+    "vulnerable_package": "merge-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/merge-deep/commit/e370968581413a2e5ffdbbf7c2f5094e0e0b3861"
+  },
+  "GHSA-r6rj-9ch6-g264": {
+    "testbed_dir": "SNYK-JS-MERGEDEEP-1070277",
+    "vulnerable_package": "merge-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/merge-deep/commit/e370968581413a2e5ffdbbf7c2f5094e0e0b3861"
+  },
+  "npm:merge-options:20180415": {
+    "testbed_dir": "npm_merge-options_20180415",
+    "vulnerable_package": "merge-options",
+    "vulnerability_fix_commit": "https://github.com/schnittstabil/merge-options/commit/d4a93bc2890455e0931ac0779667023e6cb101d4"
+  },
+  "GHSA-qw93-45r3-p66p": {
+    "testbed_dir": "npm_merge-options_20180415",
+    "vulnerable_package": "merge-options",
+    "vulnerability_fix_commit": "https://github.com/schnittstabil/merge-options/commit/d4a93bc2890455e0931ac0779667023e6cb101d4"
+  },
+  "npm:mixin-deep:20180215": {
+    "testbed_dir": "npm_mixin-deep_20180215",
+    "vulnerable_package": "mixin-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/mixin-deep/commit/578b0bc5e74e14de9ef4975f504dc698796bdf9c"
+  },
+  "GHSA-3mpr-hq3p-49h9": {
+    "testbed_dir": "npm_mixin-deep_20180215",
+    "vulnerable_package": "mixin-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/mixin-deep/commit/578b0bc5e74e14de9ef4975f504dc698796bdf9c"
+  },
+  "SNYK-JS-MIXINDEEP-450212": {
+    "testbed_dir": "SNYK-JS-MIXINDEEP-450212",
+    "vulnerable_package": "mixin-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/mixin-deep/commit/8f464c8ce9761a8c9c2b3457eaeee9d404fa7af9"
+  },
+  "GHSA-fhjf-83wg-r2j9": {
+    "testbed_dir": "SNYK-JS-MIXINDEEP-450212",
+    "vulnerable_package": "mixin-deep",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/mixin-deep/commit/8f464c8ce9761a8c9c2b3457eaeee9d404fa7af9"
+  },
+  "SNYK-JS-MPATH-1577289": {
+    "testbed_dir": "SNYK-JS-MPATH-1577289",
+    "vulnerable_package": "mpath",
+    "vulnerability_fix_commit": "https://github.com/aheckmann/mpath/commit/89402d2880d4ea3518480a8c9847c541f2d824fc"
+  },
+  "GHSA-p92x-r36w-9395": {
+    "testbed_dir": "SNYK-JS-MPATH-1577289",
+    "vulnerable_package": "mpath",
+    "vulnerability_fix_commit": "https://github.com/aheckmann/mpath/commit/89402d2880d4ea3518480a8c9847c541f2d824fc"
+  },
+  "SNYK-JS-MQUERY-1089718": {
+    "testbed_dir": "SNYK-JS-MQUERY-1089718",
+    "vulnerable_package": "mquery",
+    "vulnerability_fix_commit": "https://github.com/aheckmann/mquery/commit/158f059e058579d2d08c2f1380689f5f69336778"
+  },
+  "GHSA-45q2-34rf-mr94": {
+    "testbed_dir": "SNYK-JS-MQUERY-1089718",
+    "vulnerable_package": "mquery",
+    "vulnerability_fix_commit": "https://github.com/aheckmann/mquery/commit/158f059e058579d2d08c2f1380689f5f69336778"
+  },
+  "SNYK-JS-NESTEDPROPERTY-1022154": {
+    "testbed_dir": "SNYK-JS-NESTEDPROPERTY-1022154",
+    "vulnerable_package": "nested-property",
+    "vulnerability_fix_commit": "https://github.com/cosmosio/nested-property/commit/881cf37eb956641fc26011ff66a436eb603c89d1"
+  },
+  "SNYK-JS-NESTIE-1300518": {
+    "testbed_dir": "SNYK-JS-NESTIE-1300518",
+    "vulnerable_package": "nestie",
+    "vulnerability_fix_commit": "https://github.com/lukeed/nestie/commit/c571c77928ecd7f256a935c7c3860f33dac4653f"
+  },
+  "GHSA-m7rg-8wvq-846v": {
+    "testbed_dir": "SNYK-JS-NESTIE-1300518",
+    "vulnerable_package": "nestie",
+    "vulnerability_fix_commit": "https://github.com/lukeed/nestie/commit/c571c77928ecd7f256a935c7c3860f33dac4653f"
+  },
+  "SNYK-JS-NODEFORGE-598677": {
+    "testbed_dir": "SNYK-JS-NODEFORGE-598677",
+    "vulnerable_package": "node-forge",
+    "vulnerability_fix_commit": "https://github.com/digitalbazaar/forge/commit/51228083550dde97701ac8e06c629a5184117562"
+  },
+  "GHSA-92xj-mqp7-vmcj": {
+    "testbed_dir": "SNYK-JS-NODEFORGE-598677",
+    "vulnerable_package": "node-forge",
+    "vulnerability_fix_commit": "https://github.com/digitalbazaar/forge/commit/51228083550dde97701ac8e06c629a5184117562"
+  },
+  "SNYK-JS-NODEEUTILS-598679": {
+    "testbed_dir": "SNYK-JS-NODEEUTILS-598679",
+    "vulnerable_package": "nodee-utils",
+    "vulnerability_fix_commit": "https://github.com/nodee-apps/utils/commit/52460d936c52f03c9907bc99ac5e890970cef83c"
+  },
+  "GHSA-p6jh-p7q8-pcrg": {
+    "testbed_dir": "SNYK-JS-NODEEUTILS-598679",
+    "vulnerable_package": "nodee-utils",
+    "vulnerability_fix_commit": "https://github.com/nodee-apps/utils/commit/52460d936c52f03c9907bc99ac5e890970cef83c"
+  },
+  "SNYK-JS-OBJECTCOLLIDER-1080739": {
+    "testbed_dir": "SNYK-JS-OBJECTCOLLIDER-1080739",
+    "vulnerable_package": "object-collider",
+    "vulnerability_fix_commit": "https://github.com/FireBlinkLTD/object-collider/commit/321f75a7f8e7b3393e5b7dd6dd9ab26ede5906e5"
+  },
+  "GHSA-85g2-29m8-qf2p": {
+    "testbed_dir": "SNYK-JS-OBJECTCOLLIDER-1080739",
+    "vulnerable_package": "object-collider",
+    "vulnerability_fix_commit": "https://github.com/FireBlinkLTD/object-collider/commit/321f75a7f8e7b3393e5b7dd6dd9ab26ede5906e5"
+  },
+  "SNYK-JS-OBJECTPATHSET-607908": {
+    "testbed_dir": "SNYK-JS-OBJECTPATHSET-607908",
+    "vulnerable_package": "object-path-set",
+    "vulnerability_fix_commit": "https://github.com/skratchdot/object-path-set/commit/55f06d75abf5885f9cba3b7760acb38d7d7d06c0"
+  },
+  "GHSA-cwx2-736x-mf6w": {
+    "testbed_dir": "SNYK-JS-OBJECTPATHSET-607908",
+    "vulnerable_package": "object-path-set",
+    "vulnerability_fix_commit": "https://github.com/skratchdot/object-path-set/commit/55f06d75abf5885f9cba3b7760acb38d7d7d06c0"
+  },
+  "SNYK-JS-OBJECTION-1582910": {
+    "testbed_dir": "SNYK-JS-OBJECTION-1582910",
+    "vulnerable_package": "objection",
+    "vulnerability_fix_commit": "https://github.com/vincit/objection.js/commit/b41aab8dcd78f426f7468dcda541a7aca18a66a6"
+  },
+  "GHSA-r659-8xfp-j327": {
+    "testbed_dir": "SNYK-JS-OBJECTION-1582910",
+    "vulnerable_package": "objection",
+    "vulnerability_fix_commit": "https://github.com/vincit/objection.js/commit/b41aab8dcd78f426f7468dcda541a7aca18a66a6"
+  },
+  "SNYK-JS-OBJNEST-1041787": {
+    "testbed_dir": "SNYK-JS-OBJNEST-1041787",
+    "vulnerable_package": "objnest",
+    "vulnerability_fix_commit": "https://github.com/okunishinishi/node-objnest/commit/c541e1a775b562d63402a14dac9f8cbc52b116d7"
+  },
+  "SNYK-JS-PATCHMERGE-1086585": {
+    "testbed_dir": "SNYK-JS-PATCHMERGE-1086585",
+    "vulnerable_package": "patchmerge",
+    "vulnerability_fix_commit": "https://github.com/pjshumphreys/patchmerge/commit/5b383c537eae7a00ebd26d3f7211dac99ddecb12"
+  },
+  "GHSA-84g3-cv89-m9gm": {
+    "testbed_dir": "SNYK-JS-PATCHMERGE-1086585",
+    "vulnerable_package": "patchmerge",
+    "vulnerability_fix_commit": "https://github.com/pjshumphreys/patchmerge/commit/5b383c537eae7a00ebd26d3f7211dac99ddecb12"
+  },
+  "SNYK-JS-PATHVAL-596926": {
+    "testbed_dir": "SNYK-JS-PATHVAL-596926",
+    "vulnerable_package": "pathval",
+    "vulnerability_fix_commit": "https://github.com/chaijs/pathval/commit/7859e0e1ce4c2c67de897edce097ed31f80661d0"
+  },
+  "SNYK-JS-PLAINOBJECTMERGE-1085643": {
+    "testbed_dir": "SNYK-JS-PLAINOBJECTMERGE-1085643",
+    "vulnerable_package": "plain-object-merge",
+    "vulnerability_fix_commit": "https://github.com/fabiospampinato/plain-object-merge/commit/e2b59efa2216957815643c48797e2e2eae8ca2b2"
+  },
+  "SNYK-JS-PROPERTIESREADER-1048968": {
+    "testbed_dir": "SNYK-JS-PROPERTIESREADER-1048968",
+    "vulnerable_package": "properties-reader",
+    "vulnerability_fix_commit": "https://github.com/steveukx/properties/commit/0877cc871db9865f58dd9389ce99e61be05380a5"
+  },
+  "SNYK-JS-PROPERTYEXPR-598800": {
+    "testbed_dir": "SNYK-JS-PROPERTYEXPR-598800",
+    "vulnerable_package": "property-expr",
+    "vulnerability_fix_commit": "https://github.com/jquense/expr/commit/df846910915d59f711ce63c1f817815bceab5ff7"
+  },
+  "GHSA-6fw4-hr69-g3rv": {
+    "testbed_dir": "SNYK-JS-PROPERTYEXPR-598800",
+    "vulnerable_package": "property-expr",
+    "vulnerability_fix_commit": "https://github.com/jquense/expr/commit/df846910915d59f711ce63c1f817815bceab5ff7"
+  },
+  "SNYK-JS-PROTOTYPEDJS-1069824": {
+    "testbed_dir": "SNYK-JS-PROTOTYPEDJS-1069824",
+    "vulnerable_package": "prototyped.js",
+    "vulnerability_fix_commit": "https://github.com/ardalanamini/prototyped.js/commit/3ab56e78250d3d5b44ac03938d3d04591b206730"
+  },
+  "SNYK-JS-PUTILMERGE-1317077": {
+    "testbed_dir": "SNYK-JS-PUTILMERGE-1317077",
+    "vulnerable_package": "putil-merge",
+    "vulnerability_fix_commit": "https://github.com/panates/putil-merge/commit/a8f5087faaa034cc2dc2e8070c13014ad6a34043"
+  },
+  "GHSA-9x7m-9hpg-xxmw": {
+    "testbed_dir": "SNYK-JS-PUTILMERGE-1317077",
+    "vulnerable_package": "putil-merge",
+    "vulnerability_fix_commit": "https://github.com/panates/putil-merge/commit/a8f5087faaa034cc2dc2e8070c13014ad6a34043"
+  },
+  "SNYK-JS-QUERYMEN-559867": {
+    "testbed_dir": "SNYK-JS-QUERYMEN-559867",
+    "vulnerable_package": "querymen",
+    "vulnerability_fix_commit": "https://github.com/diegohaz/querymen/commit/1987fefcb3b7508253a29502a008d5063a873cef"
+  },
+  "GHSA-2cf2-2383-h4jv": {
+    "testbed_dir": "SNYK-JS-QUERYMEN-559867",
+    "vulnerable_package": "querymen",
+    "vulnerability_fix_commit": "https://github.com/diegohaz/querymen/commit/1987fefcb3b7508253a29502a008d5063a873cef"
+  },
+  "SNYK-JS-SDS-564123": {
+    "testbed_dir": "SNYK-JS-SDS-564123",
+    "vulnerable_package": "sds",
+    "vulnerability_fix_commit": "https://github.com/monsterkodi/sds/commit/a228f025fd1be033088b7abbc0f77118d573f216"
+  },
+  "GHSA-cxm3-284p-qc4v": {
+    "testbed_dir": "SNYK-JS-SDS-564123",
+    "vulnerable_package": "sds",
+    "vulnerability_fix_commit": "https://github.com/monsterkodi/sds/commit/a228f025fd1be033088b7abbc0f77118d573f216"
+  },
+  "SNYK-JS-SETGETTER-1303099": {
+    "testbed_dir": "SNYK-JS-SETGETTER-1303099",
+    "vulnerable_package": "set-getter",
+    "vulnerability_fix_commit": "https://github.com/doowb/set-getter/commit/66eb3f0d4686a4a8c7c3d6f7ecd8e570b580edc4"
+  },
+  "GHSA-jv35-xqg7-f92r": {
+    "testbed_dir": "SNYK-JS-SETGETTER-1303099",
+    "vulnerable_package": "set-getter",
+    "vulnerability_fix_commit": "https://github.com/doowb/set-getter/commit/66eb3f0d4686a4a8c7c3d6f7ecd8e570b580edc4"
+  },
+  "SNYK-JS-SETOBJECTVALUE-1054931": {
+    "testbed_dir": "SNYK-JS-SETOBJECTVALUE-1054931",
+    "vulnerable_package": "set-object-value",
+    "vulnerability_fix_commit": "https://github.com/react-atomic/react-atomic-organism/commit/c8ec63388f7785078cb27275b56ed955ffd3db6c"
+  },
+  "GHSA-4jj4-m52p-8rx3": {
+    "testbed_dir": "SNYK-JS-SETOBJECTVALUE-1054931",
+    "vulnerable_package": "set-object-value",
+    "vulnerability_fix_commit": "https://github.com/react-atomic/react-atomic-organism/commit/c8ec63388f7785078cb27275b56ed955ffd3db6c"
+  },
+  "SNYK-JS-SETORGET-1070806": {
+    "testbed_dir": "SNYK-JS-SETORGET-1070806",
+    "vulnerable_package": "set-or-get",
+    "vulnerability_fix_commit": "https://github.com/IonicaBizau/set-or-get.js/commit/82ede5cccb2e8d13e4f62599203a4389f6d8e936"
+  },
+  "GHSA-6rv4-4qv6-88g2": {
+    "testbed_dir": "SNYK-JS-SETORGET-1070806",
+    "vulnerable_package": "set-or-get",
+    "vulnerability_fix_commit": "https://github.com/IonicaBizau/set-or-get.js/commit/82ede5cccb2e8d13e4f62599203a4389f6d8e936"
+  },
+  "SNYK-JS-SHVL-1085284": {
+    "testbed_dir": "SNYK-JS-SHVL-1085284",
+    "vulnerable_package": "shvl",
+    "vulnerability_fix_commit": "https://github.com/robinvdvleuten/shvl/commit/4ed0edfa70f7778556f7b7e9ef1ee5d6d002fce2"
+  },
+  "SNYK-JS-STRIKEENTCOSET-1038821": {
+    "testbed_dir": "SNYK-JS-STRIKEENTCOSET-1038821",
+    "vulnerable_package": "@strikeentco/set",
+    "vulnerability_fix_commit": "https://github.com/strikeentco/set/commit/102cc6b2e1d1e0c928ced87e75df759d5541ff60"
+  },
+  "SNYK-JS-SUPERMIXER-607909": {
+    "testbed_dir": "SNYK-JS-SUPERMIXER-607909",
+    "vulnerable_package": "supermixer",
+    "vulnerability_fix_commit": "https://github.com/stampit-org/supermixer/commit/94dcc6fc45e0fed96187cb52aaffadf76dbbc0a3"
+  },
+  "GHSA-7prf-vw4p-qr59": {
+    "testbed_dir": "SNYK-JS-SUPERMIXER-607909",
+    "vulnerable_package": "supermixer",
+    "vulnerability_fix_commit": "https://github.com/stampit-org/supermixer/commit/94dcc6fc45e0fed96187cb52aaffadf76dbbc0a3"
+  },
+  "SNYK-JS-SWIPER-1088062": {
+    "testbed_dir": "SNYK-JS-SWIPER-1088062",
+    "vulnerable_package": "swiper",
+    "vulnerability_fix_commit": "https://github.com/nolimits4web/swiper/commit/9dad2739b7474f383474773d5ab898a0c29ac178"
+  },
+  "GHSA-p3hc-fv2j-rp68": {
+    "testbed_dir": "SNYK-JS-SWIPER-1088062",
+    "vulnerable_package": "swiper",
+    "vulnerability_fix_commit": "https://github.com/nolimits4web/swiper/commit/9dad2739b7474f383474773d5ab898a0c29ac178"
+  },
+  "GHSA-6cj2-92m5-7mvp": {
+    "testbed_dir": "GHSA-6cj2-92m5-7mvp",
+    "vulnerable_package": "think-config",
+    "vulnerability_fix_commit": "https://github.com/thinkjs/think-config/commit/31b82468d72f2e1456a27a4827cea378196db6db"
+  },
+  "SNYK-JS-THINKCONFIG-1536566": {
+    "testbed_dir": "GHSA-6cj2-92m5-7mvp",
+    "vulnerable_package": "think-config",
+    "vulnerability_fix_commit": "https://github.com/thinkjs/think-config/commit/31b82468d72f2e1456a27a4827cea378196db6db"
+  },
+  "SNYK-JS-TOTALJS-1046671": {
+    "testbed_dir": "SNYK-JS-TOTALJS-1046671",
+    "vulnerable_package": "total.js",
+    "vulnerability_fix_commit": "https://github.com/totaljs/framework/commit/b3f901561d66ab799a4a99279893b94cad7ae4ff"
+  },
+  "GHSA-6cf8-qhqj-vjqm": {
+    "testbed_dir": "SNYK-JS-TOTALJS-1046671",
+    "vulnerable_package": "total.js",
+    "vulnerability_fix_commit": "https://github.com/totaljs/framework/commit/b3f901561d66ab799a4a99279893b94cad7ae4ff"
+  },
+  "SNYK-JS-TREEKIT-1077068": {
+    "testbed_dir": "SNYK-JS-TREEKIT-1077068",
+    "vulnerable_package": "tree-kit",
+    "vulnerability_fix_commit": "https://github.com/cronvel/tree-kit/commit/c90d45f4f0e1266867be136670eddeb99b2a32a5"
+  },
+  "SNYK-JS-TSDOTPROP-1024441": {
+    "testbed_dir": "SNYK-JS-TSDOTPROP-1024441",
+    "vulnerable_package": "ts-dot-prop",
+    "vulnerability_fix_commit": "https://github.com/justinlettau/ts-dot-prop/commit/816b887a669ab959c3c2f85c6563d33928f00f14#diff-f41e9d04a45c83f3b6f6e630f10117feR183"
+  },
+  "SNYK-JS-TSEDCORE-1019382": {
+    "testbed_dir": "SNYK-JS-TSEDCORE-1019382",
+    "vulnerable_package": "@tsed/core",
+    "vulnerability_fix_commit": "https://github.com/TypedProject/tsed/commit/1395773ddac35926cf058fc6da9fb8e82266761b"
+  },
+  "GHSA-77xq-cpvg-7xm2": {
+    "testbed_dir": "SNYK-JS-TSEDCORE-1019382",
+    "vulnerable_package": "@tsed/core",
+    "vulnerability_fix_commit": "https://github.com/TypedProject/tsed/commit/1395773ddac35926cf058fc6da9fb8e82266761b"
+  },
+  "SNYK-JS-UNDEFSAFE-548940": {
+    "testbed_dir": "SNYK-JS-UNDEFSAFE-548940",
+    "vulnerable_package": "undefsafe",
+    "vulnerability_fix_commit": "https://github.com/remy/undefsafe/commit/f272681b3a50e2c4cbb6a8533795e1453382c822"
+  },
+  "SNYK-JS-UTILITIFY-559497": {
+    "testbed_dir": "SNYK-JS-UTILITIFY-559497",
+    "vulnerable_package": "utilitify",
+    "vulnerability_fix_commit": "https://github.com/xcritical-software/utilitify/commit/88d6e27009823338bf319ffb768fe6b08e8ad2d1"
+  },
+  "GHSA-9534-h433-2rjf": {
+    "testbed_dir": "SNYK-JS-UTILITIFY-559497",
+    "vulnerable_package": "utilitify",
+    "vulnerability_fix_commit": "https://github.com/xcritical-software/utilitify/commit/88d6e27009823338bf319ffb768fe6b08e8ad2d1"
+  },
+  "SNYK-JS-VIKING04MERGE-1584118": {
+    "testbed_dir": "SNYK-JS-VIKING04MERGE-1584118",
+    "vulnerable_package": "@viking04/merge",
+    "vulnerability_fix_commit": "https://github.com/viking04/merge/commit/baba40332080b38b33840d2614df6d4142dedaf6"
+  },
+  "GHSA-cqqh-49mx-fq63": {
+    "testbed_dir": "SNYK-JS-VIKING04MERGE-1584118",
+    "vulnerable_package": "@viking04/merge",
+    "vulnerability_fix_commit": "https://github.com/viking04/merge/commit/baba40332080b38b33840d2614df6d4142dedaf6"
+  },
+  "SNYK-JS-ANSIREGEX-1583908": {
+    "testbed_dir": "SNYK-JS-ANSIREGEX-1583908",
+    "vulnerable_package": "ansi-regex",
+    "vulnerability_fix_commit": "https://github.com/chalk/ansi-regex/commit/419250fa510bf31b4cc672e76537a64f9332e1f1"
+  },
+  "SNYK-JS-AXIOS-1579269": {
+    "testbed_dir": "SNYK-JS-AXIOS-1579269",
+    "vulnerable_package": "axios",
+    "vulnerability_fix_commit": "https://github.com/axios/axios/commit/5b457116e31db0e88fede6c428e969e87f290929"
+  },
+  "GHSA-cph5-m8f7-6c5x": {
+    "testbed_dir": "SNYK-JS-AXIOS-1579269",
+    "vulnerable_package": "axios",
+    "vulnerability_fix_commit": "https://github.com/axios/axios/commit/5b457116e31db0e88fede6c428e969e87f290929"
+  },
+  "npm:brace-expansion:20170302": {
+    "testbed_dir": "npm_brace-expansion_20170302",
+    "vulnerable_package": "brace-expansion",
+    "vulnerability_fix_commit": "https://github.com/juliangruber/brace-expansion/pull/35/commits/b13381281cead487cbdbfd6a69fb097ea5e456c3"
+  },
+  "GHSA-832h-xg76-4gv6": {
+    "testbed_dir": "npm_brace-expansion_20170302",
+    "vulnerable_package": "brace-expansion",
+    "vulnerability_fix_commit": "https://github.com/juliangruber/brace-expansion/pull/35/commits/b13381281cead487cbdbfd6a69fb097ea5e456c3"
+  },
+  "SNYK-JS-BROWSERSLIST-1090194": {
+    "testbed_dir": "SNYK-JS-BROWSERSLIST-1090194",
+    "vulnerable_package": "browserslist",
+    "vulnerability_fix_commit": "https://github.com/browserslist/browserslist/commit/c091916910dfe0b5fd61caad96083c6709b02d98"
+  },
+  "GHSA-w8qv-6jwh-64r5": {
+    "testbed_dir": "SNYK-JS-BROWSERSLIST-1090194",
+    "vulnerable_package": "browserslist",
+    "vulnerability_fix_commit": "https://github.com/browserslist/browserslist/commit/c091916910dfe0b5fd61caad96083c6709b02d98"
+  },
+  "npm:cejs:20180217": {
+    "testbed_dir": "npm_cejs_20180217",
+    "vulnerable_package": "cejs",
+    "vulnerability_fix_commit": "https://github.com/kanasimi/CeJS/commit/c6a9ffec1152781f268b8d72d80ee4d8fc837986"
+  },
+  "SNYK-JS-CHRONONODE-1083228": {
+    "testbed_dir": "SNYK-JS-CHRONONODE-1083228",
+    "vulnerable_package": "chrono-node",
+    "vulnerability_fix_commit": "https://github.com/wanasit/chrono/commit/98815b57622443b5c498a427210ebd603d705f4c"
+  },
+  "GHSA-hpmr-g4pq-jhgp": {
+    "testbed_dir": "SNYK-JS-CHRONONODE-1083228",
+    "vulnerable_package": "chrono-node",
+    "vulnerability_fix_commit": "https://github.com/wanasit/chrono/commit/98815b57622443b5c498a427210ebd603d705f4c"
+  },
+  "npm:clean-css:20180306": {
+    "testbed_dir": "npm_clean-css_20180306",
+    "vulnerable_package": "clean-css",
+    "vulnerability_fix_commit": "https://github.com/jakubpawlowicz/clean-css/commit/2929bafbf8cdf7dccb24e0949c70833764fa87e3"
+  },
+  "SNYK-JS-CODEMIRROR-1016937": {
+    "testbed_dir": "SNYK-JS-CODEMIRROR-1016937",
+    "vulnerable_package": "codemirror",
+    "vulnerability_fix_commit": "https://github.com/codemirror/CodeMirror/commit/55d0333907117c9231ffdf555ae8824705993bbb"
+  },
+  "GHSA-4gw3-8f77-f72c": {
+    "testbed_dir": "SNYK-JS-CODEMIRROR-1016937",
+    "vulnerable_package": "codemirror",
+    "vulnerability_fix_commit": "https://github.com/codemirror/CodeMirror/commit/55d0333907117c9231ffdf555ae8824705993bbb"
+  },
+  "SNYK-JS-COLORSTRING-1082939": {
+    "testbed_dir": "SNYK-JS-COLORSTRING-1082939",
+    "vulnerable_package": "color-string",
+    "vulnerability_fix_commit": "https://github.com/Qix-/color-string/commit/0789e21284c33d89ebc4ab4ca6f759b9375ac9d3"
+  },
+  "GHSA-257v-vj4p-3w2h": {
+    "testbed_dir": "SNYK-JS-COLORSTRING-1082939",
+    "vulnerable_package": "color-string",
+    "vulnerability_fix_commit": "https://github.com/Qix-/color-string/commit/0789e21284c33d89ebc4ab4ca6f759b9375ac9d3"
+  },
+  "SNYK-JS-COLORSCLI-1584218": {
+    "testbed_dir": "SNYK-JS-COLORSCLI-1584218",
+    "vulnerable_package": "colors-cli",
+    "vulnerability_fix_commit": "https://github.com/jaywcjlove/colors-cli/commit/78ee15ba9111ddee1cc0640ccd79369525bd57b8"
+  },
+  "npm:content:20180305": {
+    "testbed_dir": "npm_content_20180305",
+    "vulnerable_package": "content",
+    "vulnerability_fix_commit": "https://github.com/hapijs/content/commit/96beb34f7c38a08d024dbf9cd63865c56e2955d9"
+  },
+  "GHSA-x6wp-rfwh-hcx7": {
+    "testbed_dir": "npm_content_20180305",
+    "vulnerable_package": "content",
+    "vulnerability_fix_commit": "https://github.com/hapijs/content/commit/96beb34f7c38a08d024dbf9cd63865c56e2955d9"
+  },
+  "SNYK-JS-CONVENTIONALCOMMITSPARSER-1766960": {
+    "testbed_dir": "SNYK-JS-CONVENTIONALCOMMITSPARSER-1766960",
+    "vulnerable_package": "conventional-commits-parser",
+    "vulnerability_fix_commit": "https://github.com/conventional-changelog/conventional-changelog/commit/c696fa35f93e0ee13728d6cf1221587ac6386311"
+  },
+  "SNYK-JS-DATEANDTIME-1054430": {
+    "testbed_dir": "SNYK-JS-DATEANDTIME-1054430",
+    "vulnerable_package": "date-and-time",
+    "vulnerability_fix_commit": "https://github.com/knowledgecode/date-and-time/commit/9e4b501eacddccc8b1f559fb414f48472ee17c2a"
+  },
+  "GHSA-r92x-f52r-x54g": {
+    "testbed_dir": "SNYK-JS-DATEANDTIME-1054430",
+    "vulnerable_package": "date-and-time",
+    "vulnerability_fix_commit": "https://github.com/knowledgecode/date-and-time/commit/9e4b501eacddccc8b1f559fb414f48472ee17c2a"
+  },
+  "npm:dirty-json:20180213": {
+    "testbed_dir": "npm_dirty-json_20180213",
+    "vulnerable_package": "dirty-json",
+    "vulnerability_fix_commit": "https://github.com/RyanMarcus/dirty-json/commit/0b9c15e26699538a11e08e0f168af558392dadbe"
+  },
+  "npm:ducktype:20180219": {
+    "testbed_dir": "npm_ducktype_20180219",
+    "vulnerable_package": "ducktype",
+    "vulnerability_fix_commit": "https://github.com/josdejong/ducktype/commit/d8b4c902598c9104d5c56225c3fffcbe1368eff6"
+  },
+  "npm:email-existence:20180225": {
+    "testbed_dir": "npm_email-existence_20180225",
+    "vulnerable_package": "email-existence",
+    "vulnerability_fix_commit": "https://github.com/nmanousos/email-existence/commit/0029ba71b6ad0d8ec0baa2ecc6256d038bdd9b56"
+  },
+  "SNYK-JS-ETHERS-1586048": {
+    "testbed_dir": "SNYK-JS-ETHERS-1586048",
+    "vulnerable_package": "ethers",
+    "vulnerability_fix_commit": "https://github.com/ethers-io/ethers.js/commit/32a6b2a362815eb85ce3f3abad5adf92f2b80e10"
+  },
+  "SNYK-JS-FASTCSV-1049538": {
+    "testbed_dir": "SNYK-JS-FASTCSV-1049538",
+    "vulnerable_package": "fast-csv",
+    "vulnerability_fix_commit": "https://github.com/C2FO/fast-csv/commit/4bbd39f26a8cd7382151ab4f5fb102234b2f829e"
+  },
+  "GHSA-8cv5-p934-3hwp": {
+    "testbed_dir": "SNYK-JS-FASTCSV-1049538",
+    "vulnerable_package": "fast-csv",
+    "vulnerability_fix_commit": "https://github.com/C2FO/fast-csv/commit/4bbd39f26a8cd7382151ab4f5fb102234b2f829e"
+  },
+  "npm:forwarded:20170908": {
+    "testbed_dir": "npm_forwarded_20170908",
+    "vulnerable_package": "forwarded",
+    "vulnerability_fix_commit": "https://github.com/jshttp/forwarded/commit/d469116eda4931fbe1c0ccb29497b35930bfa328"
+  },
+  "GHSA-mpcf-4gmh-23w8": {
+    "testbed_dir": "npm_forwarded_20170908",
+    "vulnerable_package": "forwarded",
+    "vulnerability_fix_commit": "https://github.com/jshttp/forwarded/commit/d469116eda4931fbe1c0ccb29497b35930bfa328"
+  },
+  "npm:fresh:20170908": {
+    "testbed_dir": "npm_fresh_20170908",
+    "vulnerable_package": "fresh",
+    "vulnerability_fix_commit": "https://github.com/jshttp/fresh/commit/21a0f0c2a5f447e0d40bc16be0c23fa98a7b46ec"
+  },
+  "GHSA-9qj9-36jm-prpv": {
+    "testbed_dir": "npm_fresh_20170908",
+    "vulnerable_package": "fresh",
+    "vulnerability_fix_commit": "https://github.com/jshttp/fresh/commit/21a0f0c2a5f447e0d40bc16be0c23fa98a7b46ec"
+  },
+  "SNYK-JS-GLOBPARENT-1314294": {
+    "testbed_dir": "SNYK-JS-GLOBPARENT-1314294",
+    "vulnerable_package": "glob-parent",
+    "vulnerability_fix_commit": "https://github.com/gulpjs/glob-parent/commit/3e9f04a3b4349db7e1962d87c9a7398cda51f339"
+  },
+  "GHSA-ww39-953v-wcq6": {
+    "testbed_dir": "SNYK-JS-GLOBPARENT-1314294",
+    "vulnerable_package": "glob-parent",
+    "vulnerability_fix_commit": "https://github.com/gulpjs/glob-parent/commit/3e9f04a3b4349db7e1962d87c9a7398cda51f339"
+  },
+  "SNYK-JS-HIGHLIGHTJS-1048676": {
+    "testbed_dir": "SNYK-JS-HIGHLIGHTJS-1048676",
+    "vulnerable_package": "highlight.js",
+    "vulnerability_fix_commit": "https://github.com/highlightjs/highlight.js/commit/373b9d862401162e832ce77305e49b859e110f9c"
+  },
+  "GHSA-vfrc-7r7c-w9mx": {
+    "testbed_dir": "SNYK-JS-HIGHLIGHTJS-1048676",
+    "vulnerable_package": "highlight.js",
+    "vulnerability_fix_commit": "https://github.com/highlightjs/highlight.js/commit/373b9d862401162e832ce77305e49b859e110f9c"
+  },
+  "SNYK-JS-HOSTEDGITINFO-1088355": {
+    "testbed_dir": "SNYK-JS-HOSTEDGITINFO-1088355",
+    "vulnerable_package": "hosted-git-info",
+    "vulnerability_fix_commit": "https://github.com/npm/hosted-git-info/commit/bede0dc38e1785e732bf0a48ba6f81a4a908eba3"
+  },
+  "GHSA-43f8-2h32-f4cj": {
+    "testbed_dir": "SNYK-JS-HOSTEDGITINFO-1088355",
+    "vulnerable_package": "hosted-git-info",
+    "vulnerability_fix_commit": "https://github.com/npm/hosted-git-info/commit/bede0dc38e1785e732bf0a48ba6f81a4a908eba3"
+  },
+  "SNYK-JS-ISEMAIL-1279002": {
+    "testbed_dir": "SNYK-JS-ISEMAIL-1279002",
+    "vulnerable_package": "is-email",
+    "vulnerability_fix_commit": "https://github.com/segmentio/is-email/commit/060ecedf345729f11ad857ccaf7a915ff6797739"
+  },
+  "GHSA-j377-2x76-558h": {
+    "testbed_dir": "SNYK-JS-ISEMAIL-1279002",
+    "vulnerable_package": "is-email",
+    "vulnerability_fix_commit": "https://github.com/segmentio/is-email/commit/060ecedf345729f11ad857ccaf7a915ff6797739"
+  },
+  "SNYK-JS-ISMYJSONVALID-597165": {
+    "testbed_dir": "SNYK-JS-ISMYJSONVALID-597165",
+    "vulnerable_package": "is-my-json-valid",
+    "vulnerability_fix_commit": "https://github.com/mafintosh/is-my-json-valid/commit/c3fc04fc455d40e9b29537f8e2c73a28ce106edb"
+  },
+  "SNYK-JS-ISSVG-1243891": {
+    "testbed_dir": "SNYK-JS-ISSVG-1243891",
+    "vulnerable_package": "is-svg",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/is-svg/commit/732fc72779840c45a30817d3fe28e12058592b02"
+  },
+  "GHSA-7r28-3m3f-r2pr": {
+    "testbed_dir": "SNYK-JS-ISSVG-1243891",
+    "vulnerable_package": "is-svg",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/is-svg/commit/732fc72779840c45a30817d3fe28e12058592b02"
+  },
+  "SNYK-JS-JSPDF-1073626": {
+    "testbed_dir": "SNYK-JS-JSPDF-1073626",
+    "vulnerable_package": "jspdf",
+    "vulnerability_fix_commit": "https://github.com/MrRio/jsPDF/commit/d8bb3b39efcd129994f7a3b01b632164144ec43e"
+  },
+  "GHSA-57f3-gghm-9mhc": {
+    "testbed_dir": "SNYK-JS-JSPDF-1073626",
+    "vulnerable_package": "jspdf",
+    "vulnerability_fix_commit": "https://github.com/MrRio/jsPDF/commit/d8bb3b39efcd129994f7a3b01b632164144ec43e"
+  },
+  "SNYK-JS-LODASH-1018905": {
+    "testbed_dir": "SNYK-JS-LODASH-1018905",
+    "vulnerable_package": "lodash",
+    "vulnerability_fix_commit": "https://github.com/lodash/lodash/commit/c4847ebe7d14540bb28a8b932a9ce1b9ecbfee1a"
+  },
+  "GHSA-29mw-wpgm-hmr9": {
+    "testbed_dir": "SNYK-JS-LODASH-1018905",
+    "vulnerable_package": "lodash",
+    "vulnerability_fix_commit": "https://github.com/lodash/lodash/commit/c4847ebe7d14540bb28a8b932a9ce1b9ecbfee1a"
+  },
+  "SNYK-JS-MARKDOWNIT-2331914": {
+    "testbed_dir": "SNYK-JS-MARKDOWNIT-2331914",
+    "vulnerable_package": "markdown-it",
+    "vulnerability_fix_commit": "https://github.com/markdown-it/markdown-it/commit/ffc49ab46b5b751cd2be0aabb146f2ef84986101"
+  },
+  "npm:method-override:20170927": {
+    "testbed_dir": "npm_method-override_20170927",
+    "vulnerable_package": "method-override",
+    "vulnerability_fix_commit": "https://github.com/expressjs/method-override/commit/4c58835a61fdf7a8e070d6f8ecd5379a961d0987"
+  },
+  "GHSA-qx2f-477c-35rq": {
+    "testbed_dir": "npm_method-override_20170927",
+    "vulnerable_package": "method-override",
+    "vulnerability_fix_commit": "https://github.com/expressjs/method-override/commit/4c58835a61fdf7a8e070d6f8ecd5379a961d0987"
+  },
+  "npm:mime:20170907": {
+    "testbed_dir": "npm_mime_20170907",
+    "vulnerable_package": "mime",
+    "vulnerability_fix_commit": "https://github.com/broofa/node-mime/commit/1df903fdeb9ae7eaa048795b8d580ce2c98f40b0"
+  },
+  "GHSA-wrvr-8mpx-r7pp": {
+    "testbed_dir": "npm_mime_20170907",
+    "vulnerable_package": "mime",
+    "vulnerability_fix_commit": "https://github.com/broofa/node-mime/commit/1df903fdeb9ae7eaa048795b8d580ce2c98f40b0"
+  },
+  "SNYK-JS-MINIMATCH-1019388": {
+    "testbed_dir": "SNYK-JS-MINIMATCH-1019388",
+    "vulnerable_package": "minimatch",
+    "vulnerability_fix_commit": "https://github.com/isaacs/minimatch/commit/6944abf9e0694bd22fd9dad293faa40c2bc8a955"
+  },
+  "GHSA-hxm2-r34f-qmc5": {
+    "testbed_dir": "SNYK-JS-MINIMATCH-1019388",
+    "vulnerable_package": "minimatch",
+    "vulnerability_fix_commit": "https://github.com/isaacs/minimatch/commit/6944abf9e0694bd22fd9dad293faa40c2bc8a955"
+  },
+  "npm:mobile-detect:20170907": {
+    "testbed_dir": "npm_mobile-detect_20170907",
+    "vulnerable_package": "mobile-detect",
+    "vulnerability_fix_commit": "https://github.com/hgoebl/mobile-detect.js/commit/7222f6e75cf8cd90e1dc53e445716203eaf79d8a"
+  },
+  "SNYK-JS-NATURAL-1915418": {
+    "testbed_dir": "SNYK-JS-NATURAL-1915418",
+    "vulnerable_package": "natural",
+    "vulnerability_fix_commit": "https://github.com/NaturalNode/natural/commit/90e85afb20e76560bc555d83abad3bc919388381"
+  },
+  "SNYK-JS-NORMALIZEURL-1296539": {
+    "testbed_dir": "SNYK-JS-NORMALIZEURL-1296539",
+    "vulnerable_package": "normalize-url",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/normalize-url/commit/b1fdb5120b6d27a88400d8800e67ff5a22bd2103"
+  },
+  "GHSA-px4h-xg32-q955": {
+    "testbed_dir": "SNYK-JS-NORMALIZEURL-1296539",
+    "vulnerable_package": "normalize-url",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/normalize-url/commit/b1fdb5120b6d27a88400d8800e67ff5a22bd2103"
+  },
+  "SNYK-JS-NPMUSERVALIDATE-1019352": {
+    "testbed_dir": "SNYK-JS-NPMUSERVALIDATE-1019352",
+    "vulnerable_package": "npm-user-validate",
+    "vulnerability_fix_commit": "https://github.com/npm/npm-user-validate/commit/c8a87dac1a4cc6988b5418f30411a8669bef204e"
+  },
+  "GHSA-pw54-mh39-w3hc": {
+    "testbed_dir": "SNYK-JS-NPMUSERVALIDATE-1019352",
+    "vulnerable_package": "npm-user-validate",
+    "vulnerability_fix_commit": "https://github.com/npm/npm-user-validate/commit/c8a87dac1a4cc6988b5418f30411a8669bef204e"
+  },
+  "GHSA-rp65-9cf3-cjxr": {
+    "testbed_dir": "GHSA-rp65-9cf3-cjxr",
+    "vulnerable_package": "nth-check",
+    "vulnerability_fix_commit": "https://github.com/fb55/nth-check/commit/9894c1d2010870c351f66c6f6efcf656e26bb726"
+  },
+  "SNYK-JS-NTHCHECK-1586032": {
+    "testbed_dir": "GHSA-rp65-9cf3-cjxr",
+    "vulnerable_package": "nth-check",
+    "vulnerability_fix_commit": "https://github.com/fb55/nth-check/commit/9894c1d2010870c351f66c6f6efcf656e26bb726"
+  },
+  "SNYK-JS-PAPAPARSE-564258": {
+    "testbed_dir": "SNYK-JS-PAPAPARSE-564258",
+    "vulnerable_package": "papaparse",
+    "vulnerability_fix_commit": "https://github.com/mholt/PapaParse/commit/235a12758cd77266d2e98fd715f53536b34ad621"
+  },
+  "GHSA-qvjc-g5vr-mfgr": {
+    "testbed_dir": "SNYK-JS-PAPAPARSE-564258",
+    "vulnerable_package": "papaparse",
+    "vulnerability_fix_commit": "https://github.com/mholt/PapaParse/commit/235a12758cd77266d2e98fd715f53536b34ad621"
+  },
+  "SNYK-JS-POSTCSS-1255640": {
+    "testbed_dir": "SNYK-JS-POSTCSS-1255640",
+    "vulnerable_package": "postcss",
+    "vulnerability_fix_commit": "https://github.com/postcss/postcss/commit/2b1d04c867995e55124e0a165b7c6622c1735956"
+  },
+  "GHSA-566m-qj78-rww5": {
+    "testbed_dir": "SNYK-JS-POSTCSS-1255640",
+    "vulnerable_package": "postcss",
+    "vulnerability_fix_commit": "https://github.com/postcss/postcss/commit/2b1d04c867995e55124e0a165b7c6622c1735956"
+  },
+  "SNYK-JS-RAMDA-1582370": {
+    "testbed_dir": "SNYK-JS-RAMDA-1582370",
+    "vulnerable_package": "ramda",
+    "vulnerability_fix_commit": "https://github.com/ramda/ramda/commit/37af6ae2ca8b94656996dd27fb0a1f208d69134e"
+  },
+  "SNYK-JS-REACTNATIVE-1298632": {
+    "testbed_dir": "SNYK-JS-REACTNATIVE-1298632",
+    "vulnerable_package": "react-native",
+    "vulnerability_fix_commit": "https://github.com/facebook/react-native/commit/ca09ae82715e33c9ac77b3fa55495cf84ba891c7"
+  },
+  "GHSA-7f53-fmmv-mfjv": {
+    "testbed_dir": "SNYK-JS-REACTNATIVE-1298632",
+    "vulnerable_package": "react-native",
+    "vulnerability_fix_commit": "https://github.com/facebook/react-native/commit/ca09ae82715e33c9ac77b3fa55495cf84ba891c7"
+  },
+  "SNYK-JS-REMARKABLE-174639": {
+    "testbed_dir": "SNYK-JS-REMARKABLE-174639",
+    "vulnerable_package": "remarkable",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/remarkable/pull/335/commits/b8bb2c0987f06d2b34e882159249f1538c6dc380"
+  },
+  "GHSA-q22g-8fr4-qpj4": {
+    "testbed_dir": "SNYK-JS-REMARKABLE-174639",
+    "vulnerable_package": "remarkable",
+    "vulnerability_fix_commit": "https://github.com/jonschlinkert/remarkable/pull/335/commits/b8bb2c0987f06d2b34e882159249f1538c6dc380"
+  },
+  "npm:sanitize:20180225": {
+    "testbed_dir": "npm_sanitize_20180225",
+    "vulnerable_package": "sanitize",
+    "vulnerability_fix_commit": "https://github.com/pocketly/node-sanitize/commit/4fd57530367ea9f2570b1e57d1a1a32e7f5d644f#diff-bd042f5439b55acdcce363c79e2f55d6R148"
+  },
+  "SNYK-JS-SEMVERREGEX-1585624": {
+    "testbed_dir": "SNYK-JS-SEMVERREGEX-1585624",
+    "vulnerable_package": "semver-regex",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/semver-regex/commit/11c66245f4e1976dccc52977ed183696a21a3fd7"
+  },
+  "GHSA-44c6-4v22-4mhx": {
+    "testbed_dir": "SNYK-JS-SEMVERREGEX-1585624",
+    "vulnerable_package": "semver-regex",
+    "vulnerability_fix_commit": "https://github.com/sindresorhus/semver-regex/commit/11c66245f4e1976dccc52977ed183696a21a3fd7"
+  },
+  "SNYK-JS-SIMPLEMARKDOWN-469242": {
+    "testbed_dir": "SNYK-JS-SIMPLEMARKDOWN-469242",
+    "vulnerable_package": "simple-markdown",
+    "vulnerability_fix_commit": "https://github.com/Khan/simple-markdown/commit/015a719bf5cdc561feea05500ecb3274ef609cd2"
+  },
+  "GHSA-qj3f-9gmq-fwv5": {
+    "testbed_dir": "SNYK-JS-SIMPLEMARKDOWN-469242",
+    "vulnerable_package": "simple-markdown",
+    "vulnerability_fix_commit": "https://github.com/Khan/simple-markdown/commit/015a719bf5cdc561feea05500ecb3274ef609cd2"
+  },
+  "SNYK-JS-SSRI-1246392": {
+    "testbed_dir": "SNYK-JS-SSRI-1246392",
+    "vulnerable_package": "ssri",
+    "vulnerability_fix_commit": "https://github.com/npm/ssri/commit/76e223317d971f19e4db8191865bdad5edee40d2"
+  },
+  "GHSA-vx3p-948g-6vhq": {
+    "testbed_dir": "SNYK-JS-SSRI-1246392",
+    "vulnerable_package": "ssri",
+    "vulnerability_fix_commit": "https://github.com/npm/ssri/commit/76e223317d971f19e4db8191865bdad5edee40d2"
+  },
+  "SNYK-JS-TERMINALKIT-1734787": {
+    "testbed_dir": "SNYK-JS-TERMINALKIT-1734787",
+    "vulnerable_package": "terminal-kit",
+    "vulnerability_fix_commit": "https://github.com/cronvel/terminal-kit/commit/a2e446cc3927b559d0281683feb9b821e83b758c"
+  },
+  "SNYK-JS-THREE-1064931": {
+    "testbed_dir": "SNYK-JS-THREE-1064931",
+    "vulnerable_package": "three",
+    "vulnerability_fix_commit": "https://github.com/mrdoob/three.js/pull/21143/commits/4a582355216b620176a291ff319d740e619d583e"
+  },
+  "GHSA-fq6p-x6j3-cmmq": {
+    "testbed_dir": "SNYK-JS-THREE-1064931",
+    "vulnerable_package": "three",
+    "vulnerability_fix_commit": "https://github.com/mrdoob/three.js/pull/21143/commits/4a582355216b620176a291ff319d740e619d583e"
+  },
+  "SNYK-JS-TRIMOFFNEWLINES-1296850": {
+    "testbed_dir": "SNYK-JS-TRIMOFFNEWLINES-1296850",
+    "vulnerable_package": "trim-off-newlines",
+    "vulnerability_fix_commit": "https://github.com/stevemao/trim-off-newlines/commit/6226c958cbbac284a840010eb1f6617fb99a5645"
+  },
+  "GHSA-38fc-wpqx-33j7": {
+    "testbed_dir": "SNYK-JS-TRIMOFFNEWLINES-1296850",
+    "vulnerable_package": "trim-off-newlines",
+    "vulnerability_fix_commit": "https://github.com/stevemao/trim-off-newlines/commit/6226c958cbbac284a840010eb1f6617fb99a5645"
+  },
+  "npm:truncate:20180225": {
+    "testbed_dir": "npm_truncate_20180225",
+    "vulnerable_package": "truncate",
+    "vulnerability_fix_commit": "https://github.com/FGRibreau/node-truncate/commit/a3cea056427b2dfbbffebf24a95419b09db23b22"
+  },
+  "SNYK-JS-UAPARSERJS-1072471": {
+    "testbed_dir": "SNYK-JS-UAPARSERJS-1072471",
+    "vulnerable_package": "ua-parser-js",
+    "vulnerability_fix_commit": "https://github.com/faisalman/ua-parser-js/commit/809439e20e273ce0d25c1d04e111dcf6011eb566"
+  },
+  "GHSA-78cj-fxph-m83p": {
+    "testbed_dir": "SNYK-JS-UAPARSERJS-1072471",
+    "vulnerable_package": "ua-parser-js",
+    "vulnerability_fix_commit": "https://github.com/faisalman/ua-parser-js/commit/809439e20e273ce0d25c1d04e111dcf6011eb566"
+  },
+  "npm:valid-email:20180222": {
+    "testbed_dir": "npm_valid-email_20180222",
+    "vulnerable_package": "valid-email",
+    "vulnerability_fix_commit": "https://github.com/johnhenry/valid-email/commit/624ffa60b42bed8c577a679d682dda286b4603e6"
+  },
+  "SNYK-JS-WS-1296835": {
+    "testbed_dir": "SNYK-JS-WS-1296835",
+    "vulnerable_package": "ws",
+    "vulnerability_fix_commit": "https://github.com/websockets/ws/commit/00c425ec77993773d823f018f64a5c44e17023ff"
+  },
+  "GHSA-6fc8-4gx4-v693": {
+    "testbed_dir": "SNYK-JS-WS-1296835",
+    "vulnerable_package": "ws",
+    "vulnerability_fix_commit": "https://github.com/websockets/ws/commit/00c425ec77993773d823f018f64a5c44e17023ff"
+  }
+}

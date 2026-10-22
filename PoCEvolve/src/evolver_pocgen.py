@@ -5,7 +5,7 @@ from pathlib import Path
 import traceback
 
 from src.config import *
-from src.utils import load_text, load_json, dump_json
+from src.utils import load_text, load_json, dump_json, _strip_static_analysis
 from src.pipeline import run_gepa_optimization
 from tqdm import tqdm
 
@@ -15,6 +15,16 @@ def _transcript_succeeded(transcript: dict) -> bool:
             if prompt.get('exploit_result'):
                 return True
     return False
+
+
+def _transcript_seed_prompt_strip(transcript: dict) -> None:
+    """Unconditionally strip baked-in static analysis from transcript seed prompts."""
+    for attempt in transcript.get('attempts', []):
+        for prompt in (attempt.get('seed_prompts') or []):
+            if isinstance(prompt.get('reflective_prompt'), str):
+                prompt['reflective_prompt'] = _strip_static_analysis(prompt['reflective_prompt'])
+            if isinstance(prompt.get('userPrompt'), str):
+                prompt['userPrompt'] = _strip_static_analysis(prompt['userPrompt'])
 
 
 def main():
@@ -66,6 +76,10 @@ def main():
                 if _transcript_succeeded(_transcript):
                     print(f'Already succeeded in previous evolver run for {id_raw}. Skip.')
                     continue
+
+                # Unconditionally strip baked-in static analysis from loaded transcript
+                _transcript_seed_prompt_strip(_transcript)
+
                 if "attempts" in _transcript:
                     transcript['attempts'] = _transcript['attempts']
 
@@ -88,6 +102,17 @@ def main():
                         f.write(id_raw)
 
                 print(id)
+                # Unconditionally strip baked-in static analysis from data dict prompts
+                for p in (data.get("seen_prompts_filtered_k5") or []):
+                    if isinstance(p, dict):
+                        if isinstance(p.get("reflective_prompt"), str):
+                            p["reflective_prompt"] = _strip_static_analysis(p["reflective_prompt"])
+                        if isinstance(p.get("userPrompt"), str):
+                            p["userPrompt"] = _strip_static_analysis(p["userPrompt"])
+                for i, p in enumerate(data.get("generated_exploits") or []):
+                    if isinstance(p, str):
+                        data["generated_exploits"][i] = _strip_static_analysis(p)
+
                 run_gepa_optimization(data, transcript)
             except KeyboardInterrupt:
                 transcript.update({"error": {"message": "KeyboardInterrupt", "trackback": ""}})

@@ -6,13 +6,25 @@ from src.llm import call_llm
 from src.config import ITERATION, MINIBATCH_SIZE
 from src.selector import select_candidate_for_evolve
 from src.prompts import REQUIRED_CONTEXTS
+from src.utils import _strip_static_analysis
 
 
 def run_gepa_optimization(data: dict, transcript: dict):
-    
+
     prompts_list = data.get("seen_prompts_filtered_k5", []) or [data.get('generated_exploits', [])]
     if len(prompts_list) == 0:
         return
+
+    # Unconditionally strip baked-in static analysis from training-data prompts
+    for p in (data.get("seen_prompts_filtered_k5") or []):
+        if isinstance(p, dict):
+            if isinstance(p.get("reflective_prompt"), str):
+                p["reflective_prompt"] = _strip_static_analysis(p["reflective_prompt"])
+            if isinstance(p.get("userPrompt"), str):
+                p["userPrompt"] = _strip_static_analysis(p["userPrompt"])
+    for i, p in enumerate(data.get("generated_exploits") or []):
+        if isinstance(p, str):
+            data["generated_exploits"][i] = _strip_static_analysis(p)
 
     transcript.setdefault('attempts', [])
     

@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-ISEMAIL-1279002",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-ISEMAIL-1279002",
+  "indexed": true,
+  "entrypoints_count": 2,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

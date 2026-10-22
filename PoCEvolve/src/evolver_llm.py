@@ -8,7 +8,7 @@ import json
 import time
 
 from .config import *
-from .utils import load_text, load_json, dump_json
+from .utils import load_text, load_json, dump_json, _strip_static_analysis
 from .pipeline import run_gepa_optimization
 from tqdm import tqdm
 
@@ -27,6 +27,16 @@ def _transcript_succeeded(transcript: dict) -> bool:
             if prompt.get('exploit_result'):
                 return True
     return False
+
+
+def _transcript_seed_prompt_strip(transcript: dict) -> None:
+    """Unconditionally strip baked-in static analysis from transcript seed prompts."""
+    for attempt in transcript.get('attempts', []):
+        for prompt in (attempt.get('seed_prompts') or []):
+            if isinstance(prompt.get('reflective_prompt'), str):
+                prompt['reflective_prompt'] = _strip_static_analysis(prompt['reflective_prompt'])
+            if isinstance(prompt.get('userPrompt'), str):
+                prompt['userPrompt'] = _strip_static_analysis(prompt['userPrompt'])
 
 
 def _load_vfcs_generated() -> dict:
@@ -101,7 +111,10 @@ def main():
                 if _transcript_succeeded(_transcript):
                     tqdm.write(f'  [SKIP] {id}: Already succeeded in previous evolver run.')
                     continue
-                
+
+                # Strip baked-in static analysis from loaded transcript (unconditional)
+                _transcript_seed_prompt_strip(_transcript)
+
                 if not has_valid_attempts:
                     tqdm.write(f'  [CLEANUP] {id}: Found incomplete/corrupted transcript from prior interruption. Resetting...')
                     transcript = {}
@@ -131,6 +144,23 @@ def main():
                     tqdm.write(f"  → [{id}] Starting GEPA optimization loop..."
                     )
                     
+                # Unconditionally strip baked-in static analysis from data dict and transcript before optimization
+                for group in (datapoint.get("seen_prompts_filtered_k5") or []):
+                    if isinstance(group, list):
+                        for p in group:
+                            if isinstance(p.get('reflective_prompt'), str):
+                                p['reflective_prompt'] = _strip_static_analysis(p['reflective_prompt'])
+                            if isinstance(p.get('userPrompt'), str):
+                                p['userPrompt'] = _strip_static_analysis(p['userPrompt'])
+                for group in (datapoint.get("seen_prompts") or []):
+                    if isinstance(group, list):
+                        for p in group:
+                            if isinstance(p.get('reflective_prompt'), str):
+                                p['reflective_prompt'] = _strip_static_analysis(p['reflective_prompt'])
+                            if isinstance(p.get('userPrompt'), str):
+                                p['userPrompt'] = _strip_static_analysis(p['userPrompt'])
+                _transcript_seed_prompt_strip(transcript)
+
                     # Execute the actual iteration loop
                     run_gepa_optimization(datapoint, transcript)
                     

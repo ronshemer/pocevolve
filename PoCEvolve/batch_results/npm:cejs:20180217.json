@@ -1,0 +1,9 @@
+{
+  "cve_id": "npm_cejs_20180217",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/npm_cejs_20180217",
+  "indexed": true,
+  "entrypoints_count": 65,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

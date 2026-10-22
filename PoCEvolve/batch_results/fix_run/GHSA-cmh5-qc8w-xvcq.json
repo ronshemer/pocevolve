@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-I18NEXT-1065979",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-I18NEXT-1065979",
+  "indexed": true,
+  "entrypoints_count": 8,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

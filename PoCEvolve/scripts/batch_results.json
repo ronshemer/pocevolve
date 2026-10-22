@@ -1,0 +1,88 @@
+{
+  "batch_stats": {
+    "total_cves": 5,
+    "has_testbed": 5,
+    "failed_index": 0,
+    "succeeded_analysis": 5,
+    "paths_found": 0,
+    "entry_points_only": 0,
+    "no_data": 5,
+    "total_nodes": 123,
+    "total_edges": 123,
+    "total_entry_points": 10,
+    "total_matched_methods": 0,
+    "total_taint_flows": 0,
+    "avg_nodes": 24.6,
+    "avg_edges": 24.6,
+    "avg_entry_points": 2.0,
+    "avg_taint_flows": 0.0,
+    "total_time_sec": 16.71743083000183
+  },
+  "cve_results": [
+    {
+      "cve_id": "SNYK-JS-HOTFORMULAPARSER-541328",
+      "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-HOTFORMULAPARSER-541328",
+      "status": "success",
+      "nodes": 14,
+      "edges": 14,
+      "entry_points_count": 1,
+      "matched_methods_count": 0,
+      "taint_flows_count": 0,
+      "mode": "no_data",
+      "error_msg": "",
+      "duration_sec": 4.1828107833862305
+    },
+    {
+      "cve_id": "SNYK-JS-ISMYJSONVALID-597167",
+      "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-ISMYJSONVALID-597167",
+      "status": "success",
+      "nodes": 28,
+      "edges": 28,
+      "entry_points_count": 2,
+      "matched_methods_count": 0,
+      "taint_flows_count": 0,
+      "mode": "no_data",
+      "error_msg": "",
+      "duration_sec": 3.384141445159912
+    },
+    {
+      "cve_id": "SNYK-JS-JSYAML-174129",
+      "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-JSYAML-174129",
+      "status": "success",
+      "nodes": 44,
+      "edges": 44,
+      "entry_points_count": 4,
+      "matched_methods_count": 0,
+      "taint_flows_count": 0,
+      "mode": "no_data",
+      "error_msg": "",
+      "duration_sec": 3.065735101699829
+    },
+    {
+      "cve_id": "npm:mixin-pro:20160407",
+      "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/npm_mixin-pro_20160407",
+      "status": "success",
+      "nodes": 15,
+      "edges": 15,
+      "entry_points_count": 1,
+      "matched_methods_count": 0,
+      "taint_flows_count": 0,
+      "mode": "no_data",
+      "error_msg": "",
+      "duration_sec": 3.050431489944458
+    },
+    {
+      "cve_id": "npm:mobile-icon-resizer:20160408",
+      "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/npm_mobile-icon-resizer_20160408",
+      "status": "success",
+      "nodes": 22,
+      "edges": 22,
+      "entry_points_count": 2,
+      "matched_methods_count": 0,
+      "taint_flows_count": 0,
+      "mode": "no_data",
+      "error_msg": "",
+      "duration_sec": 3.0342795848846436
+    }
+  ]
+}

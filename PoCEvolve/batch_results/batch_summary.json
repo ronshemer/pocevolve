@@ -1,0 +1,2404 @@
+{
+  "summary": {
+    "total": 0,
+    "indexed": 0,
+    "entrypoints_gt0": 0,
+    "paths_gt0": 0,
+    "errors": 0,
+    "skipped_missing_testbed": 299
+  },
+  "results": [
+    {
+      "cve_id": "SNYK-JS-HOTFORMULAPARSER-541328",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-HOTFORMULAPARSER-541328 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-rc77-xxq6-4mff",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-HOTFORMULAPARSER-541328 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ISMYJSONVALID-597167",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ISMYJSONVALID-597167 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-f522-ffg8-j8r6",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ISMYJSONVALID-597165 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JSYAML-174129",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSYAML-174129 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-xxvw-45rp-3mj2",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSYAML-174129 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:mixin-pro:20160407",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mixin-pro_20160407 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:mobile-icon-resizer:20160408",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mobile-icon-resizer_20160408 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-mxjr-xmcg-fg7w",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mobile-icon-resizer_20160408 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:mol-proto:20160407",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mol-proto_20160407 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PIXLCLASS-564968",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PIXLCLASS-564968 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-vm5j-vqr6-v7v8",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PIXLCLASS-564968 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SERIALIZEJAVASCRIPT-570062",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SERIALIZEJAVASCRIPT-570062 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-hxcc-f52p-wc94",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SERIALIZEJAVASCRIPT-570062 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:serialize-to-js:20170208",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_serialize-to-js_20170208 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-mm62-wxc8-cf7m",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_serialize-to-js_20170208 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-THENIFY-571690",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-THENIFY-571690 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-cf4h-3jhx-xvhq",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed GHSA-cf4h-3jhx-xvhq exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ARPPING-1060047",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ARPPING-1060047 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ASYNCGIT-1064877",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ASYNCGIT-1064877 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6qpr-9mc5-7gch",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ASYNCGIT-1064877 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-BESTZIP-609371",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BESTZIP-609371 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6xv6-jpvw-cx6q",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BESTZIP-609371 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-BLAMER-559541",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BLAMER-559541 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-7vm7-j8p7-h346",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BLAMER-559541 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CLAMSCAN-564113",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CLAMSCAN-564113 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CODECOV-585979",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CODECOV-585979 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-xp63-6vf5-xf3v",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CODECOV-585979 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DISKUSAGENG-564425",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DISKUSAGENG-564425 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-3269-x4pw-vffg",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DISKUSAGENG-564425 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:dns-sync:20141111",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_dns-sync_20141111 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-q5pq-pgrv-fh89",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_dns-sync_20141111 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-EXTRAASCIINEMA-608292",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-EXTRAASCIINEMA-608292 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-GETNPMPACKAGEVERSION-1050390",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-GETNPMPACKAGEVERSION-1050390 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-KILLBYPORT-1078531",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-KILLBYPORT-1078531 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-mm4f-47ch-f7hx",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-KILLBYPORT-1078531 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-KILLPORT-1078535",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-KILLPORT-1078535 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-fc42-h7q4-qp8h",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-KILLPORT-1078535 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-LIBNMAP-72551",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LIBNMAP-72551 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-7g2w-6r25-2j7p",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LIBNMAP-72551 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:macaddress:20180511",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_macaddress_20180511 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-pp57-mqmh-44h7",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_macaddress_20180511 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MACFROMIP-1048336",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MACFROMIP-1048336 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-vh8f-xw5v-8993",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MACFROMIP-1048336 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:pidusage:20170605",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_pidusage_20170605 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-hfq9-rfpv-j8r8",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_pidusage_20170605 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PORTPROCESSES-1078536",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PORTPROCESSES-1078536 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-vm67-7vmg-66vm",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PORTPROCESSES-1078536 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-THINGEGF-1089810",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-THINGEGF-1089810 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-rj44-gpjc-29r7",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-THINGEGF-1089810 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-TOTALJS-1046672",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TOTALJS-1046672 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-4449-hg37-77v8",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TOTALJS-1046672 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-VBOXMANAGEJS-607910",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-VBOXMANAGEJS-607910 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-whq6-mj2r-mjqc",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-VBOXMANAGEJS-607910 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:whereis:20180401",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_whereis_20180401 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-wjr4-2jgw-hmv8",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_whereis_20180401 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-VIVAXYHERE-455285",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-VIVAXYHERE-455285 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:angular-http-server:20180426",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_angular-http-server_20180426 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-4rvg-955w-h68q",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_angular-http-server_20180426 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:crud-file-server:20180226",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_crud-file-server_20180226 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-vfp9-gwrh-wq9g",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_crud-file-server_20180226 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:glance:20180129",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_glance_20180129 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-2x4q-6jfv-8h9h",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_glance_20180129 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:hostr:20161211",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_hostr_20161211 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-xqqr-p362-6rmc",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_hostr_20161211 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:m-server:20180226",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_m-server_20180226 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-899g-6q6w-7v94",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_m-server_20180226 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:node-simple-router:20170523",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_node-simple-router_20170523 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-5w8q-x7hc-jhp6",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_node-simple-router_20170523 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:node-srv:20180125",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_node-srv_20180125 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-52r9-g5g6-2hjp",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_node-srv_20180125 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SERVEHEREJS-450884",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SERVEHEREJS-450884 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-4448-rc82-fcr7",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SERVEHEREJS-450884 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ALGOLIASEARCHHELPER-1570421",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ALGOLIASEARCHHELPER-1570421 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-vpf5-82c8-9v36",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ALGOLIASEARCHHELPER-1570421 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ASSIGNDEEP-450211",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ASSIGNDEEP-450211 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-66rh-8fw6-59q6",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ASSIGNDEEP-450211 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-AURELIAPATH-1292346",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-AURELIAPATH-1292346 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-3c9c-2p65-qvwv",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-AURELIAPATH-1292346 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-BODYMEN-548897",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BODYMEN-548897 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-8h84-8j4f-p97q",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BODYMEN-548897 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CACHEDPATHRELATIVE-72573",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CACHEDPATHRELATIVE-72573 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-hc9w-4p87-j549",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CACHEDPATHRELATIVE-72573 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CHANGESET-1083989",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CHANGESET-1083989 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CONFINIT-564433",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CONFINIT-564433 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-jgpq-g82g-6c39",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CONFINIT-564433 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CONTROLLEDMERGE-1040460",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CONTROLLEDMERGE-1040460 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-5pg7-v24c-9rp9",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CONTROLLEDMERGE-1040460 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:deep-extend:20180409",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_deep-extend_20180409 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-hr2v-3952-633q",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_deep-extend_20180409 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DEEPOVERRIDE-1292344",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPOVERRIDE-1292344 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-v659-54cx-g4qr",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPOVERRIDE-1292344 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DEEPHAS-1039845",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPHAS-1039845 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-4fr2-j4g9-mppf",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPHAS-1039845 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DEEPLY-451026",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPLY-451026 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-8j4w-5fw4-rm27",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPLY-451026 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DEEPREF-1049536",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPREF-1049536 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-7c7g-72q7-4xhm",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DEEPREF-1049536 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:defaults-deep:20180215",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_defaults-deep_20180215 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-cqp5-m4pq-gfgp",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_defaults-deep_20180215 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DOCPATH-1011952",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DOCPATH-1011952 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-gm8g-xhh8-rmwr",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DOCPATH-1011952 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DOTOBJECT-548905",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DOTOBJECT-548905 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DOTPROP-543489",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DOTPROP-543489 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-ff7x-qrg7-qggm",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DOTPROP-543489 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DOTTY-1577292",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DOTTY-1577292 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6g47-63mv-qpgh",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DOTTY-1577292 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-EIVIFJDOT-564435",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-EIVIFJDOT-564435 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-EXTENDMERGE-609868",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-EXTENDMERGE-609868 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:extend:20180424",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_extend_20180424 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-qrmc-fj45-qfc2",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_extend_20180424 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-FABIOCACCAMOUTILSJS-1932614",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-FABIOCACCAMOUTILSJS-1932614 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-3xph-cp8f-2229",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-FABIOCACCAMOUTILSJS-1932614 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-FASTJSONPATCH-595663",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-FASTJSONPATCH-595663 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-FIREBASEUTIL-1038324",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-FIREBASEUTIL-1038324 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-fpm5-vv97-jfwg",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-FIREBASEUTIL-1038324 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:hoek:20180212",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_hoek_20180212 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-jp4x-w63m-7wgm",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_hoek_20180212 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-I18NEXT-1065979",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-I18NEXT-1065979 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-cmh5-qc8w-xvcq",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-I18NEXT-1065979 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-IMMER-1540542",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-IMMER-1540542 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-33f9-j839-rf8h",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-IMMER-1540542 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-INIREADER-1054843",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-INIREADER-1054843 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JOINTJS-1579578",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JOINTJS-1579578 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-f3pp-32qc-36w4",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JOINTJS-1579578 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JQUERY-174006",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JQUERY-174006 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6c3j-c64m-qhgq",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JQUERY-174006 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JSDATA-1584361",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSDATA-1584361 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-c6h4-gc3f-hgjq",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSDATA-1584361 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JSINI-1048970",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSINI-1048970 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-896r-f27r-55mw",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed GHSA-896r-f27r-55mw exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JSONSCHEMA-1920922",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed GHSA-896r-f27r-55mw exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JSONPOINTER-1577288",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSONPOINTER-1577288 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-282f-qqgm-c34q",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSONPOINTER-1577288 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JUSTSAFESET-1316267",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JUSTSAFESET-1316267 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-v26w-gcxh-v4r7",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JUSTSAFESET-1316267 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-KEYGET-1048048",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-KEYGET-1048048 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-LIBNESTED-1054930",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LIBNESTED-1054930 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-3r9x-mjrm-2725",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LIBNESTED-1054930 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-LINUXCMDLINE-598674",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LINUXCMDLINE-598674 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-LODASH-608086",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LODASH-608086 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-fvqr-27wr-82fm",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LODASH-608086 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-LODASH-73638",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LODASH-73638 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-h726-x36v-rx45",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LODASH-73638 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MATHJS-1016401",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MATHJS-1016401 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-x2fc-mxcx-w4mf",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MATHJS-1016401 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MERGEDEEP-1070277",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MERGEDEEP-1070277 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-r6rj-9ch6-g264",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MERGEDEEP-1070277 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:merge-options:20180415",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_merge-options_20180415 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-qw93-45r3-p66p",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_merge-options_20180415 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:mixin-deep:20180215",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mixin-deep_20180215 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-3mpr-hq3p-49h9",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mixin-deep_20180215 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MIXINDEEP-450212",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MIXINDEEP-450212 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-fhjf-83wg-r2j9",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MIXINDEEP-450212 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MPATH-1577289",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MPATH-1577289 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-p92x-r36w-9395",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MPATH-1577289 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MQUERY-1089718",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MQUERY-1089718 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-45q2-34rf-mr94",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MQUERY-1089718 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NESTEDPROPERTY-1022154",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NESTEDPROPERTY-1022154 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NESTIE-1300518",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NESTIE-1300518 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-m7rg-8wvq-846v",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NESTIE-1300518 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NODEFORGE-598677",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NODEFORGE-598677 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-92xj-mqp7-vmcj",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NODEFORGE-598677 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NODEEUTILS-598679",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NODEEUTILS-598679 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-p6jh-p7q8-pcrg",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NODEEUTILS-598679 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-OBJECTCOLLIDER-1080739",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-OBJECTCOLLIDER-1080739 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-85g2-29m8-qf2p",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-OBJECTCOLLIDER-1080739 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-OBJECTPATHSET-607908",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-OBJECTPATHSET-607908 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-cwx2-736x-mf6w",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-OBJECTPATHSET-607908 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-OBJECTION-1582910",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-OBJECTION-1582910 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-r659-8xfp-j327",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-OBJECTION-1582910 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-OBJNEST-1041787",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-OBJNEST-1041787 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PATCHMERGE-1086585",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PATCHMERGE-1086585 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-84g3-cv89-m9gm",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PATCHMERGE-1086585 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PATHVAL-596926",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PATHVAL-596926 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PLAINOBJECTMERGE-1085643",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PLAINOBJECTMERGE-1085643 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PROPERTIESREADER-1048968",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PROPERTIESREADER-1048968 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PROPERTYEXPR-598800",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PROPERTYEXPR-598800 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6fw4-hr69-g3rv",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PROPERTYEXPR-598800 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PROTOTYPEDJS-1069824",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PROTOTYPEDJS-1069824 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PUTILMERGE-1317077",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PUTILMERGE-1317077 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-9x7m-9hpg-xxmw",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PUTILMERGE-1317077 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-QUERYMEN-559867",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-QUERYMEN-559867 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-2cf2-2383-h4jv",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-QUERYMEN-559867 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SDS-564123",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SDS-564123 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-cxm3-284p-qc4v",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SDS-564123 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SETGETTER-1303099",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SETGETTER-1303099 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-jv35-xqg7-f92r",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SETGETTER-1303099 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SETOBJECTVALUE-1054931",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SETOBJECTVALUE-1054931 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-4jj4-m52p-8rx3",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SETOBJECTVALUE-1054931 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SETORGET-1070806",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SETORGET-1070806 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6rv4-4qv6-88g2",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SETORGET-1070806 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SHVL-1085284",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SHVL-1085284 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-STRIKEENTCOSET-1038821",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-STRIKEENTCOSET-1038821 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SUPERMIXER-607909",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SUPERMIXER-607909 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-7prf-vw4p-qr59",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SUPERMIXER-607909 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SWIPER-1088062",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SWIPER-1088062 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-p3hc-fv2j-rp68",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SWIPER-1088062 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6cj2-92m5-7mvp",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed GHSA-6cj2-92m5-7mvp exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-THINKCONFIG-1536566",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed GHSA-6cj2-92m5-7mvp exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-TOTALJS-1046671",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TOTALJS-1046671 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6cf8-qhqj-vjqm",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TOTALJS-1046671 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-TREEKIT-1077068",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TREEKIT-1077068 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-TSDOTPROP-1024441",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TSDOTPROP-1024441 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-TSEDCORE-1019382",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TSEDCORE-1019382 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-77xq-cpvg-7xm2",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TSEDCORE-1019382 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-UNDEFSAFE-548940",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-UNDEFSAFE-548940 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-UTILITIFY-559497",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-UTILITIFY-559497 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-9534-h433-2rjf",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-UTILITIFY-559497 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-VIKING04MERGE-1584118",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-VIKING04MERGE-1584118 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-cqqh-49mx-fq63",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-VIKING04MERGE-1584118 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ANSIREGEX-1583908",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ANSIREGEX-1583908 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-AXIOS-1579269",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-AXIOS-1579269 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-cph5-m8f7-6c5x",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-AXIOS-1579269 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:brace-expansion:20170302",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_brace-expansion_20170302 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-832h-xg76-4gv6",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_brace-expansion_20170302 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-BROWSERSLIST-1090194",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BROWSERSLIST-1090194 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-w8qv-6jwh-64r5",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-BROWSERSLIST-1090194 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:cejs:20180217",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_cejs_20180217 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CHRONONODE-1083228",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CHRONONODE-1083228 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-hpmr-g4pq-jhgp",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CHRONONODE-1083228 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:clean-css:20180306",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_clean-css_20180306 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CODEMIRROR-1016937",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CODEMIRROR-1016937 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-4gw3-8f77-f72c",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CODEMIRROR-1016937 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-COLORSTRING-1082939",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-COLORSTRING-1082939 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-257v-vj4p-3w2h",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-COLORSTRING-1082939 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-COLORSCLI-1584218",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-COLORSCLI-1584218 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:content:20180305",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_content_20180305 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-x6wp-rfwh-hcx7",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_content_20180305 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-CONVENTIONALCOMMITSPARSER-1766960",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-CONVENTIONALCOMMITSPARSER-1766960 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-DATEANDTIME-1054430",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DATEANDTIME-1054430 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-r92x-f52r-x54g",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-DATEANDTIME-1054430 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:dirty-json:20180213",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_dirty-json_20180213 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:ducktype:20180219",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_ducktype_20180219 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:email-existence:20180225",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_email-existence_20180225 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ETHERS-1586048",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ETHERS-1586048 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-FASTCSV-1049538",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-FASTCSV-1049538 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-8cv5-p934-3hwp",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-FASTCSV-1049538 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:forwarded:20170908",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_forwarded_20170908 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-mpcf-4gmh-23w8",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_forwarded_20170908 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:fresh:20170908",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_fresh_20170908 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-9qj9-36jm-prpv",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_fresh_20170908 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-GLOBPARENT-1314294",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-GLOBPARENT-1314294 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-ww39-953v-wcq6",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-GLOBPARENT-1314294 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-HIGHLIGHTJS-1048676",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-HIGHLIGHTJS-1048676 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-vfrc-7r7c-w9mx",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-HIGHLIGHTJS-1048676 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-HOSTEDGITINFO-1088355",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-HOSTEDGITINFO-1088355 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-43f8-2h32-f4cj",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-HOSTEDGITINFO-1088355 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ISEMAIL-1279002",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ISEMAIL-1279002 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-j377-2x76-558h",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ISEMAIL-1279002 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ISMYJSONVALID-597165",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ISMYJSONVALID-597165 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-ISSVG-1243891",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ISSVG-1243891 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-7r28-3m3f-r2pr",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-ISSVG-1243891 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-JSPDF-1073626",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSPDF-1073626 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-57f3-gghm-9mhc",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-JSPDF-1073626 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-LODASH-1018905",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LODASH-1018905 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-29mw-wpgm-hmr9",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-LODASH-1018905 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MARKDOWNIT-2331914",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MARKDOWNIT-2331914 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:method-override:20170927",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_method-override_20170927 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-qx2f-477c-35rq",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_method-override_20170927 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:mime:20170907",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mime_20170907 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-wrvr-8mpx-r7pp",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mime_20170907 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-MINIMATCH-1019388",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MINIMATCH-1019388 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-hxm2-r34f-qmc5",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-MINIMATCH-1019388 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:mobile-detect:20170907",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_mobile-detect_20170907 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NATURAL-1915418",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NATURAL-1915418 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NORMALIZEURL-1296539",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NORMALIZEURL-1296539 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-px4h-xg32-q955",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NORMALIZEURL-1296539 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NPMUSERVALIDATE-1019352",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NPMUSERVALIDATE-1019352 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-pw54-mh39-w3hc",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-NPMUSERVALIDATE-1019352 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-rp65-9cf3-cjxr",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed GHSA-rp65-9cf3-cjxr exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-NTHCHECK-1586032",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed GHSA-rp65-9cf3-cjxr exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-PAPAPARSE-564258",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PAPAPARSE-564258 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-qvjc-g5vr-mfgr",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-PAPAPARSE-564258 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-POSTCSS-1255640",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-POSTCSS-1255640 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-566m-qj78-rww5",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-POSTCSS-1255640 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-RAMDA-1582370",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-RAMDA-1582370 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-REACTNATIVE-1298632",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-REACTNATIVE-1298632 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-7f53-fmmv-mfjv",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-REACTNATIVE-1298632 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-REMARKABLE-174639",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-REMARKABLE-174639 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-q22g-8fr4-qpj4",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-REMARKABLE-174639 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:sanitize:20180225",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_sanitize_20180225 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SEMVERREGEX-1585624",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SEMVERREGEX-1585624 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-44c6-4v22-4mhx",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SEMVERREGEX-1585624 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SIMPLEMARKDOWN-469242",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SIMPLEMARKDOWN-469242 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-qj3f-9gmq-fwv5",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SIMPLEMARKDOWN-469242 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-SSRI-1246392",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SSRI-1246392 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-vx3p-948g-6vhq",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-SSRI-1246392 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-TERMINALKIT-1734787",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TERMINALKIT-1734787 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-THREE-1064931",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-THREE-1064931 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-fq6p-x6j3-cmmq",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-THREE-1064931 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-TRIMOFFNEWLINES-1296850",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TRIMOFFNEWLINES-1296850 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-38fc-wpqx-33j7",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-TRIMOFFNEWLINES-1296850 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:truncate:20180225",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_truncate_20180225 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-UAPARSERJS-1072471",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-UAPARSERJS-1072471 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-78cj-fxph-m83p",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-UAPARSERJS-1072471 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "npm:valid-email:20180222",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed npm_valid-email_20180222 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "SNYK-JS-WS-1296835",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-WS-1296835 exists but is not a valid git repository and cannot be re-cloned"
+    },
+    {
+      "cve_id": "GHSA-6fc8-4gx4-v693",
+      "indexed": false,
+      "entrypoints_count": 0,
+      "paths_count": 0,
+      "mode": "unknown",
+      "error": "testbed SNYK-JS-WS-1296835 exists but is not a valid git repository and cannot be re-cloned"
+    }
+  ]
+}

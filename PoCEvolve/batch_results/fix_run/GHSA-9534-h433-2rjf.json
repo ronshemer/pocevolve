@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-UTILITIFY-559497",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-UTILITIFY-559497",
+  "indexed": true,
+  "entrypoints_count": 2,
+  "paths_count": 0,
+  "mode": "entry_points_only",
+  "error": ""
+}

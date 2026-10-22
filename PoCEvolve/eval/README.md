@@ -27,6 +27,23 @@ Phase 5: Comparison Report    → Before vs after comparison output
 
 ## Quick Start
 
+### Prepare one CVE and inspect static analysis
+
+```bash
+# Creates/reuses a git checkout at the parent of the fix commit and runs static analysis.
+bash PoCEvolve/eval/prepare_cve.sh SNYK-JS-HOTFORMULAPARSER-541328
+
+# The direct static-analysis command is also available. It writes JSON to
+# eval/results/static-analysis/<CVE-ID>.json by default.
+bash PoCEvolve/eval/analyze_cve.sh SNYK-JS-HOTFORMULAPARSER-541328
+```
+
+The static-analysis command creates the vulnerable checkout itself if it is missing,
+so it can also be run on its own. Checkout directories are cached below
+`src/git_testbeds/auto/`. The checkout is the parent of the VFC fix commit, which
+keeps deleted-line locations aligned with the vulnerable source. This command
+does not invoke exploit generation or require the LLM/Docker evaluation setup.
+
 ```bash
 # Baseline run
 bash PoCEvolve/eval/run_pipeline.sh --mode baseline
@@ -57,7 +74,7 @@ All configuration is in `PoCEvolve/src/config.py`:
 | `VERIFY_TIME` | 3 | Verify timeout in seconds |
 | `COMMAND_TIMEOUT` | 30 | Exploit execution timeout |
 | `SEED` | 42 | Random seed for reproducibility |
-| `DATASET_LIST` | datasets/SecBench.js.PoCGen.vfc.190 | Target dataset file path |
+| `DATASET_LIST` | datasets/SecBench.js.PoCGen.vfc.173 | Target dataset file path |
 
 ## Dataset Selection
 
@@ -66,14 +83,14 @@ All configuration is in `PoCEvolve/src/config.py`:
 
 Two datasets are available:
 
-- `datasets/SecBench.js.PoCGen.vfc.190` — 190 vulnerability IDs with VFC data (recommended for evaluation)
+- `datasets/SecBench.js.PoCGen.vfc.173` — 173 vulnerability IDs with VFC data (current filtered dataset)
 - `datasets/SecBench.js.PoCGen.559` — 559 total vulnerability IDs (larger scope, longer runtime)
 
 ## Expected Runtime
 
 | Dataset | Est. LLM Calls per Vuln | Est. Total LLM Calls | Est. Wall Time (baseline) |
 |---------|------------------------|---------------------|--------------------------|
-| vfc.190 | ~20-40 | ~3,800-7,600 | 2-4 hours (with caching) |
+| vfc.173 | ~20-40 | ~3,460-6,920 | 2-4 hours (with caching) |
 | PoCGen.559 | ~20-40 | ~11,000-22,000 | 6-12 hours (with caching) |
 
 Timing depends heavily on LLM API latency and whether cache is warm.

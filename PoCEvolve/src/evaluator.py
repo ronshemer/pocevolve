@@ -2,7 +2,7 @@ import json
 import re
 
 from src.llm import call_llm
-from src.utils import extract_js_triple_backticks
+from src.utils import extract_js_triple_backticks, _strip_static_analysis
 from src.verify import run_exploit
 from src.prompts import (
     FEEDBACK_LLM_SYSTEM_PROMPT,

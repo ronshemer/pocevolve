@@ -1,0 +1,9 @@
+{
+  "cve_id": "SNYK-JS-REACTNATIVE-1298632",
+  "testbed_path": "/home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-REACTNATIVE-1298632",
+  "indexed": false,
+  "entrypoints_count": 0,
+  "paths_count": 0,
+  "mode": "unknown",
+  "error": "CLI exit code 1: INFO: indexing /home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-REACTNATIVE-1298632 ...\nINFO: Indexed /home/ron/Projects/cve_pocs/pocevolve/PoCEvolve/testbed/SNYK-JS-REACTNATIVE-1298632: 27832 nodes, 27928 edges (587 docs)\nINFO: indexed 27832 nodes, 27928 edges\nINFO: scan: found 828 entry points, 1 sinks among 27832 nodes\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/ron/Pro"
+}
