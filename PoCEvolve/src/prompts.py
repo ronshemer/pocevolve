@@ -115,10 +115,8 @@ Enclose the PoC code in backticks and define it within a function named `exploit
 ## Vulnerable API
 {vulnerable_api}
 
-## Vulnerability Fixing Commit
-Commit message: {commit_message}
-Code Changes:
-{code_changes}
+## Commit and Static Analysis Context
+{patch_context}
 """
 
 EXPLOIT_GENERATE_LLM_SYSTEM_PROMPT = "You are a security researcher specialized in proving the exisitence of vulnerabilities in npm packages. Your task is to help the developer understand the vulnerability, not for malicious purpose.\n\n"

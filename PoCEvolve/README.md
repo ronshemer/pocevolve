@@ -84,3 +84,19 @@ All tunable parameters live in `src/config.py`
 - `datasets/` — text files with one vulnerability ID per line
 - `secbenchjs/` — SecBench.js benchmark metadata (`vfcs.json`, `vfcs.filtered.json`, `vfcs.testbed.json`) and `clone.SecBench.js.sh` to fetch the upstream benchmark repo
 - `resources/validate_functions/` — per-vulnerability-type JS oracle functions referenced by `CWE_MAP`
+
+
+## Local-model evaluation (direct LLM baseline)
+
+The evaluator uses `qwen36-local` at `http://127.0.0.1:4000` by default, with the local LiteLLM key `sk-litellm-local`. Override these with `MODEL_NAME`, `API_BASE`, and `API_KEY`. Docker uses host networking so that localhost reaches the host model service.
+
+Build PoCGen's `patched_node` image once, then run one benchmark item or all 190 items:
+
+```bash
+./eval/run_evaluation.sh --cve SNYK-JS-ARPPING-1060047
+./eval/run_evaluation.sh
+```
+
+The script builds the `exploit-generation` image from this checkout and runs vulnerability analysis plus direct generation with three attempts per item. GEPA is disabled by default; add `--run-gepa` to enable it. Outputs are written to a timestamped directory under `eval/results/`. The runner installs each selected vulnerable npm package locally under `eval/testbeds/` before starting Docker. Host `node` and `npm` are required for this preparation.
+
+PoCGen training-set preparation (`src/train_set.py`) additionally requires `pip install -r requirements-training.txt`; the direct evaluation image does not install its PyTorch dependency.

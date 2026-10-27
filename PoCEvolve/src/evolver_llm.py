@@ -46,6 +46,9 @@ def _load_vfcs_generated() -> dict:
 
 
 def main():
+    if SKIP_GEPA:
+        print("[SKIP] GEPA disabled by SKIP_GEPA=1")
+        return
     print(DATASET_LIST)
 
     vfcs_by_id = _load_vfcs_generated()

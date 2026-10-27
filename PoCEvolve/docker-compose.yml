@@ -3,6 +3,7 @@ services:
     container_name: exploit-generation
     build: .
     image: exploit-generation:latest
+    network_mode: host
     volumes:
       - .:/app
     tty: true

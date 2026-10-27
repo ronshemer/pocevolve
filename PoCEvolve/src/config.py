@@ -3,9 +3,10 @@ import os
 
 
 ## Paths & Directories
-DATASET_LIST = os.getenv("DATASET")
-TESTBED_DIR = "testbed"
-GEPA_LOG_DIR = Path("logs")
+DATASET_LIST = os.getenv("DATASET", "datasets/SecBench.js.PoCGen.vfc.190")
+TESTBED_DIR = os.getenv("TESTBED_DIR", "eval/testbeds")
+GEPA_LOG_DIR = Path(os.getenv("RUN_OUTPUT_DIR", "logs"))
+GEPA_LOG_DIR.mkdir(parents=True, exist_ok=True)
 GEPA_LOG_DIR.mkdir(parents=True, exist_ok=True)
 PROJECT_ROOT = Path(__file__).resolve().parent
 
@@ -17,17 +18,19 @@ MAX_EXECUTION_OUTPUTS_IN_FEEDBACK = 4
 
 
 TRAINING_DATA = "path/to/pocgen/qwen3.7-plus.training-set"
-GENERATED_VFC_GLOB = "./path/to/llm/qwen3.7-plus/vfcs.generated.*.jsonl"
-ITERATION = 5
+GENERATED_VFC_GLOB = str(GEPA_LOG_DIR / "vfcs.generated.*.jsonl")
+ITERATION = int(os.getenv("GEPA_ITERATIONS", "5"))
+MAX_GENERATION_ATTEMPTS = int(os.getenv("MAX_GENERATION_ATTEMPTS", "3"))
 MINIBATCH_SIZE = 3
 VERIFY_TIME = 2
 SEED = 42
 # MODEL_NAME = "gpt-4o-mini"
 # API_KEY = "sk-proj-xxx"
 # API_BASE = "https://api.openai.com/v1"
-MODEL_NAME = "qwen/qwen3.7-plus"
-API_KEY = "sk-or-v1-xxx"
-API_BASE = "https://openrouter.ai/api/v1"
+MODEL_NAME = os.getenv("MODEL_NAME", "qwen36-local")
+API_KEY = os.getenv("API_KEY", "sk-litellm-local")
+API_BASE = os.getenv("API_BASE", "http://127.0.0.1:4000")
+SKIP_GEPA = os.getenv("SKIP_GEPA", "1").strip().lower() not in {"0", "false", "no", "off"}
 TEMPERATURE = 1
 MAX_RETRY = 2
 
